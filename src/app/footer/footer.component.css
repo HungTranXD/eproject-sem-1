@@ -1,0 +1,211 @@
+.background-grey{
+  background-color: #f5f5f7;
+  font-size: 15px;
+}
+ul.content{
+  padding: 0;
+  list-style: none;
+}
+ul.content li{
+  padding: 0.1rem 0;
+}
+ul.content li a{
+  color: #888;
+}
+ul.content li a:hover{
+  color: #ff3d00;
+}
+form{
+  display: flex;
+  height: 40px;
+  padding: 2px;
+  margin: 0.2rem 0 1.2rem;
+  background: white;
+  min-width: 18%!important;
+  border-radius: 2px;
+  border: 1px solid rgba(155,155,155,0.2);
+}
+form .email-subscribe{
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 15px;
+  border: none;
+  font-weight: 500;
+  background: none;
+}
+form button{
+  padding: 0 15px;
+  color: #fff;
+  font-size: 15px;
+  background: #ff3d00;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+nav form button:hover{
+  background: #e63600;
+}
+ul.icon-group{
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+ul.icon-group li{
+  margin-right: 0.7rem;
+  padding: 0.1rem 0;
+}
+ul.icon-group li a{
+  color: #888;
+}
+ul.icon-group li a:hover{
+  color: #ff3d00;
+}
+
+/* -------- COPY CSS FROM BOOTSTRAP TO CHANGE ACCORDION------------ */
+.accordion-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 15px;
+  color: #212529;
+  text-align: left;
+  background-color:  #f5f5f7;
+  border: 0;
+  border-radius: 0;
+  overflow-anchor: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .accordion-button {
+    transition: none;
+  }
+}
+.accordion-button:not(.collapsed) {
+  color: black;
+  background-color:  #f5f5f7;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  transform: rotate(-180deg);
+}
+.accordion-button::after {
+  flex-shrink: 0;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-left: auto;
+  content: "";
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: 0.8rem;
+  transition: transform 0.2s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .accordion-button::after {
+    transition: none;
+  }
+}
+.accordion-button:hover {
+  z-index: 2;
+}
+.accordion-button:focus {
+  z-index: 3;
+  border-color: #ff3d00;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(255, 61, 0, 0.25);
+}
+
+.accordion-header {
+  margin-bottom: 0;
+}
+
+.accordion-item {
+  background-color:  #f5f5f7;
+  border: 0px solid rgba(0, 0, 0, 0.125);
+}
+.accordion-item:first-of-type {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.accordion-item:first-of-type .accordion-button {
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+.accordion-item:not(:first-of-type) {
+  border-top: 0;
+}
+.accordion-item:last-of-type {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+.accordion-item:last-of-type .accordion-button.collapsed {
+  border-bottom-right-radius: calc(0.25rem - 1px);
+  border-bottom-left-radius: calc(0.25rem - 1px);
+}
+.accordion-item:last-of-type .accordion-collapse {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.accordion-body {
+  padding: 0.5rem 0;
+}
+.accordion-body ul.content{
+  margin-bottom: 0;
+}
+.accordion-body ul.content li{
+  padding: 0.3rem 0;
+}
+.accordion-flush .accordion-collapse {
+  border-width: 0;
+}
+.accordion-flush .accordion-item {
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+}
+.accordion-flush .accordion-item:first-child {
+  border-top: 0;
+}
+.accordion-flush .accordion-item:last-child {
+  border-bottom: 0;
+}
+.accordion-flush .accordion-item .accordion-button {
+  border-radius: 0;
+}
+/* ------------ END OF ACCORDION -------------- */
+
+
+/* --- Bottom footer with continuous scrolling ticker ---- */
+.background-dark{
+  background-color: #171c24;
+}
+
+.ticker {
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+}
+.ticker__list {
+  display: flex;
+  margin-top: 20px;
+  animation: ticker 15s infinite linear;
+}
+.ticker:hover .ticker__list {
+  animation-play-state: paused;
+}
+.ticker__item {
+  margin-right: 20px;
+  color: white;
+  width: max-content;
+}
+
+@keyframes ticker {
+  100% {
+    transform: translateX(-100%); /*try changing this to -100vw*/
+  }
+}

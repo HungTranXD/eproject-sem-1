@@ -1,0 +1,52 @@
+<div class="background fixed-top"  id="{{displaySideMenu == 0 ? 'navbar': ''}}">
+  <div class="container">
+    <nav>
+      <div class="menu-icon" id="menuBt">
+        <i class="fa-solid fa-bars" (click)="displaySideMenu = 1" [class.hide]="displaySideMenu == 1"></i>
+      </div>
+      <div class="logo">
+        <a href="#"><img src="assets/images/logo-white.png" alt="logo" width="150"/></a>
+      </div>
+      <div class="nav-items" [class.active]="displaySideMenu == 1">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Lastest Post</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Popular Sections  <i class="fa-solid fa-chevron-down"></i></a>
+          <div class="dropdown-content">
+            <a href="#">Bridges History</a>
+            <a href="#">Historical Great Bridges</a>
+            <a href="#">High-Level Achivements in Bridges</a>
+            <a href="#">Iconic Bridges</a>
+            <a href="#">Modern Great Bridges</a>
+            <a href="#">Bridges Facts</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Bridges By Continent  <i class="fa-solid fa-chevron-down"></i></a>
+          <div class="dropdown-content">
+            <a href="#">North America</a>
+            <a href="#">South America</a>
+            <a href="#">Europe</a>
+            <a href="#">Africa</a>
+            <a href="#">Asia</a>
+            <a href="#">Australia</a>
+          </div>
+        </li>
+        <li><a href="#">Gallery</a></li>
+      </div>
+      <div class="search-icon" [class.hide]="displaySideMenu == 1 || displaySearchBar == 1" (click)="displaySearchBar = 1">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="cancel-icon" [class.show]="displaySideMenu == 1 || displaySearchBar == 1" (click)="displaySideMenu = 0; displaySearchBar = 0">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <form action="#" [class.active]="displaySearchBar == 1">
+        <input type="search" class="search-data" placeholder="Search" required>
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+    </nav>
+  </div>
+</div>
+<!-- Due to header fixed top position > this div is created to push content below header -->
+<div style="height: 80px"></div>
+

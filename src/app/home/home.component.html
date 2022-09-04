@@ -1,0 +1,93 @@
+<div class="container">
+
+
+  <!-- Page header with welcome massage and slide show -->
+  <div class="page-header row">
+    <div class="welcome-massage mx-2">
+      <div class="title">Welcome to Bridge.com</div>
+      <div class="content">In here you can find information and images about some of the world’s most Incredible bridges, both young and old.</div>
+      <div class="linkgroup">
+        <a class="about-link">About us</a>
+        <a class="about-link">Contact us</a>
+      </div>
+    </div>
+  </div>
+  <ul class="slideshow">
+    <li><span></span></li>
+    <li><span>2</span></li>
+    <li><span></span></li>
+    <li><span></span></li>
+    <li><span></span></li>
+  </ul>
+
+
+  <!-- TOP sections (like top longest, top tallest, top oldest bridges -->
+  <div class="top-list row g-2" *ngIf="topListData">
+    <div class="col-12 col-md-auto px-0">
+      <div class="header px-3">
+        Top lists about bridges
+      </div>
+    </div>
+    <div class="row border-bottom border-dark mx-0"></div>
+
+    <div class="col-12 col-md-6" *ngFor="let t of topListData; let i = index" [class.col-lg-3]="i >= 2" [class.d-md-block]="i >= 3" [ngClass]="{'d-none': displayMoreTopList == 0 && i >= 3, 'd-block': displayMoreTopList == 1 && i >= 3}">
+      <a href="#"><div class="top-list-card">
+        <img class="thumbnail" src="{{t.thumbnail}}"/>
+        <div class="title">{{t.title}}</div>
+      </div></a>
+    </div>
+
+    <button class="show-more-button d-md-none" (click)="displayMoreTopList = 1" [class.d-none]="displayMoreTopList == 1">Show more</button>
+    <button class="show-more-button d-md-none" (click)="displayMoreTopList = 0" [class.d-none]="displayMoreTopList == 0">Show less</button>
+    <div class="row border-bottom border-dark mx-0 mt-2"></div>
+  </div>
+
+
+  <!-- Browse bridges by continents -->
+  <div class="top-list row g-2 mt-2">
+    <div class="col-12 col-md-auto px-0">
+      <div class="header px-3">
+        Browse bridges by continent
+      </div>
+    </div>
+    <div class="row border-bottom border-dark mx-0"></div>
+    <div id="map-continents">
+      <ul class="continents">
+        <li class="c1"><a href="#africa">Africa</a></li>
+        <li class="c2"><a href="#asia">Asia</a></li>
+        <li class="c3"><a href="#australia">Australia</a></li>
+        <li class="c4"><a href="#europe">Europe</a></li>
+        <li class="c5"><a href="#north-america">North America</a></li>
+        <li class="c6"><a href="#south-america">South America</a></li>
+      </ul>
+    </div>
+    <div class="row border-bottom border-dark mx-0 mt-2"></div>
+  </div>
+
+
+  <!-- Latest Posts/Recently added -->
+  <div class="top-list row g-2 mt-2">
+    <div class="col-12 col-md-auto px-0">
+      <div class="header px-3">
+        Latest posts
+      </div>
+    </div>
+    <div class="row border-bottom border-dark mx-0"></div>
+
+    <div class="col-12 col-md-6" *ngFor="let l of latestPostData; let i = index" [class.col-lg-3]="i >= 2" [class.d-md-block]="i >= 3" [ngClass]="{'d-none': displayMoreLatestPost == 0 && i >= 3, 'd-block': displayMoreLatestPost == 1 && i >= 3}">
+      <div class="post-card">
+        <a href="#"><img src="{{l.thumbnail}}"/></a>
+        <div class="location"><a href="#">{{l.country}}</a> / <a href="#">{{l.continent}}</a></div>
+        <div class="title"><a href="#">{{l.title}}</a></div>
+      </div>
+    </div>
+
+    <button class="show-more-button d-md-none" (click)="displayMoreLatestPost = 1" [class.d-none]="displayMoreLatestPost == 1">Show more</button>
+    <button class="show-more-button d-md-none" (click)="displayMoreLatestPost = 0" [class.d-none]="displayMoreLatestPost == 0">Show less</button>
+    <button class="show-more-button" href="#">Go to Latest Posts</button>
+<!--    <div class="row border-bottom border-dark mx-0 mt-2"></div>-->
+  </div>
+
+</div>
+
+
