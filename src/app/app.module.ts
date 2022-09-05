@@ -13,9 +13,11 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FaqComponent } from './faq/faq.component';
 import { Header2Component } from './header2/header2.component';
+import { LatestPostsComponent } from './latest-posts/latest-posts.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
+  {path: 'latest-posts', component: LatestPostsComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'contact-us', component: ContactUsComponent},
   {path: 'faq', component: FaqComponent},
@@ -32,7 +34,8 @@ const appRoutes: Routes = [
     AboutUsComponent,
     ContactUsComponent,
     FaqComponent,
-    Header2Component
+    Header2Component,
+    LatestPostsComponent
   ],
   imports: [
     BrowserModule,

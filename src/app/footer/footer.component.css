@@ -192,7 +192,6 @@ ul.icon-group li a:hover{
 }
 .ticker__list {
   display: flex;
-  margin-top: 20px;
   animation: ticker 15s infinite linear;
 }
 .ticker:hover .ticker__list {
@@ -201,11 +200,13 @@ ul.icon-group li a:hover{
 .ticker__item {
   margin-right: 20px;
   color: white;
-  width: max-content;
+  width: 450px;
 }
 
 @keyframes ticker {
   100% {
-    transform: translateX(-100%); /*try changing this to -100vw*/
+    transform: translateX(-100vw); /*try changing this to -100vw*/
   }
 }
+
+
