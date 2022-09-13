@@ -1,0 +1,110 @@
+/*CSS summary information*/
+.col-4.information .col-5 {
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+
+.col-4.information .col-7 {
+  font-style: italic;
+}
+.col-4.information .row {
+  margin-bottom: 10px;
+}
+.col-4.information .title.col-1 {
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+  font-size: 21px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.col-4.information .title.col-1 p {
+  background-color: #d2c6c6;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.introduction {
+  margin-top: 25px;
+}
+.title-main p {
+  width: 130px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  padding-left: 10px;
+  margin-bottom: -1px;
+}
+.title-main {
+  border-bottom: 1px solid black;
+}
+
+/*CSS general introduction and history section*/
+.content {
+  margin-bottom: 18px;
+  line-height: 1.5;
+  text-indent: 1.5em;
+}
+.content.num1 {
+  margin-top: 15px;
+  text-align: justify;
+}
+@media (max-width: 1380px) {
+  .col-8.thumbnail {
+    width: 100%;
+    margin-top: -15px;
+    margin-bottom: 15px;
+  }
+  .col-4.information {
+    width: 100%;
+  }
+  .col-4.information .row {
+    margin-bottom: 2px;
+  }
+  .col-4.information .title.col-1 {
+    padding: 0;
+    width: 100%;
+    writing-mode: inherit;
+  }
+  .col-4.information .title.col-1 p {
+    background-color: #d2c6c6;
+    color: white;
+    padding: 0 10px;
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 1024px){
+  .col-8.thumbnail {
+    width: 100%;
+    margin-top: -15px;
+    margin-bottom: 15px;
+  }
+  .col-4.information {
+  width: 100%;
+  }
+  .col-4.information .row {
+    margin-bottom: 2px;
+  }
+  .col-4.information .title.col-1 {
+    padding: 0;
+    width: 100%;
+    writing-mode: inherit;
+  }
+  .col-4.information .title.col-1 p {
+    background-color: #d2c6c6;
+    color: white;
+    padding: 0 10px;
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
+

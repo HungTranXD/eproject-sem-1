@@ -41,7 +41,7 @@ const appRoutes: Routes = [
     FaqComponent,
     Header2Component,
     LatestPostsComponent,
-    TopListPageComponent
+    TopListPageComponent,
     LatestPostsComponent,
     BridgeDetailComponent
   ],
