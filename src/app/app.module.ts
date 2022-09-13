@@ -14,6 +14,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FaqComponent } from './faq/faq.component';
 import { Header2Component } from './header2/header2.component';
 import { LatestPostsComponent } from './latest-posts/latest-posts.component';
+import { BridgeDetailComponent } from './bridge-detail/bridge-detail.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -21,7 +22,8 @@ const appRoutes: Routes = [
   {path: 'about-us', component: AboutUsComponent},
   {path: 'contact-us', component: ContactUsComponent},
   {path: 'faq', component: FaqComponent},
-  {path: 'gallery', component: GalleryComponent}
+  {path: 'gallery', component: GalleryComponent},
+  {path: 'bridge-detail', component: BridgeDetailComponent}
 ];
 
 @NgModule({
@@ -35,7 +37,8 @@ const appRoutes: Routes = [
     ContactUsComponent,
     FaqComponent,
     Header2Component,
-    LatestPostsComponent
+    LatestPostsComponent,
+    BridgeDetailComponent
   ],
   imports: [
     BrowserModule,
