@@ -1,0 +1,77 @@
+/*CSS gallery*/
+.title-main p {
+  width: 130px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  padding-left: 10px;
+  margin-bottom: -1px;
+}
+.title-main {
+  border-bottom: 1px solid black;
+}
+.gallery-lightbox-container .title p {
+  margin-bottom: -1px;
+}
+.gallery-lightbox-container .title-main {
+  margin-bottom: 25px;
+}
+
+.content-img .row .col-4 {
+  padding: 20px;
+}
+
+.wrapper {
+  padding: 15px;
+  border-radius: 5px;
+  border: black 1px solid;
+  margin-bottom: 15px;
+}
+.wrapper .title {
+  margin-top: 10px;
+  height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+}
+.wrapper .title:hover {
+  color: #810303;
+  overflow: visible;
+  white-space: pre-line;
+  width: 350px;
+  height: auto;
+  background-color: #ececec;
+  position: absolute;
+  z-index: 1;
+  padding: 15px 10px;
+  box-shadow: 10px 10px #cbc9c9;
+  font-style: italic;
+  font-weight: normal;
+}
+.wrapper .img {
+  height: 182px;
+  overflow: hidden;
+}
+.wrapper img {
+  border-radius: 4px;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.4s;
+}
+.wrapper .img:hover img{
+  transform: scale(1.5);
+}
+.gallery-room {
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.gallery-inner {
+
+}
