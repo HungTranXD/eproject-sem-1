@@ -31,7 +31,7 @@
     <div class="row border-bottom border-dark mx-0"></div>
 
     <div class="col-12 col-md-6" *ngFor="let t of topListData; let i = index" [class.col-lg-3]="i >= 2" [class.d-md-block]="i >= 3" [ngClass]="{'d-none': displayMoreTopList == 0 && i >= 3, 'd-block': displayMoreTopList == 1 && i >= 3}">
-      <a href="#"><div class="top-list-card">
+      <a [routerLink]="['/top-list-page', t.title]"><div class="top-list-card">
         <img class="thumbnail" src="{{t.thumbnail}}"/>
         <div class="title">{{t.title}}</div>
       </div></a>

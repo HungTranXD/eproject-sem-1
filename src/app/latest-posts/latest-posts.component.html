@@ -1,161 +1,71 @@
 <div class="container">
-  <div class="row page-header bg-light pt-2 pb-3 mb-3">
-    <div class="col-auto fs-3">Latest Posts</div>
-    <div class="col-auto fs-3 text-secondary">|</div>
-    <div class="col-auto fs-3 text-secondary">50 results</div>
-    <div class="col-12">In this page we listed all the bridges so we have collected so far.</div>
+  <div class="row page-header pt-4 pb-4 mb-3 mx-0">
+    <div class="title col-auto fs-3">Latest Posts</div>
+    <div class="col-auto fs-3">|</div>
+    <div class="col-auto fs-3">{{count}} results</div>
+    <div class="col-12 fst-italic">In this page we listed all the bridges we have collected so far.</div>
   </div>
   <div class="row filter mb-1">
     <p>
-      <button class="btn btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-        Continent / Country
-      </button>
+      <button id="continent-button" class="btn btn-outline-dark me-2" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1" >Continent {{continentName}}</button>
+      <button id="country-button" class="btn btn-outline-dark me-2" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Country {{countryName}}</button>
+      <button class="btn btn-outline-dark" (click)="clearFilter()"><i class="fa-regular fa-circle-xmark"></i>  Clear filter</button>
     </p>
-    <div class="collapse" id="collapseExample">
-      <div class="card card-body">
-        <div class="d-flex align-items-start">
-          <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            <button class="nav-link active" id="v-pills-north-america-tab" data-bs-toggle="pill" data-bs-target="#v-pills-north-america" type="button" role="tab" aria-controls="v-pills-north-america" aria-selected="true">North America</button>
-            <button class="nav-link" id="v-pills-south-america-tab" data-bs-toggle="pill" data-bs-target="#v-pills-south-america" type="button" role="tab" aria-controls="v-pills-south-america" aria-selected="false">South America</button>
-            <button class="nav-link" id="v-pills-europe-tab" data-bs-toggle="pill" data-bs-target="#v-pills-europe" type="button" role="tab" aria-controls="v-pills-europe" aria-selected="false">Europe</button>
-            <button class="nav-link" id="v-pills-africa-tab" data-bs-toggle="pill" data-bs-target="#v-pills-africa" type="button" role="tab" aria-controls="v-pills-africa" aria-selected="false">Africa</button>
-            <button class="nav-link" id="v-pills-asia-tab" data-bs-toggle="pill" data-bs-target="#v-pills-asia" type="button" role="tab" aria-controls="v-pills-asia" aria-selected="false">Asia</button>
-            <button class="nav-link" id="v-pills-australia-tab" data-bs-toggle="pill" data-bs-target="#v-pills-australia" type="button" role="tab" aria-controls="v-pills-australia" aria-selected="false">Australia</button>
+    <div class="row pe-0">
+      <div class="col-12 pe-0">
+        <div class="collapse multi-collapse" id="multiCollapseExample1">
+          <div class="card card-body py-1 mb-3">
+            <div class="row">
+              <button class="filter-button col-6 col-md-auto" *ngFor="let continent of CONTINENTS" (click)="filterByContinent(continent)">{{continent.name}}</button>
+            </div>
           </div>
-          <div class="tab-content" id="v-pills-tabContent">
-            <div class="tab-pane fade show active" id="v-pills-north-america" role="tabpanel" aria-labelledby="v-pills-north-america-tab">
-              <a href="#">All</a>
-              <a href="#">United State</a>
-              <a href="#">Canada</a>
-              <a href="#">Mexico</a>
-              <a href="#">All</a>
-              <a href="#">United State</a>
-              <a href="#">Canada</a>
-              <a href="#">Mexico</a>
-              <a href="#">All</a>
-              <a href="#">United State</a>
-              <a href="#">Canada</a>
-              <a href="#">Mexico</a>
-              <a href="#">All</a>
-              <a href="#">United State</a>
-              <a href="#">Canada</a>
-              <a href="#">Mexico</a>
-              <a href="#">All</a>
-              <a href="#">United State</a>
-              <a href="#">Canada</a>
-              <a href="#">Mexico</a>
+        </div>
+      </div>
+      <div class="col-12 pe-0">
+        <div class="collapse multi-collapse" id="multiCollapseExample2">
+          <div class="card card-body py-1 mb-3">
+            <div class="row">
+              <button class="filter-button col-6 col-md-auto" *ngFor="let country of COUNTRIES" (click)="filterByCountry(country)">{{country.country_name}}</button>
             </div>
-            <div class="tab-pane fade" id="v-pills-south-america" role="tabpanel" aria-labelledby="v-pills-south-america-tab">2</div>
-            <div class="tab-pane fade" id="v-pills-europe" role="tabpanel" aria-labelledby="v-pills-europe-tab">3</div>
-            <div class="tab-pane fade" id="v-pills-africa" role="tabpanel" aria-labelledby="v-pills-africa-tab">4</div>
-            <div class="tab-pane fade" id="v-pills-asia" role="tabpanel" aria-labelledby="v-pills-asia-tab">
-              <div class="row">
-                <div class="col-12"><a>All</a></div>
-                <div class="col-auto"><a>Afghanistan</a></div>
-                <div class="col-auto"><a>Armenia</a></div>
-                <div class="col-auto"><a>Azerbaijan</a></div>
-                <div class="col-auto"><a>Bahrain</a></div>
-                <div class="col-auto"><a>Bangladesh</a></div>
-                <div class="col-auto"><a>Bhutan</a></div>
-                <div class="col-auto"><a>Brunei</a></div>
-                <div class="col-auto"><a>Cambodia</a></div>
-                <div class="col-auto"><a>China</a></div>
-                <div class="col-auto"><a>India</a></div>
-                <div class="col-auto"><a>Indonesia</a></div>
-                <div class="col-auto"><a>Iran</a></div>
-                <div class="col-auto"><a>Iraq</a></div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="v-pills-australia" role="tabpanel" aria-labelledby="v-pills-australia-tab">6</div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="row post-card mb-4">
+  <div class="row post-card mb-4" *ngFor="let post of POSTS | paginate: {itemsPerPage: listSize, currentPage: page, totalItems: count}; let i = index">
     <div class="col-12 d-md-none">
-      <div class="bridge-name fs-4">Golden Gate Bridge</div>
-      <div class="posted-date text-black-50">Posted on 05/09/2022</div>
+      <div class="bridge-name fs-4">{{post.bridge_name}}</div>
+      <div class="posted-date text-black-50">Posted on {{post.posted_date}}</div>
     </div>
-    <div class="col-12 col-md-4">
-      <img class="thumbnail" src="assets/images/golden_gate_bridge.jpg">
+    <div class="col-12 col-md-4 thumbnail-container">
+      <img class="thumbnail" src="{{post.thumbnail}}">
     </div>
     <div class="col-12 col-md-8">
       <div class="title row d-none d-md-flex mb-3">
-        <div class="bridge-name fs-4">Golden Gate Bridge</div>
-        <div class="posted-date text-black-50">Posted on 05/09/2022</div>
+        <div class="bridge-name fs-4">{{post.bridge_name}}</div>
+        <div class="posted-date text-black-50">Posted on {{post.posted_date}}</div>
       </div>
       <div class="detail row">
-        <div class="col-2"><strong>Location:</strong></div>
-        <div class="col-10">San Francisco, California and Marin County, California, U.S.</div>
-        <div class="col-2"><strong>Type:</strong></div>
-        <div class="col-10">Suspension</div>
-        <div class="col-2"><strong>Length:</strong></div>
-        <div class="col-10">2,737.1 m</div>
-        <div class="col-2"><strong>Height:</strong></div>
-        <div class="col-10">227.4 m</div>
-        <div class="col-2"><strong>Opened:</strong></div>
-        <div class="col-10">May 27, 1937</div>
+        <div class="col-3 col-lg-2"><strong>Location:</strong></div>
+        <div class="col-9 col-lg-10">{{post.detail_location}}</div>
+        <div class="col-3 col-lg-2"><strong>Country:</strong></div>
+        <div class="col-9 col-lg-10">{{post.country_name}}</div>
+        <div class="col-3 col-lg-2"><strong>Continent:</strong></div>
+        <div class="col-9 col-lg-10">{{post.continent_name}}</div>
+        <div class="col-3 col-lg-2"><strong>Type:</strong></div>
+        <div class="col-9 col-lg-10">{{post.type}}</div>
+        <div class="col-3 col-lg-2"><strong>Length:</strong></div>
+        <div class="col-9 col-lg-10">{{post.total_length}} m</div>
       </div>
     </div>
   </div>
 
-  <div class="row post-card mb-4">
-    <div class="col-12 d-md-none">
-      <div class="bridge-name fs-4">Golden Gate Bridge</div>
-      <div class="posted-date text-black-50">Posted on 05/09/2022</div>
-    </div>
-    <div class="col-12 col-md-4">
-      <img class="thumbnail" src="assets/images/golden_gate_bridge.jpg">
-    </div>
-    <div class="col-12 col-md-8">
-      <div class="title row d-none d-md-flex mb-3">
-        <div class="bridge-name fs-4">Golden Gate Bridge</div>
-        <div class="posted-date text-black-50">Posted on 05/09/2022</div>
-      </div>
-      <div class="detail row">
-        <div class="col-2"><strong>Location:</strong></div>
-        <div class="col-10">San Francisco, California and Marin County, California, U.S.</div>
-        <div class="col-2"><strong>Type:</strong></div>
-        <div class="col-10">Suspension</div>
-        <div class="col-2"><strong>Length:</strong></div>
-        <div class="col-10">2,737.1 m</div>
-        <div class="col-2"><strong>Height:</strong></div>
-        <div class="col-10">227.4 m</div>
-        <div class="col-2"><strong>Opened:</strong></div>
-        <div class="col-10">May 27, 1937</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row post-card mb-4">
-    <div class="col-12 d-md-none">
-      <div class="bridge-name fs-4">Golden Gate Bridge</div>
-      <div class="posted-date text-black-50">Posted on 05/09/2022</div>
-    </div>
-    <div class="col-12 col-md-4">
-      <img class="thumbnail" src="assets/images/golden_gate_bridge.jpg">
-    </div>
-    <div class="col-12 col-md-8">
-      <div class="title row d-none d-md-flex mb-3">
-        <div class="bridge-name fs-4">Golden Gate Bridge</div>
-        <div class="posted-date text-black-50">Posted on 05/09/2022</div>
-      </div>
-      <div class="detail row">
-        <div class="col-2"><strong>Location:</strong></div>
-        <div class="col-10">San Francisco, California and Marin County, California, U.S.</div>
-        <div class="col-2"><strong>Type:</strong></div>
-        <div class="col-10">Suspension</div>
-        <div class="col-2"><strong>Length:</strong></div>
-        <div class="col-10">2,737.1 m</div>
-        <div class="col-2"><strong>Height:</strong></div>
-        <div class="col-10">227.4 m</div>
-        <div class="col-2"><strong>Opened:</strong></div>
-        <div class="col-10">May 27, 1937</div>
-      </div>
-    </div>
-  </div>
+  <pagination-controls class="posts-pagination"
+    previousLabel=""
+    nextLabel=""
+    (pageChange)="onListDataChange($event)">
+  </pagination-controls>
 
 </div>
 
