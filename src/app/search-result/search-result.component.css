@@ -1,0 +1,42 @@
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
+
+.page-header .title{
+  font-family: 'Abril Fatface', serif;
+}
+.page-header{
+  background-image: linear-gradient(to right, rgba(246, 245, 245, 0.81), rgba(255, 61, 0, 0)), url("../../assets/images/bridges-list/golden_gate_bridge/9.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#continent-button:hover, #country-button:hover{
+  color: white;
+  background-color: #ff3d00;
+  border-color: #ff3d00;
+}
+.filter-button{
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.5rem;
+}
+.filter-button:hover{
+  background-color: #ff3d00;
+  border: 1px solid #ff3d00;
+  border-radius: 0.25rem;
+  color: white;
+}
+.thumbnail-container{
+  height: 15rem;
+}
+.thumbnail-container .thumbnail{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.posts-pagination::ng-deep .ngx-pagination {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+.posts-pagination::ng-deep .ngx-pagination .current{
+  background-color: #ff3d00;
+}

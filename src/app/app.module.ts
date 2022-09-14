@@ -17,11 +17,13 @@ import { LatestPostsComponent } from './latest-posts/latest-posts.component';
 import { BridgeDetailComponent } from './bridge-detail/bridge-detail.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { TopListPageComponent } from './top-list-page/top-list-page.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'latest-posts', component: LatestPostsComponent},
-  {path: 'top-list-page', component: TopListPageComponent},
+  {path: 'top-list-page/:id', component: TopListPageComponent},
+  {path: 'search-result/:name', component: SearchResultComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'contact-us', component: ContactUsComponent},
   {path: 'faq', component: FaqComponent},
@@ -43,7 +45,8 @@ const appRoutes: Routes = [
     LatestPostsComponent,
     TopListPageComponent,
     LatestPostsComponent,
-    BridgeDetailComponent
+    BridgeDetailComponent,
+    SearchResultComponent
   ],
   imports: [
     BrowserModule,

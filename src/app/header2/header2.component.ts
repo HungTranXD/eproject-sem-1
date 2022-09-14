@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-header2',
@@ -7,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Header2Component implements OnInit {
 
-  constructor() { }
+  searchInput: string = '';
+
+  displaySideMenu = 0;
+  displaySearchBar = 0;
+
+  constructor( private router: Router) { }
 
   ngOnInit(): void {
   }
-  displaySideMenu = 0;
-  displaySearchBar = 0;
+
 }

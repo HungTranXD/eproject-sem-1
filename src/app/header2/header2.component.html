@@ -5,7 +5,7 @@
         <i class="fa-solid fa-bars" (click)="displaySideMenu = 1" [class.hide]="displaySideMenu == 1"></i>
       </div>
       <div class="logo">
-        <a href="#"><img src="assets/images/logo-white.png" alt="logo" width="150"/></a>
+        <a routerLink="/"><img src="assets/images/logo-white.png" alt="logo" width="150"/></a>
       </div>
       <div class="nav-items" [class.active]="displaySideMenu == 1">
         <li><a routerLink="/">Home</a></li>
@@ -40,13 +40,14 @@
       <div class="cancel-icon" [class.show]="displaySideMenu == 1 || displaySearchBar == 1" (click)="displaySideMenu = 0; displaySearchBar = 0">
         <i class="fa-solid fa-xmark"></i>
       </div>
-      <form action="#" [class.active]="displaySearchBar == 1">
-        <input type="search" class="search-data" placeholder="Search" required>
-        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-      </form>
+      <div class="form" action="#" [class.active]="displaySearchBar == 1">
+        <input type="text" [(ngModel)]="searchInput" class="search-data" placeholder="Search" required/>
+        <button type="submit" [routerLink]="['/search-result',searchInput]"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
     </nav>
   </div>
 </div>
 <!-- Due to header fixed top position > this div is created to push content below header -->
 <div style="height: 80px"></div>
+
 
