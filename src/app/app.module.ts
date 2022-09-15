@@ -18,6 +18,8 @@ import { BridgeDetailComponent } from './bridge-detail/bridge-detail.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { TopListPageComponent } from './top-list-page/top-list-page.component';
 import { SearchResultComponent } from './search-result/search-result.component';
+import { BridgeDetailGalleryComponent } from './bridge-detail-gallery/bridge-detail-gallery.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -46,14 +48,16 @@ const appRoutes: Routes = [
     TopListPageComponent,
     LatestPostsComponent,
     BridgeDetailComponent,
-    SearchResultComponent
+    SearchResultComponent,
+    BridgeDetailGalleryComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     NgxPaginationModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -81,7 +81,6 @@ a:hover{
 /*  CONTENT 2 -- VISION  */
 .row.vision {
   padding: 10px 0;
-  border-bottom: #0f3f85 1px solid;
 }
 /*  including the CSS of the "MISSION" section  */
 .title-vision, .title-mission {
@@ -106,7 +105,10 @@ a:hover{
 }
 
 /*  CONTENT 3 -- MISSION  */
-.row.mission .title-vision {
+.mission {
+  border-top: #0f3f85 1px solid;
+}
+.mission .title-vision {
   margin-top: 25px;
   margin-bottom: 15px;
   font-weight: bolder;
@@ -156,7 +158,7 @@ a:hover{
   padding: 12px;
   font-family: 'Source Sans Pro', sans-serif;
   text-align: justify;
-  box-shadow: 5px 5px 3px 3px #7a8085;
+  filter: drop-shadow(1px 2px 1px black);
 }
 
 /*  CONTENT 5 -- OUR TEAM  */
@@ -171,37 +173,36 @@ a:hover{
   letter-spacing: 2px;
 }
 .title-our-team {
+  margin-bottom: -5px;
   border-bottom: 1px #0f3f85 solid;
 }
 .content-our-team {
-  margin: 27px 0;
+  margin-top: 10px;
 }
 .content-our-team .member-infor {
   background-color: #e5e9ea;
   text-align: center;
   padding-top: 17px;
+  filter: drop-shadow(0 0 2px black);
 }
 .fa-sharp.fa-solid.fa-circle-user {
   font-size: 150px;
   display: flex;
   justify-content: center;
 }
-.member-infor .mem-infor {
+.member-infor .content-main {
   padding-top: 10px;
 }
-.mem-infor .name {
+.content-main .name {
   text-transform: uppercase;
 }
-.mem-infor .position {
+.content-main .position {
   font-family: 'Source Sans Pro', sans-serif;
 }
-.mem-infor .position.num2 {
+.content-main .position.num2 {
   padding-bottom: 15px;
 }
-.content-our-team .col {
-  width: 264px;
-  height: 264px;
-}
+
 
 /*  DISPLAY SCREEN LESS THAN 1400px  */
 @media (max-width: 1400px){
@@ -215,17 +216,17 @@ a:hover{
     margin: 0 40px;
   }
 
-  /*  CONTENT 4 -- OUR TEAM*/
-  .content-our-team .col {
-    width: 264px;
-  }
-  /*  CONTENT4 -- OUR COMMITMENT  */
+  /*  CONTENT 4 -- OUR COMMITMENT  */
   .content-commitment .col-4 {
     width: 100%;
   }
   .content-commitment .col-4 p {
     width: 100%;
     padding: 20px;
+  }
+  /*  CONTENT 5 -- OUR TEAM*/
+  .content-member-information {
+
   }
 }
 
@@ -292,13 +293,21 @@ a:hover{
 
 /*  DISPLAY SCREEN LESS THAN 740px  */
 @media (max-width: 740px){
+  .container {
+    padding: 0 10px;
+  }
   /*  CAROUSEL  */
   #carouselExampleCaptions {
     padding: 0 15px;
   }
   /*    CONTENT 1 - ABOUT US  */
-  .row.greeting.col-5 {
+  .row.greeting .col-5 {
     padding: 0 0 20px 0;
+  }
+  .row.greeting .col-5 .greeting {
+    padding: 0 20px;
+    text-align: center;
+    font-size: 18px;
   }
   /*  CONTENT 2 -- VISION  */
   .title-vision {
@@ -316,7 +325,17 @@ a:hover{
     margin: 0 20px;
   }
   /*  CONTENT 4 -- OUR COMMITMENT  */
-  .content-commitment .col-4 p {
+  .our-commitment {
+
+  }
+  .content-commitment .col-4 {
+    padding: 0 15px;
+  }
+  .content-commitment p {
     padding: 20px;
+  }
+  /*  CONTENT 5 -- OUR TEAM  */
+  .our-team {
+
   }
 }

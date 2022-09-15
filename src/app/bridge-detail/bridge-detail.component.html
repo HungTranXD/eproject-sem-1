@@ -1,10 +1,12 @@
-<div class="container">
-  <!--  BRIDGE NAME // TÊN CẦU  -->
-  <div class="row page-header bg-light pt-2 pb-3 mb-3">
-    <div class="col-12 fs-3" style="text-shadow: 0 1px 1px #cc0000;">Golden Gate Bridge</div>
-    <div class="col-12" style="font-style: italic ">Posted on 2022-09-08</div>
+<!--  BRIDGE NAME // TÊN CẦU  -->
+<div class="bridge-name">
+  <div class="container">
+    <div class="name">Golden Gate Bridge</div>
+    <div class="post-day">Posted on 2022-09-08</div>
   </div>
+</div>
 
+<div class="container">
   <!--  THUMBNAIL AND SUMMARY INFORMATION // HÌNH ẢNH VA THÔNG TIN TÓM TẮT  -->
   <div class="row">
     <!--SLIDE-->
@@ -150,7 +152,9 @@
   </div>
 
   <!-- GALLERY -->
-  <app-gallery>
-  </app-gallery>
+  <app-bridge-detail-gallery
+    [galleryDataImage]="data"
+    [showCount]="true"
+  ></app-bridge-detail-gallery>
 </div>
 
