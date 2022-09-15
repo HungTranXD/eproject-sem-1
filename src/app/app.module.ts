@@ -23,7 +23,7 @@ const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'latest-posts', component: LatestPostsComponent},
   {path: 'top-list-page/:id', component: TopListPageComponent},
-  {path: 'search-result/:name', component: SearchResultComponent},
+  {path: 'search-result', component: SearchResultComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'contact-us', component: ContactUsComponent},
   {path: 'faq', component: FaqComponent},

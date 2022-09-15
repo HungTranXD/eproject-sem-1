@@ -26,5 +26,7 @@ export class Header2Component implements OnInit {
   submit() {
     console.log(this.searchInputValue);
     this.searchInputService.changeInputMessage(this.searchInputValue);
+    this.router.navigate(['/search-result']);
+    this.searchInputService.senClickEvent();
   }
 }

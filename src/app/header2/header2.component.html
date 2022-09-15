@@ -41,8 +41,8 @@
         <i class="fa-solid fa-xmark"></i>
       </div>
       <div class="form" action="#" [class.active]="displaySearchBar == 1">
-        <input type="text"  class="search-data" placeholder="Search" required/>
-        <button type="submit" ><i class="fa-solid fa-magnifying-glass"></i></button>
+        <input type="text" [(ngModel)]="searchInputValue" class="search-data" placeholder="Search" required/>
+        <button type="submit" (click)="submit()"><i class="fa-solid fa-magnifying-glass"></i></button>
       </div>
     </nav>
   </div>
