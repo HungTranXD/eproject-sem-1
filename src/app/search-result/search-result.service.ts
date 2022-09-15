@@ -10,7 +10,7 @@ export class SearchResultService {
   constructor( private http: HttpClient) { }
 
   searchBridgesByName(name: string): Observable<any> {
-    const url = 'http://localhost:5000/search-bridge';
+    const url = 'https://tranhungfptaptech.herokuapp.com/search-bridge';
     let params = new HttpParams();
     params = params.append('q', name);
     return this.http.get(url, {params: params});

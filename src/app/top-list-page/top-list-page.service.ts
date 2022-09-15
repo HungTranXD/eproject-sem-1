@@ -11,7 +11,7 @@ export class TopListPageService {
 
   //Call API get top list info (name, description of the top list)
   getTopListInfo(topListId: number): Observable<any> {
-    const url = 'http://localhost:5000/api-top-list-info';
+    const url = 'https://tranhungfptaptech.herokuapp.com/api-top-list-info';
     let params = new HttpParams();
     params = params.append('toplistid', topListId);
     return this.http.get(url, {params: params});
@@ -19,7 +19,7 @@ export class TopListPageService {
 
   //Call API get top 10 bridges in the top list
   get10Bridges(sortOrder: string): Observable<any> {
-    const url = 'http://localhost:5000/api-top-10-bridges';
+    const url = 'https://tranhungfptaptech.herokuapp.com/api-top-10-bridges';
     let params = new HttpParams();
     params = params.append('sortorder', sortOrder);
     return this.http.get(url, {params: params});
