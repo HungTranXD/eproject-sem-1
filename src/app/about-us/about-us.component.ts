@@ -19,7 +19,7 @@ export class AboutUsComponent implements OnInit {
     {memberName : 'Nguyen Duy Quoc', positionOne : 'Member', positionTwo : 'Software Developer'},
     {memberName : 'Nguyen Hong Quang', positionOne : 'Member', positionTwo : 'Software Developer'},
     {memberName : 'Nguyen Truong Giang', positionOne : 'Member', positionTwo : 'Software Developer'},
-    {memberName : 'Paolo Maldini', positionOne : 'Member', positionTwo : 'Software Developer'}
+    {memberName : 'Trinh Quang Hoa', positionOne : 'Member', positionTwo : 'Software Developer'}
   ];
 
   constructor() { }
