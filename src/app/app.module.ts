@@ -20,17 +20,22 @@ import { TopListPageComponent } from './top-list-page/top-list-page.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { BridgeDetailGalleryComponent } from './bridge-detail-gallery/bridge-detail-gallery.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { BridgesByContinentComponent } from './bridges-by-continent/bridges-by-continent.component';
+import { BridgesHistoryComponent } from './bridges-history/bridges-history.component';
+import {LightboxModule} from "ngx-lightbox";
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'latest-posts', component: LatestPostsComponent},
   {path: 'top-list-page/:id', component: TopListPageComponent},
-  {path: 'search-result', component: SearchResultComponent},
+  {path: 'search-result/:name', component: SearchResultComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'contact-us', component: ContactUsComponent},
   {path: 'faq', component: FaqComponent},
   {path: 'gallery', component: GalleryComponent},
-  {path: 'bridge-detail', component: BridgeDetailComponent}
+  {path: 'bridge-detail', component: BridgeDetailComponent},
+  {path: 'bridges-by-continent/:id', component: BridgesByContinentComponent},
+  {path: 'bridges-history', component: BridgesHistoryComponent},
 ];
 
 @NgModule({
@@ -49,7 +54,9 @@ const appRoutes: Routes = [
     LatestPostsComponent,
     BridgeDetailComponent,
     SearchResultComponent,
-    BridgeDetailGalleryComponent
+    BridgeDetailGalleryComponent,
+    BridgesByContinentComponent,
+    BridgesHistoryComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +64,8 @@ const appRoutes: Routes = [
     NgxPaginationModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    LightboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

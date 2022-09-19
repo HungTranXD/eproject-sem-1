@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SearchInputService } from './search-input.service';
+import { Header2Service } from './header2.service';
 
-describe('SearchInputService', () => {
-  let service: SearchInputService;
+describe('Header2Service', () => {
+  let service: Header2Service;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(SearchInputService);
+    service = TestBed.inject(Header2Service);
   });
 
   it('should be created', () => {

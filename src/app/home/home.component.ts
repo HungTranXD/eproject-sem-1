@@ -12,9 +12,16 @@ export class HomeComponent implements OnInit {
   displayMoreTopList = 0;
   displayMoreLatestPost = 0;
 
+  //Url for cssmapsplugin java script file
+  url = 'assets/cssmapsplugin.js';
+
+
   constructor( private homeService: HomeService) { }
 
   ngOnInit(): void {
+    //Load js file for cssmapsplugin
+    this.loadAPI;
+
     this.allTopLists();
     this.someLatestPosts();
   }
@@ -35,12 +42,18 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  latestPostData = [
-    {title: 'The Brooklyn Bridge', country: 'United State', continent: 'North America', thumbnail: 'assets/images/brooklyn_bridge.jpg'},
-    {title: 'The Brooklyn Bridge', country: 'United State', continent: 'North America', thumbnail: 'assets/images/brooklyn_bridge.jpg'},
-    {title: 'The Brooklyn Bridge', country: 'United State', continent: 'North America', thumbnail: 'assets/images/brooklyn_bridge.jpg'},
-    {title: 'The Brooklyn Bridge', country: 'United State', continent: 'North America', thumbnail: 'assets/images/brooklyn_bridge.jpg'},
-    {title: 'The Brooklyn Bridge', country: 'United State', continent: 'North America', thumbnail: 'assets/images/brooklyn_bridge.jpg'},
-    {title: 'The Brooklyn Bridge', country: 'United State', continent: 'North America', thumbnail: 'assets/images/brooklyn_bridge.jpg'},
-  ];
+  //Create methods to load java scripts in ngOnInit
+  public loadSript() {
+    console.log("preparing to load...");
+    let node = document.createElement("script");
+    node.src = this.url;
+    node.type = "text/javascript";
+    node.async = true;
+    node.charset = "utf-8";
+    document.getElementsByTagName("head")[0].appendChild(node);
+  }
+  loadAPI = new Promise( resolve => {
+    console.log("resolving promise...");
+    this.loadSript();
+  })
 }
