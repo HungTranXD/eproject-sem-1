@@ -1,0 +1,75 @@
+.title-main {
+  font-family: 'Nanum Gothic', sans-serif;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  align-items: center;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 35px;
+  padding: 30px 0;
+  background-color: #f6f5f5;
+}
+
+.title-accordion {
+  text-align: center;
+  margin: 30px 20px;
+  font-style: italic;
+}
+
+.accordion.accordion-flush{
+  margin: 0 250px;
+}
+
+.accordion-item button {
+  background-color: #f8f6f6;
+  border: none;
+  color: black;
+
+}
+
+
+.accordion-item {
+  margin: 25px;
+}
+.accordion-body {
+  margin-top: 10px;
+  border-left: #e1e0e0 1px solid;
+  border-right:#e1e0e0 1px solid;
+}
+
+
+.accordion-button:focus {
+  z-index: 3;
+  border-color: #ff3d00;
+  outline: 0;
+  box-shadow: none;
+}
+
+.words-of-thanks {
+  font-family: 'Nanum Gothic', sans-serif;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  margin-top: 10px;
+  padding: 30px 0;
+  text-shadow: 0 1px 1px #cc0000;
+  text-transform: uppercase;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  transform: rotate(-180deg);
+}
+.accordion-button::after {
+  flex-shrink: 0;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-left: auto;
+  content: "";
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: 0.8rem;
+  transition: transform 0.2s ease-in-out;
+}
