@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, TemplateRef} from '@angular/core';
 import {HomeService} from "./home.service";
 
 @Component({
@@ -15,6 +15,8 @@ export class HomeComponent implements OnInit {
   //Url for cssmapsplugin java script file
   url = 'assets/cssmapsplugin.js';
 
+  public loading = true;
+  public loadingTemplate !: TemplateRef<any>;
 
   constructor( private homeService: HomeService) { }
 
@@ -28,10 +30,17 @@ export class HomeComponent implements OnInit {
 
   //Display all top lists
   allTopLists(): void {
-    this.homeService.getAllTopLists().subscribe( response => {
-      this.ALLTOPLISTS = response;
-      console.log(this.ALLTOPLISTS);
-    })
+    this.loading = true;
+    this.homeService.getAllTopLists().subscribe(
+      (response) => {
+        this.loading = false;
+        this.ALLTOPLISTS = response;
+        console.log(this.ALLTOPLISTS);
+      },
+      (err) => {
+        this.loading = false
+      }
+    )
   }
 
   //Display 6 latest posts

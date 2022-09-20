@@ -23,6 +23,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { BridgesByContinentComponent } from './bridges-by-continent/bridges-by-continent.component';
 import { BridgesHistoryComponent } from './bridges-history/bridges-history.component';
 import {LightboxModule} from "ngx-lightbox";
+import {ngxLoadingAnimationTypes, NgxLoadingModule} from "ngx-loading";
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -66,6 +67,14 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
     LightboxModule,
+    NgxLoadingModule.forRoot({
+      animationType: ngxLoadingAnimationTypes.wanderingCubes,
+      backdropBackgroundColour: "rgba(0,0,0)",
+      backdropBorderRadius: "4px",
+      primaryColour: "#ffffff",
+      secondaryColour: "#ffffff",
+      tertiaryColour: "#ffffff",
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

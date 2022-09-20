@@ -7,8 +7,8 @@
       <div class="title">Welcome to Bridge.com</div>
       <div class="content">In here you can find information and images about some of the world’s most Incredible bridges, both young and old.</div>
       <div class="linkgroup">
-        <a class="about-link">About us</a>
-        <a class="about-link">Contact us</a>
+        <a class="about-link" routerLink="/about-us">About us</a>
+        <a class="about-link" routerLink="/contact-us">Contact us</a>
       </div>
     </div>
   </div>
@@ -22,6 +22,7 @@
 
 
   <!-- TOP sections (like top longest, top tallest, top oldest bridges -->
+
   <div class="top-list row g-2">
     <div class="col-12 col-md-auto px-0">
       <div class="header px-3">
@@ -40,7 +41,14 @@
     <button class="show-more-button d-md-none" (click)="displayMoreTopList = 1" [class.d-none]="displayMoreTopList == 1">Show more</button>
     <button class="show-more-button d-md-none" (click)="displayMoreTopList = 0" [class.d-none]="displayMoreTopList == 0">Show less</button>
     <div class="row border-bottom border-dark mx-0 mt-2"></div>
+
+
+
   </div>
+
+
+
+
 
 
   <!-- Browse bridges by continents -->
@@ -88,6 +96,12 @@
 <!--    <div class="row border-bottom border-dark mx-0 mt-2"></div>-->
   </div>
 
+
+
+  <ngx-loading
+    [show]="loading"
+    [template]="loadingTemplate"
+  ></ngx-loading>
 </div>
 
 
