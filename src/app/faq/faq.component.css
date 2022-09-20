@@ -73,3 +73,30 @@
   background-size: 0.8rem;
   transition: transform 0.2s ease-in-out;
 }
+/*  DISPLAY SCREEN LESS THAN 1400px  */
+@media (max-width: 1400px) {
+  .accordion.accordion-flush{
+    margin: 0 100px;
+  }
+}
+/*  DISPLAY SCREEN LESS THAN 1024px  */
+@media (max-width: 1024px) {
+  .accordion.accordion-flush{
+    margin: 10px;
+  }
+}
+/*  DISPLAY SCREEN LESS THAN 724px  */
+@media (max-width: 724px) {
+  .accordion.accordion-flush{
+    margin: 10px;
+  }
+  .title-main {
+    font-size: 25px;
+    text-align: center;
+  }
+  .words-of-thanks {
+    font-size: 20px;
+    padding: 25px 0;
+  }
+
+}
