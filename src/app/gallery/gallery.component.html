@@ -1,82 +1,25 @@
-<!-- GALLERY -->
 <div class="container">
-  <div class="gallery-lightbox-container">
-    <div class="title-main">
-      <p>Gallery</p>
+  <div class="row align-items-center page-header pt-4 pb-4 mb-3 mx-0">
+    <div class="col-12 col-md-9 col-lg-11 row">
+      <div class="title col-auto fs-3 text-light">Images gallery</div>
+      <div class="col-12 fst-italic text-light">A collection off all bridge images, photos, paintings from all continents.</div>
     </div>
-  </div>
-
-  <div class="content-img"></div>
-
-  <div class="content-img">
-    <div class="row">
-      <div class="col-4">
-        <div class="row" *ngFor="let data of galleryData; let i = index">
-          <div class="wrapper">
-            <div class="img">
-              <img class="img-fluid" src="{{data.imageSrc}}" alt="{{data.imageAlt}}">
-            </div>
-            <div class="title">
-              {{data.titleGalleryImg}}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="row" *ngFor="let data of galleryData; let i = index">
-          <div class="wrapper">
-            <div class="img">
-              <img class="img-fluid" src="{{data.imageSrc}}" alt="{{data.imageAlt}}">
-            </div>
-            <div class="title">
-              {{data.titleGalleryImg}}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="row" *ngFor="let data of galleryData; let i = index">
-          <div class="wrapper">
-            <div class="img">
-              <img class="img-fluid" src="{{data.imageSrc}}" alt="{{data.imageAlt}}">
-            </div>
-            <div class="title">
-              {{data.titleGalleryImg}}
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="d-none d-md-block col-md-3 col-lg-1">
+      <img class="w-75" src="assets/images/image_icon.png"/>
     </div>
   </div>
 </div>
 
+<div class="container">
+  <div class="all-images">
+    <ul>
+      <li *ngFor="let image of tempIMAGES, let i = index">
+        <img [src]="image.url" [title]="image.title" (click)="open(i)"/>
+      </li>
+    </ul>
+    <div class="blur-effect" [class.d-none]="tempIMAGES.length == IMAGES.length"></div>
+  </div>
 
-<div class="gallery-room" style="!important;">
-  <div class="eliminate">
-    <i class="fa-solid fa-xmark" style="font-size: 40px"></i>
-  </div>
-  <div class="gallery-inner">
-    <img src="assets/images/great_belt_bridge.jpg" alt="img1">
-  </div>
-  <div class="control prev">
-    <i class="fa-solid fa-angle-left" style="font-size: 40px"></i>
-  </div>
-  <div class="control next">
-    <i class="fa-solid fa-angle-right" style="font-size: 40px"></i>
-  </div>
+  <button class="show-more-button w-100 my-1" (click)="showMore()" [class.d-none]="tempIMAGES.length == IMAGES.length">Show more  <i class="fa-solid fa-chevron-down"></i></button>
+  <button class="show-more-button w-100" (click)="showLess()" [class.d-none]="tempIMAGES.length == 50">Show less  <i class="fa-regular fa-circle-xmark"></i></button>
 </div>
-
-
-<!--  <div class="gallery" *ngFor="let data of galleryData; let i = index">-->
-<!--    <div class="gallery-image">-->
-<!--      <img src="{{data.imageSrc}}" alt="{{data.imageAlt}}">-->
-<!--    </div>-->
-<!--    <div class="title-image">-->
-<!--      {{data.titleGalleryImg}}-->
-<!--    </div>-->
-<!--  </div>-->
-
-
-
-
-

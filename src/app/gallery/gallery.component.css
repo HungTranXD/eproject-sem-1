@@ -1,77 +1,100 @@
-/*CSS gallery*/
-.title-main p {
-  width: 130px;
-  font-size: 1rem;
-  text-transform: uppercase;
-  background-color: black;
-  color: white;
-  padding-left: 10px;
-  margin-bottom: -1px;
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
+/* ---------- PAGE HEADER SECTION ---------- */
+.page-header .title{
+  font-family: 'Abril Fatface', serif;
 }
-.title-main {
-  border-bottom: 1px solid black;
-}
-.gallery-lightbox-container .title p {
-  margin-bottom: -1px;
-}
-.gallery-lightbox-container .title-main {
-  margin-bottom: 25px;
+.page-header{
+  background-image: linear-gradient(to right, rgba(255, 61, 0, 0.82), rgba(255, 255, 255, 0)), url("../../assets/images/bridges-list/golden_gate_bridge/9.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-.content-img .row .col-4 {
-  padding: 20px;
+/* ---------- ALL IMAGES LIST SECTION ---------- */
+.all-images{
+  position: relative;
 }
+/* BASIC*/
 
-.wrapper {
-  padding: 15px;
-  border-radius: 5px;
-  border: black 1px solid;
-  margin-bottom: 15px;
-}
-.wrapper .title {
-  margin-top: 10px;
-  height: 30px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-
-}
-.wrapper .title:hover {
-  color: #810303;
-  overflow: visible;
-  white-space: pre-line;
-  width: 350px;
-  height: auto;
-  background-color: #ececec;
-  position: absolute;
-  z-index: 1;
-  padding: 15px 10px;
-  box-shadow: 10px 10px #cbc9c9;
-  font-style: italic;
-  font-weight: normal;
-}
-.wrapper .img {
-  height: 182px;
-  overflow: hidden;
-}
-.wrapper img {
-  border-radius: 4px;
-  object-fit: cover;
-  object-position: center;
-  transition: 0.4s;
-}
-.wrapper .img:hover img{
-  transform: scale(1.5);
-}
-.gallery-room {
-  width: 100%;
-  height: 100%;
-  background: rgb(0, 0, 0, 0.6);
+.all-images ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
-
+  flex-wrap: wrap;
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
 }
-.gallery-inner {
 
+.all-images li {
+  height: 12rem;
+  flex-grow: 1;
+  margin: 0.1rem;
 }
+
+.all-images li:last-child {
+  /* There's no science in using "10" here. In all my testing, this delivered the best results.*/
+  flex-grow: 10;
+}
+
+.all-images img {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+  height: 12rem;
+}
+
+/* ADVANCED*/
+
+/* Portrait*/
+
+@media (max-aspect-ratio: 1/1) {
+  .all-images li {
+    height: 9rem;
+  }
+}
+
+/* Short screens*/
+
+@media (max-height: 480px) {
+  .all-images li {
+    height: 80vh;
+  }
+}
+
+/* Smaller screens in portrait*/
+
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+  .all-images ul {
+    flex-direction: row;
+  }
+
+  .all-images li {
+    height: auto;
+    width: 100%;
+  }
+  .all-images img {
+    width: 100%;
+    max-height: 75vh;
+    min-width: 0;
+  }
+}
+
+.blur-effect{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(transparent, white);
+  z-index: 2;
+}
+.show-more-button{
+  border: 1px solid #171c24;
+  color: #171c24;
+  background-color: transparent;
+  padding: 0.2rem 0;
+}
+.show-more-button:hover{
+  border: 1px solid #ff3d00;
+  color: #ff3d00;
+}
+
+

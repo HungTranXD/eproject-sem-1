@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row page-header pt-4 pb-4 mb-3 mx-0">
+    <div class="title col-auto fs-3">Search result for "{{searchInputValue}}"</div>
+    <div class="col-auto fs-3">|</div>
+    <div class="col-auto fs-3">{{POSTS.length}} results</div>
+    <div class="col-12 fst-italic">Click on bridge for more details.</div>
+  </div>
+
+
+  <div class="row post-card mb-4" *ngFor="let post of POSTS | paginate: {itemsPerPage: listSize, currentPage: page, totalItems: count}; let i = index">
+    <div class="col-12 d-md-none">
+      <div class="bridge-name fs-4">{{post.bridge_name}}</div>
+      <div class="posted-date text-black-50">Posted on {{post.posted_date}}</div>
+    </div>
+    <div class="col-12 col-md-4 thumbnail-container">
+      <img class="thumbnail" src="{{post.thumbnail}}">
+    </div>
+    <div class="col-12 col-md-8">
+      <div class="title row d-none d-md-flex mb-3">
+        <div class="bridge-name fs-4">{{post.bridge_name}}</div>
+        <div class="posted-date text-black-50">Posted on {{post.posted_date}}</div>
+      </div>
+      <div class="detail row">
+        <div class="col-3 col-lg-2"><strong>Location:</strong></div>
+        <div class="col-9 col-lg-10">{{post.detail_location}}</div>
+        <div class="col-3 col-lg-2"><strong>Country:</strong></div>
+        <div class="col-9 col-lg-10">{{post.country_name}}</div>
+        <div class="col-3 col-lg-2"><strong>Continent:</strong></div>
+        <div class="col-9 col-lg-10">{{post.continent_name}}</div>
+        <div class="col-3 col-lg-2"><strong>Type:</strong></div>
+        <div class="col-9 col-lg-10">{{post.type}}</div>
+        <div class="col-3 col-lg-2"><strong>Length:</strong></div>
+        <div class="col-9 col-lg-10">{{post.total_length}} m</div>
+      </div>
+    </div>
+  </div>
+
+  <pagination-controls class="posts-pagination"
+                       previousLabel=""
+                       nextLabel=""
+                       (pageChange)="onListDataChange($event)">
+  </pagination-controls>
+
+</div>

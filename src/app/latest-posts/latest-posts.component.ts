@@ -20,7 +20,7 @@ export class LatestPostsComponent implements OnInit {
   listSize: number = 10;
   listSizes: any = [5, 10, 15, 20];
 
-  //Create 2 more variables to store pramas for pagination onListDataChange() function
+  //Create 2 more variables to store parameters for pagination onListDataChange() function
   continentId: string = 'all';
   countryCode: string = 'all'
 

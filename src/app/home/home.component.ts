@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, TemplateRef} from '@angular/core';
+import {HomeService} from "./home.service";
 
 @Component({
   selector: 'app-home',
@@ -6,30 +7,62 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  ALLTOPLISTS: any;
+  SOMELATESTPOST: any;
+  displayMoreTopList = 0;
+  displayMoreLatestPost = 0;
 
-  constructor() { }
+  //Url for cssmapsplugin java script file
+  url = 'assets/cssmapsplugin.js';
+
+  public loading = true;
+  public loadingTemplate !: TemplateRef<any>;
+
+  constructor( private homeService: HomeService) { }
 
   ngOnInit(): void {
-  }
-  displayMoreTopList = 0;
-  topListData = [
-    {title: '10 Longest Bridges in the World', thumbnail: 'assets/images/brooklyn_bridge.jpg'},
-    {title: '10 Longest Bridges in the World', thumbnail: 'assets/images/brooklyn_bridge.jpg'},
-    {title: '10 Longest Bridges in the World', thumbnail: 'assets/images/brooklyn_bridge.jpg'},
-    {title: '10 Longest Bridges in the World', thumbnail: 'assets/images/brooklyn_bridge.jpg'},
-    {title: '10 Longest Bridges in the World', thumbnail: 'assets/images/brooklyn_bridge.jpg'},
-    {title: '10 Longest Bridges in the World', thumbnail: 'assets/images/brooklyn_bridge.jpg'},
-    {title: '10 Longest Bridges in the World', thumbnail: 'assets/images/brooklyn_bridge.jpg'},
-    {title: '10 Longest Bridges in the World', thumbnail: 'assets/images/brooklyn_bridge.jpg'},
-  ];
+    //Load js file for cssmapsplugin
+    this.loadAPI;
 
-  displayMoreLatestPost = 0;
-  latestPostData = [
-    {title: 'The Brooklyn Bridge', country: 'United State', continent: 'North America', thumbnail: 'assets/images/brooklyn_bridge.jpg'},
-    {title: 'The Brooklyn Bridge', country: 'United State', continent: 'North America', thumbnail: 'assets/images/brooklyn_bridge.jpg'},
-    {title: 'The Brooklyn Bridge', country: 'United State', continent: 'North America', thumbnail: 'assets/images/brooklyn_bridge.jpg'},
-    {title: 'The Brooklyn Bridge', country: 'United State', continent: 'North America', thumbnail: 'assets/images/brooklyn_bridge.jpg'},
-    {title: 'The Brooklyn Bridge', country: 'United State', continent: 'North America', thumbnail: 'assets/images/brooklyn_bridge.jpg'},
-    {title: 'The Brooklyn Bridge', country: 'United State', continent: 'North America', thumbnail: 'assets/images/brooklyn_bridge.jpg'},
-  ];
+    this.allTopLists();
+    this.someLatestPosts();
+  }
+
+  //Display all top lists
+  allTopLists(): void {
+    this.loading = true;
+    this.homeService.getAllTopLists().subscribe(
+      (response) => {
+        this.loading = false;
+        this.ALLTOPLISTS = response;
+        console.log(this.ALLTOPLISTS);
+      },
+      (err) => {
+        this.loading = false
+      }
+    )
+  }
+
+  //Display 6 latest posts
+  someLatestPosts(): void {
+    this.homeService.getPostsPerPage('all', 'all', 6, 0).subscribe( response => {
+      this.SOMELATESTPOST = response;
+      console.log(this.SOMELATESTPOST);
+    })
+  }
+
+  //Create methods to load java scripts in ngOnInit
+  public loadSript() {
+    console.log("preparing to load...");
+    let node = document.createElement("script");
+    node.src = this.url;
+    node.type = "text/javascript";
+    node.async = true;
+    node.charset = "utf-8";
+    document.getElementsByTagName("head")[0].appendChild(node);
+  }
+  loadAPI = new Promise( resolve => {
+    console.log("resolving promise...");
+    this.loadSript();
+  })
 }

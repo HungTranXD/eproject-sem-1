@@ -7,7 +7,7 @@ import { Observable} from "rxjs";
 })
 export class LatestPostsService {
 
-  constructor( private http: HttpClient) { }
+  constructor( private http: HttpClient ) { }
 
   getAllContinents(): Observable<any> {
     const url = 'https://tranhungfptaptech.herokuapp.com/api-get-continent';

@@ -1,4 +1,21 @@
-/*CSS summary information*/
+/*  BRIDGE NAME  */
+.bridge-name {
+  background-color: #f3f2f2;
+  margin: -10px 0 15px;
+
+}
+.bridge-name .name {
+  text-shadow: 0 1px 1px #cc0000;
+  font-size: 30px;
+  padding-top: 3px;
+}
+.bridge-name .post-day {
+  font-style: italic;
+  padding-bottom: 15px;
+}
+
+
+/*  CSS SUMMARY INFORMATION  */
 .col-4.information .col-5 {
   font-weight: bolder;
   text-transform: capitalize;
@@ -41,7 +58,8 @@
   border-bottom: 1px solid black;
 }
 
-/*CSS general introduction and history section*/
+
+/*  CSS GENERAL INTRODUCTION AND HISTORY SECTION  */
 .content {
   margin-bottom: 18px;
   line-height: 1.5;
@@ -79,6 +97,9 @@
     margin-bottom: 10px;
   }
 }
+
+
+/*  DISPLAY SCREEN LESS THAN 1024px  */
 @media (max-width: 1024px){
   .col-8.thumbnail {
     width: 100%;
@@ -107,4 +128,6 @@
     margin-bottom: 10px;
   }
 }
+/*  GALLERY  */
+
 

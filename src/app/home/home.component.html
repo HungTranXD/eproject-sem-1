@@ -7,8 +7,8 @@
       <div class="title">Welcome to Bridge.com</div>
       <div class="content">In here you can find information and images about some of the world’s most Incredible bridges, both young and old.</div>
       <div class="linkgroup">
-        <a class="about-link">About us</a>
-        <a class="about-link">Contact us</a>
+        <a class="about-link" routerLink="/about-us">About us</a>
+        <a class="about-link" routerLink="/contact-us">Contact us</a>
       </div>
     </div>
   </div>
@@ -22,7 +22,8 @@
 
 
   <!-- TOP sections (like top longest, top tallest, top oldest bridges -->
-  <div class="top-list row g-2" *ngIf="topListData">
+
+  <div class="top-list row g-2">
     <div class="col-12 col-md-auto px-0">
       <div class="header px-3">
         Top lists about bridges
@@ -30,17 +31,24 @@
     </div>
     <div class="row border-bottom border-dark mx-0"></div>
 
-    <div class="col-12 col-md-6" *ngFor="let t of topListData; let i = index" [class.col-lg-3]="i >= 2" [class.d-md-block]="i >= 3" [ngClass]="{'d-none': displayMoreTopList == 0 && i >= 3, 'd-block': displayMoreTopList == 1 && i >= 3}">
-      <a [routerLink]="['/top-list-page', t.title]"><div class="top-list-card">
-        <img class="thumbnail" src="{{t.thumbnail}}"/>
-        <div class="title">{{t.title}}</div>
+    <div class="col-12 col-md-6" *ngFor="let all of ALLTOPLISTS; let i = index" [class.col-lg-3]="i >= 2" [class.d-md-block]="i >= 3" [ngClass]="{'d-none': displayMoreTopList == 0 && i >= 3, 'd-block': displayMoreTopList == 1 && i >= 3}">
+      <a [routerLink]="['/top-list-page', all.id]"><div class="top-list-card">
+        <img class="thumbnail" src="{{all.thumbnail}}"/>
+        <div class="title">{{all.name}}</div>
       </div></a>
     </div>
 
     <button class="show-more-button d-md-none" (click)="displayMoreTopList = 1" [class.d-none]="displayMoreTopList == 1">Show more</button>
     <button class="show-more-button d-md-none" (click)="displayMoreTopList = 0" [class.d-none]="displayMoreTopList == 0">Show less</button>
     <div class="row border-bottom border-dark mx-0 mt-2"></div>
+
+
+
   </div>
+
+
+
+
 
 
   <!-- Browse bridges by continents -->
@@ -53,12 +61,12 @@
     <div class="row border-bottom border-dark mx-0"></div>
     <div id="map-continents">
       <ul class="continents">
-        <li class="c1"><a href="#africa">Africa</a></li>
-        <li class="c2"><a href="#asia">Asia</a></li>
-        <li class="c3"><a href="#australia">Australia</a></li>
-        <li class="c4"><a href="#europe">Europe</a></li>
-        <li class="c5"><a href="#north-america">North America</a></li>
-        <li class="c6"><a href="#south-america">South America</a></li>
+        <li class="c1"><a [routerLink]="['/bridges-by-continent', 4]">Africa</a></li>
+        <li class="c2"><a [routerLink]="['/bridges-by-continent', 5]">Asia</a></li>
+        <li class="c3"><a [routerLink]="['/bridges-by-continent', 6]">Australia</a></li>
+        <li class="c4"><a [routerLink]="['/bridges-by-continent', 3]">Europe</a></li>
+        <li class="c5"><a [routerLink]="['/bridges-by-continent', 1]">North America</a></li>
+        <li class="c6"><a [routerLink]="['/bridges-by-continent', 2]">South America</a></li>
       </ul>
     </div>
     <div class="row border-bottom border-dark mx-0 mt-2"></div>
@@ -74,11 +82,11 @@
     </div>
     <div class="row border-bottom border-dark mx-0"></div>
 
-    <div class="col-12 col-md-6" *ngFor="let l of latestPostData; let i = index" [class.col-lg-3]="i >= 2" [class.d-md-block]="i >= 3" [ngClass]="{'d-none': displayMoreLatestPost == 0 && i >= 3, 'd-block': displayMoreLatestPost == 1 && i >= 3}">
+    <div class="col-12 col-md-6" *ngFor="let latest of SOMELATESTPOST; let i = index" [class.col-lg-3]="i >= 2" [class.d-md-block]="i >= 3" [ngClass]="{'d-none': displayMoreLatestPost == 0 && i >= 3, 'd-block': displayMoreLatestPost == 1 && i >= 3}">
       <div class="post-card">
-        <a href="#"><img src="{{l.thumbnail}}"/></a>
-        <div class="location"><a href="#">{{l.country}}</a> / <a href="#">{{l.continent}}</a></div>
-        <div class="title"><a href="#">{{l.title}}</a></div>
+        <a href="#"><img class="latest-post-thumbnail" src="{{latest.thumbnail}}"/></a>
+        <div class="location"><a href="#">{{latest.country_name}}</a> / <a href="#">{{latest.continent_name}}</a></div>
+        <div class="title"><a href="#">{{latest.bridge_name}}</a></div>
       </div>
     </div>
 
@@ -88,6 +96,12 @@
 <!--    <div class="row border-bottom border-dark mx-0 mt-2"></div>-->
   </div>
 
+
+
+  <ngx-loading
+    [show]="loading"
+    [template]="loadingTemplate"
+  ></ngx-loading>
 </div>
 
 

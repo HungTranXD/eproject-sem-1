@@ -1,0 +1,113 @@
+<div class="container">
+  <div class="row align-items-center page-header pt-4 pb-4 mb-3 mx-0">
+    <div class="col-12 col-md-9 col-lg-11 row">
+      <div class="title col-auto fs-3 text-light">{{CONTINENTINFO[0].name}}</div>
+      <div class="col-12 fst-italic text-light">{{CONTINENTINFO[0].intro}}</div>
+    </div>
+    <div class="d-none d-md-block col-md-3 col-lg-1">
+      <img src="{{CONTINENTINFO[0].thumbnail}}"/>
+    </div>
+  </div>
+
+  <!--  Record (top) section-->
+  <div class="top-list row g-2 mt-2">
+    <div class="col-12 col-md-auto px-0">
+      <div class="header px-3 py-1">
+        BRIDGE RECORDS IN {{CONTINENTINFO[0].name}}
+      </div>
+    </div>
+    <div class="row border-bottom border-dark mx-0"></div>
+
+    <div class="col-12 col-md-4">
+      <div class="post-card">
+        <a href="#"><img class="latest-post-thumbnail" src="{{LONGEST[0].thumbnail}}"/></a>
+        <div class="record-tag px-3 py-1">LONGEST</div>
+        <div class="title"><a href="#"><span>{{LONGEST[0].bridge_name}}</span> - <i>Length: {{LONGEST[0].total_length}}m</i></a></div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="post-card">
+        <a href="#"><img class="latest-post-thumbnail" src="{{HIGHEST[0].thumbnail}}"/></a>
+        <div class="record-tag px-3 py-1">HIGHEST</div>
+        <div class="title"><a href="#"><span>{{HIGHEST[0].bridge_name}}</span> - <i>Clearance below: {{HIGHEST[0].total_length}}m</i></a></div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="post-card">
+        <a href="#"><img class="latest-post-thumbnail" src="{{TALLEST[0].thumbnail}}"/></a>
+        <div class="record-tag px-3 py-1">TALLEST</div>
+        <div class="title"><a href="#"><span>{{TALLEST[0].bridge_name}}</span> - <i>Height: {{TALLEST[0].total_length}}m</i></a></div>
+      </div>
+    </div>
+
+    <div class="row border-bottom border-dark mx-0 mt-2"></div>
+  </div>
+
+  <!-- Latest Posts Section -->
+  <div class="latest-post row g-2 mt-4">
+    <div class="col-12 col-md-auto px-0">
+      <div class="header px-3 py-1">
+        LATEST POSTS IN {{CONTINENTINFO[0].name}}
+      </div>
+    </div>
+    <div class="row border-bottom border-dark mx-0 mb-3"></div>
+
+    <div class="row post-card mb-3" *ngFor="let post of POSTS | paginate: {itemsPerPage: listSize, currentPage: page, totalItems: count}; let i = index">
+      <div class="col-12 d-md-none">
+        <div class="bridge-name fs-4">{{post.bridge_name}}</div>
+        <div class="posted-date text-black-50">Posted on {{post.posted_date}}</div>
+      </div>
+      <div class="col-12 col-md-4 thumbnail-container px-1">
+        <img class="thumbnail" src="{{post.thumbnail}}">
+      </div>
+      <div class="col-12 col-md-8">
+        <div class="title row d-none d-md-flex mb-3">
+          <div class="bridge-name fs-4">{{post.bridge_name}}</div>
+          <div class="posted-date text-black-50">Posted on {{post.posted_date}}</div>
+        </div>
+        <div class="detail row">
+          <div class="col-3 col-lg-2"><strong>Location:</strong></div>
+          <div class="col-9 col-lg-10">{{post.detail_location}}</div>
+          <div class="col-3 col-lg-2"><strong>Country:</strong></div>
+          <div class="col-9 col-lg-10">{{post.country_name}}</div>
+          <div class="col-3 col-lg-2"><strong>Continent:</strong></div>
+          <div class="col-9 col-lg-10">{{post.continent_name}}</div>
+          <div class="col-3 col-lg-2"><strong>Type:</strong></div>
+          <div class="col-9 col-lg-10">{{post.type}}</div>
+          <div class="col-3 col-lg-2"><strong>Length:</strong></div>
+          <div class="col-9 col-lg-10">{{post.total_length}} m</div>
+        </div>
+      </div>
+    </div>
+
+    <pagination-controls class="posts-pagination"
+                         previousLabel=""
+                         nextLabel=""
+                         (pageChange)="onListDataChange($event)">
+    </pagination-controls>
+
+    <div class="row border-bottom border-dark mx-0 mt-2"></div>
+  </div>
+
+  <!-- All images of the continent -->
+  <div class="all-images row g-2 mt-4">
+    <div class="col-12 col-md-auto px-0">
+      <div class="header px-3 py-1">
+        IMAGES OF {{CONTINENTINFO[0].name}}
+      </div>
+    </div>
+    <div class="row border-bottom border-dark mx-0 mb-0"></div>
+    <ul>
+      <li *ngFor="let image of tempIMAGES, let i = index">
+        <img [src]="image.url" [title]="image.title" (click)="open(i)"/>
+      </li>
+    </ul>
+    <div class="blur-effect" [class.d-none]="tempIMAGES.length == IMAGES.length"></div>
+  </div>
+  <button class="show-more-button w-100" (click)="showMore()" [class.d-none]="tempIMAGES.length == IMAGES.length">Show more  <i class="fa-solid fa-chevron-down"></i></button>
+  <button class="show-more-button w-100 my-2" (click)="showLess()" [class.d-none]="tempIMAGES.length == 9">Show less  <i class="fa-regular fa-circle-xmark"></i></button>
+
+</div>
+

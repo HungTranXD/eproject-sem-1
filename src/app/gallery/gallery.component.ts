@@ -1,10 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {GalleryService} from "./gallery.service";
+import {Lightbox} from "ngx-lightbox";
 
-interface Item {
-  imageSrc: string;
-  imageAlt: string;
-  titleGalleryImg: string;
-}
 
 @Component({
   selector: 'app-gallery',
@@ -12,24 +9,57 @@ interface Item {
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent implements OnInit {
-  @Input() galleryData: Item[] = [
-    {imageSrc : 'assets/images/great_belt_bridge.jpg', imageAlt : 'img1', titleGalleryImg: 'The above example creates three equal-width columns across all devices and viewports using our predefined grid classes. Those columns are centered in the page with the parent'},
-    {imageSrc : 'assets/images/golden_gate_bridge.jpg', imageAlt : 'img2', titleGalleryImg: 'The above example creates three equal-width columns across all devices and viewports using our predefined grid classes. Those columns are centered in the page with the parent'},
-    {imageSrc : 'assets/images/brooklyn_bridge.jpg', imageAlt : 'img3', titleGalleryImg: 'The above example creates three equal-width columns across all devices and viewports using our predefined grid classes. Those columns are centered in the page with the parent'},
-    {imageSrc : 'assets/images/sydney_harbour_bridge.jpg', imageAlt : 'img4', titleGalleryImg: 'The above example creates three equal-width columns across all devices and viewports using our predefined grid classes. Those columns are centered in the page with the parent'},
-    {imageSrc : 'assets/images/brooklyn_bridge.jpg', imageAlt : 'img5', titleGalleryImg: 'The above example creates three equal-width columns across all devices and viewports using our predefined grid classes. Those columns are centered in the page with the parent'},
-    {imageSrc : 'assets/images/golden_gate_bridge.jpg', imageAlt : 'img6', titleGalleryImg: 'The above example creates three equal-width columns across all devices and viewports using our predefined grid classes. Those columns are centered in the page with the parent'},
-    {imageSrc : 'assets/images/great_belt_bridge.jpg', imageAlt : 'img7', titleGalleryImg: 'The above example creates three equal-width columns across all devices and viewports using our predefined grid classes. Those columns are centered in the page with the parent'},
-    {imageSrc : 'assets/images/sydney_harbour_bridge.jpg', imageAlt : 'img8', titleGalleryImg: 'The above example creates three equal-width columns across all devices and viewports using our predefined grid classes. Those columns are centered in the page with the parent'},
-    {imageSrc : 'assets/images/brooklyn_bridge.jpg', imageAlt : 'img9', titleGalleryImg: 'The above example creates three equal-width columns across all devices and viewports using our predefined grid classes. Those columns are centered in the page with the parent'},
-    {imageSrc : 'assets/images/great_belt_bridge.jpg', imageAlt : 'img10', titleGalleryImg: 'The above example creates three equal-width columns across all devices and viewports using our predefined grid classes. Those columns are centered in the page with the parent'},
-    {imageSrc : 'assets/images/sydney_harbour_bridge.jpg', imageAlt : 'img11', titleGalleryImg: 'The above example creates three equal-width columns across all devices and viewports using our predefined grid classes. Those columns are centered in the page with the parent'},
-    {imageSrc : 'assets/images/great_belt_bridge.jpg', imageAlt : 'img12', titleGalleryImg: 'The above example creates three equal-width columns across all devices and viewports using our predefined grid classes. Those columns are centered in the page with the parent'},
+  IMAGES: any;
+  tempIMAGES: any;
 
-  ];
-  constructor() { }
+  _albums: any = [];
 
-  ngOnInit(): void {
+  constructor( private galleryService: GalleryService,
+               private _lightbox: Lightbox) {
+    this.allImages();
   }
 
+  ngOnInit(): void {
+
+  }
+
+  //Get all images
+  allImages(): void {
+    this.galleryService.getAllImages().subscribe( response => {
+      this.IMAGES = response;
+      console.log(this.IMAGES);
+      //Add first 50 images to tempIMAGES to be displayed
+      this.tempIMAGES = this.IMAGES.slice(0,50);
+      //The for loop below is used to add data to _albums and run in constructor for lightbox
+      for(let i = 0; i < this.IMAGES.length; i++) {
+        const album = {
+          src: this.IMAGES[i].url,
+          caption: '<a routerLink="/bridge-detail">' + this.IMAGES[i].name + '</a>' + ' - ' + this.IMAGES[i].title,
+          thumb: this.IMAGES[i].url,
+        }
+        this._albums.push(album);
+      }
+    })
+  }
+
+  open(index: number): void {
+    // open lightbox
+    this._lightbox.open(this._albums, index);
+  }
+
+  close(): void {
+    // close lightbox programmatically
+    this._lightbox.close();
+  }
+
+  showMore() {
+    let newLength = this.tempIMAGES.length + 50;
+    if (newLength > this.IMAGES.length) {
+      newLength = this.IMAGES.length
+    }
+    this.tempIMAGES = this.IMAGES.slice(0,newLength);
+  }
+  showLess() {
+    this.tempIMAGES = this.IMAGES.slice(0,50);
+  }
 }
