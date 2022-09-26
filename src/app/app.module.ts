@@ -24,6 +24,9 @@ import { BridgesByContinentComponent } from './bridges-by-continent/bridges-by-c
 import { BridgesHistoryComponent } from './bridges-history/bridges-history.component';
 import {LightboxModule} from "ngx-lightbox";
 import {ngxLoadingAnimationTypes, NgxLoadingModule} from "ngx-loading";
+import { BridgePageComponent } from './bridge-page/bridge-page.component';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
+
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -37,6 +40,7 @@ const appRoutes: Routes = [
   {path: 'bridge-detail', component: BridgeDetailComponent},
   {path: 'bridges-by-continent/:id', component: BridgesByContinentComponent},
   {path: 'bridges-history', component: BridgesHistoryComponent},
+  {path: 'bridge-page/:id', component: BridgePageComponent},
 ];
 
 @NgModule({
@@ -57,24 +61,27 @@ const appRoutes: Routes = [
     SearchResultComponent,
     BridgeDetailGalleryComponent,
     BridgesByContinentComponent,
-    BridgesHistoryComponent
+    BridgesHistoryComponent,
+    BridgePageComponent,
+    ScrollToTopComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     NgxPaginationModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, {scrollPositionRestoration: 'enabled'}),
     BrowserAnimationsModule,
     LightboxModule,
     NgxLoadingModule.forRoot({
-      animationType: ngxLoadingAnimationTypes.wanderingCubes,
-      backdropBackgroundColour: "rgba(0,0,0)",
+      animationType: ngxLoadingAnimationTypes.cubeGrid,
+      backdropBackgroundColour: "rgba(255,255,255)",
       backdropBorderRadius: "4px",
-      primaryColour: "#ffffff",
-      secondaryColour: "#ffffff",
-      tertiaryColour: "#ffffff",
+      primaryColour: "#ff3d00",
+      secondaryColour: "#ff3d00",
+      tertiaryColour: "#ff3d00",
     }),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

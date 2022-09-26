@@ -1,0 +1,155 @@
+<div class="position-relative" *ngIf="loading == true" style="height: 100vh">
+  <ngx-loading
+    [show]="loading"
+    [template]="loadingTemplate"
+  ></ngx-loading>
+</div>
+
+<div class="container position-relative" *ngIf="loading == false" style="margin-top: -1.2rem">
+  <div class="banner" [ngStyle]="{'background': 'linear-gradient(#000, transparent, #000), url('+'../../'+BRIDGEDETAIL[0].thumbnail+') 50%/ cover', 'background-attachment' : 'fixed', 'background-blend-mode': 'multiply', 'height': '37.5vmin'}"></div>
+  <div class="row page-header">
+    <div class="title col-12">{{BRIDGEDETAIL[0].bridge_name}}</div>
+  </div>
+
+  <div class="section-title mt-5">
+    <span>Characteristics</span>
+  </div>
+  <div class="row info-container mb-5 mx-1" style="border-radius: 14px; box-shadow: 0 0 20px rgba(0,0,0,0.2); overflow: hidden">
+    <div class="col-12 col-md-5 p-0">
+      <img src="{{BRIDGEDETAIL[0].thumbnail}}" style="width: 100%; height: 100%; object-fit: cover">
+    </div>
+    <div class="col-12 col-md-7 p-4">
+      <div class="row gy-1 fs-5">
+        <div class="col-4">
+          Coordinates:
+        </div>
+        <div class="col-8 fst-italic">
+          {{BRIDGEDETAIL[0].coordinates}}
+        </div>
+        <div class="col-4">
+          Location:
+        </div>
+        <div class="col-8 fst-italic">
+          {{BRIDGEDETAIL[0].detail_location}}, {{BRIDGEDETAIL[0].country_name}}
+        </div>
+        <div class="col-12 border-bottom mx-2"></div>
+        <div class="col-4">
+          Type:
+        </div>
+        <div class="col-8 fst-italic">
+          {{BRIDGEDETAIL[0].type}}
+          <span *ngIf="BRIDGEDETAIL[0].type == null">N/A</span>
+        </div>
+        <div class="col-4">
+          Material:
+        </div>
+        <div class="col-8 fst-italic">
+          {{BRIDGEDETAIL[0].main_material}}
+          <span *ngIf="BRIDGEDETAIL[0].main_material == null">N/A</span>
+        </div>
+        <div class="col-4">
+          Total length:
+        </div>
+        <div class="col-8 fst-italic">
+          {{BRIDGEDETAIL[0].total_length}}<span *ngIf="BRIDGEDETAIL[0].total_length != null">m</span>
+          <span *ngIf="BRIDGEDETAIL[0].total_length == null">N/A</span>
+        </div>
+        <div class="col-4">
+          Width:
+        </div>
+        <div class="col-8 fst-italic">
+          {{BRIDGEDETAIL[0].width}}<span *ngIf="BRIDGEDETAIL[0].width != null">m</span>
+          <span *ngIf="BRIDGEDETAIL[0].width == null">N/A</span>
+        </div>
+        <div class="col-4">
+          Height:
+        </div>
+        <div class="col-8 fst-italic">
+          {{BRIDGEDETAIL[0].height}}<span *ngIf="BRIDGEDETAIL[0].height != null">m</span>
+          <span *ngIf="BRIDGEDETAIL[0].height == null">N/A</span>
+        </div>
+        <div class="col-4">
+          Longest span:
+        </div>
+        <div class="col-8 fst-italic">
+          {{BRIDGEDETAIL[0].longest_span}}<span *ngIf="BRIDGEDETAIL[0].longest_span != null">m</span>
+          <span *ngIf="BRIDGEDETAIL[0].longest_span == null">N/A</span>
+        </div>
+        <div class="col-4">
+          Clearance below:
+        </div>
+        <div class="col-8 fst-italic">
+          {{BRIDGEDETAIL[0].clearance_below}}<span *ngIf="BRIDGEDETAIL[0].clearance_below != null">m</span>
+          <span *ngIf="BRIDGEDETAIL[0].clearance_below == null">N/A</span>
+        </div>
+        <div class="col-4">
+          Construction start:
+        </div>
+        <div class="col-8 fst-italic">
+          {{BRIDGEDETAIL[0].construction_start}}
+          <span *ngIf="BRIDGEDETAIL[0].construction_start == null">N/A</span>
+        </div>
+        <div class="col-4">
+          Construction end:
+        </div>
+        <div class="col-8 fst-italic">
+          {{BRIDGEDETAIL[0].construction_end}}
+          <span *ngIf="BRIDGEDETAIL[0].construction_end == null">N/A</span>
+        </div>
+        <div class="col-4">
+          Opened date:
+        </div>
+        <div class="col-8 fst-italic">
+          {{BRIDGEDETAIL[0].opened_date}}
+          <span *ngIf="BRIDGEDETAIL[0].opened_date == null">N/A</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="banner" [ngStyle]="{'background': 'linear-gradient(#000, transparent, #000), url('+'../../'+BRIDGEDETAIL[0].thumbnail+') 50%/ cover', 'background-attachment' : 'fixed', 'background-blend-mode': 'multiply', 'height': '37.5vmin'}"></div>
+  <div class="section-title mt-5">
+    <span>Introduction</span>
+  </div>
+  <div class="row mx-1 mb-5" style="border-radius: 14px; box-shadow: 0 0 20px rgba(0,0,0,0.2)">
+    <div class="fs-5 p-4" style="white-space: break-spaces; text-align: justify">
+      {{BRIDGEDETAIL[0].introduction}}
+    </div>
+  </div>
+
+  <div class="banner" [ngStyle]="{'background': 'linear-gradient(#000, transparent, #000), url('+'../../'+BRIDGEDETAIL[0].thumbnail+') 50%/ cover', 'background-attachment' : 'fixed', 'background-blend-mode': 'multiply', 'height': '37.5vmin'}"></div>
+  <div class="section-title mt-5">
+    <span>History</span>
+  </div>
+  <div class="row mx-1 mb-5" style="border-radius: 14px; box-shadow: 0 0 20px rgba(0,0,0,0.2)">
+    <div class="fs-5 p-4" style="white-space: break-spaces; text-align: justify">
+      {{BRIDGEDETAIL[0].history}}
+    </div>
+  </div>
+
+
+
+  <div class="banner" [ngStyle]="{'background': 'linear-gradient(#000, transparent, #000), url('+'../../'+BRIDGEDETAIL[0].thumbnail+') 50%/ cover', 'background-attachment' : 'fixed', 'background-blend-mode': 'multiply', 'height': '37.5vmin'}"></div>
+
+  <div class="section-title mt-5">
+    <span>Images</span>
+  </div>
+  <div class="all-images mt-4 mb-5">
+    <ul style="padding: 0">
+      <ul style="padding: 0">
+        <li *ngFor="let image of IMAGES, let i = index">
+          <img [src]="image.url" [title]="image.title" (click)="open(i)"/>
+        </li>
+      </ul>
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+
+

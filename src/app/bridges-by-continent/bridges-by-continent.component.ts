@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, TemplateRef} from '@angular/core';
 import {BridgesByContinentService} from "./bridges-by-continent.service";
 import {ActivatedRoute} from "@angular/router";
 import {Lightbox} from "ngx-lightbox";
@@ -6,7 +6,7 @@ import {Lightbox} from "ngx-lightbox";
 @Component({
   selector: 'app-bridges-by-continent',
   templateUrl: './bridges-by-continent.component.html',
-  styleUrls: ['./bridges-by-continent.component.css']
+  styleUrls: ['./bridges-by-continent.component.scss']
 })
 export class BridgesByContinentComponent implements OnInit {
   CONTINENTINFO: any;
@@ -21,7 +21,10 @@ export class BridgesByContinentComponent implements OnInit {
   POSTS: any;
   page: number = 1;
   count: number = 0;
-  listSize: number = 10;
+  listSize: number = 12;
+
+  public loading = true;
+  public loadingTemplate !: TemplateRef<any>;
 
   constructor( private bridgesByContinentService: BridgesByContinentService,
                private route: ActivatedRoute,
@@ -40,9 +43,11 @@ export class BridgesByContinentComponent implements OnInit {
       this.continentInfo(routeParams['id']);
       this.topBridgeByContinent(routeParams['id']);
       this.postListByContinent(routeParams['id']);
-      this.imagesByContinent(routeParams['id']);
+      // this.imagesByContinent(routeParams['id']);
     })
+
   }
+
 
   //Get and display continent info
   continentInfo(continentId: number): void {
@@ -54,7 +59,11 @@ export class BridgesByContinentComponent implements OnInit {
 
   //Get and display all bridges (posts) of this continent
   postListByContinent(continentId: number): void {
+    this.loading = true;
     this.bridgesByContinentService.getPostsByContinent(continentId).subscribe(response => {
+      setTimeout(() => {
+        this.loading = false;
+      }, 500);
       this.POSTS = response;
       console.log(this.POSTS);
     })
@@ -82,12 +91,12 @@ export class BridgesByContinentComponent implements OnInit {
       this.IMAGES = response;
       console.log(this.IMAGES);
       //Add first 9 images to tempIMAGES to be displayed
-      this.tempIMAGES = this.IMAGES.slice(0,9);
+      this.tempIMAGES = this.IMAGES.slice(0,20);
       //The for loop below is used to add data to _albums and run in constructor for lightbox
       for(let j = 0; j < this.IMAGES.length; j++) {
         const album = {
           src: this.IMAGES[j].url,
-          caption: '<a routerLink="/bridge-detail">' + this.IMAGES[j].name + '</a>' + ' - ' + this.IMAGES[j].title,
+          caption: '<a href="/bridge-page/' + this.IMAGES[j].bridge_id +'">' + this.IMAGES[j].name + '</a>' + ' - ' + this.IMAGES[j].title,
           thumb: this.IMAGES[j].url,
         }
         this._albums.push(album);
@@ -109,13 +118,13 @@ export class BridgesByContinentComponent implements OnInit {
     this._lightbox.close();
   }
   showMore() {
-    let newLength = this.tempIMAGES.length + 9;
+    let newLength = this.tempIMAGES.length + 20;
     if (newLength > this.IMAGES.length) {
       newLength = this.IMAGES.length
     }
     this.tempIMAGES = this.IMAGES.slice(0,newLength);
   }
   showLess() {
-    this.tempIMAGES = this.IMAGES.slice(0,9);
+    this.tempIMAGES = this.IMAGES.slice(0,20);
   }
 }

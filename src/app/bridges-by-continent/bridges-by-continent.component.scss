@@ -1,0 +1,589 @@
+/* -------------------------- NEW HEADER --------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+header {
+  height: 200vh;
+}
+._container {
+  /* hide fixed overflow contents */
+  clip: rect(0, auto, auto, 0);
+
+  /* does not work if overflow = visible */
+  overflow: hidden;
+
+  /* only works with absolute positioning */
+  position: absolute;
+
+  /* Make sure containers are full-width and height */
+  height: 100vh;
+  left: 0;
+  width: 100%;
+
+
+  /* safari hack */
+  -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%);
+}
+
+.container_solid {
+  background: white;
+
+  /* position this container at the top of its parent element */
+  top: 0;
+}
+.title_wrapper {
+  position: fixed;
+  display: block;
+  margin: auto;
+  width: 100%;
+  /* center the text wrapper vertically */
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.title_wrapper h1 {
+  text-align: center;
+  font-size: 74px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Fraunces', serif;
+  /*font-family: 'Abril Fatface', serif;*/
+  font-weight: 900;
+}
+
+.container_solid .title_wrapper h1 {
+  /* the text background */
+  background: url('../../assets/images/continent-gif/1.gif');
+  background-size: 100vw auto;
+  background-position: center;
+
+  /* clip the text is possible */
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  /* fallback text color */
+  color: black;
+}
+
+.container_image {
+
+  background-image: url('../../assets/images/continent-gif/1.gif');
+  background-size:100vw auto;
+  background-position: center;
+  background-attachment: fixed;
+
+  /* position the second container below the first container */
+  top: 100vh;
+}
+
+.container_image .title_wrapper h1 {
+  color: white;
+}
+
+section {
+  min-height: 100vh;
+  padding: 2em;
+  margin: auto;
+  max-width: 800px;
+}
+
+// --------------- BANNER DIV USED TO SEPARATE SECTION --------------
+.banner {
+  margin-left: calc(50% - 50vw);
+  width: 100vw; height: 37.5vmin;
+  min-height: 15em;
+  background: linear-gradient(#000, transparent, #000),
+  var(--img) 50%/ cover;
+  background-attachment: fixed!important;
+  background-blend-mode: multiply!important;
+
+  &:nth-of-type(1) {
+    --img: url('../../assets/images/paralax-banner/1.jpg');
+  }
+
+  &:nth-of-type(2) {
+    --img: url('../../assets/images/paralax-banner/1.jpg');
+  }
+
+  &:nth-of-type(3) {
+    --img: url('../../assets/images/paralax-banner/1.jpg')
+  }
+
+  &:nth-of-type(4) {
+    --img: url('../../assets/images/paralax-banner/1.jpg')
+  }
+
+  &:nth-of-type(5) {
+    --img: url('../../assets/images/paralax-banner/1.jpg');
+  }
+
+  &:nth-of-type(6) {
+    --img: url('../../assets/images/paralax-banner/1.jpg');
+  }
+
+  &:nth-of-type(7) {
+    --img: url('../../assets/images/paralax-banner/1.jpg')
+  }
+
+  &:nth-of-type(8) {
+    --img: url('../../assets/images/paralax-banner/1.jpg')
+  }
+
+  &:nth-of-type(9) {
+    --img: url('../../assets/images/paralax-banner/1.jpg')
+  }
+
+  &:nth-of-type(10) {
+    --img: url('../../assets/images/paralax-banner/1.jpg')
+  }
+
+  &:nth-of-type(11) {
+    --img: url('../../assets/images/paralax-banner/1.jpg')
+  }
+
+  &:nth-of-type(12) {
+    --img: url('../../assets/images/paralax-banner/1.jpg')
+  }
+
+  &:nth-of-type(13) {
+    --img: url('../../assets/images/paralax-banner/1.jpg')
+  }
+}
+
+
+
+/* ---------- PAGE HEADER SECTION ---------- */
+//.page-header .title{
+//  font-family: 'Abril Fatface', serif;
+//}
+//.page-header{
+//  background-image: linear-gradient(to right, rgba(255, 61, 0, 0.82), rgba(255, 255, 255, 0)), url("../../assets/images/bridges-list/golden_gate_bridge/9.jpg");
+//  background-size: cover;
+//  background-position: center;
+//}
+
+// --------------------INTRODUCTION SECTION ---------------------
+.introduction{
+  border-radius: 10px;
+  box-shadow:0 0 20px rgba(black,0.2);
+}
+
+
+/* --------- TOP IN CONTINENT SECTION --------- */
+//.top-list{
+//  position: relative;
+//}
+//.top-list .header{
+//  color: white;
+//  background-color: #171c24;
+//  font-size: 1rem;
+//  text-transform: uppercase;
+//  border: 1px solid #171c24;
+//}
+//.top-list .post-card{
+//  position: relative;
+//}
+//.top-list .post-card .title{
+//  font-size: 1.2rem;
+//}
+//.top-list .post-card .title span{
+//  font-family: 'Abril Fatface', serif;
+//}
+//.top-list .post-card .record-tag{
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  color: white;
+//  background-color: #ff3d00;
+//}
+//.latest-post-thumbnail{
+//  object-fit: cover;
+//  object-position: center;
+//  height: 12rem;
+//  width: 100%;
+//}
+
+
+
+/* ----------------------- LATEST POST SECTION -------------------------------- */
+//.latest-post .header{
+//  color: white;
+//  background-color: #171c24;
+//  font-size: 1rem;
+//  text-transform: uppercase;
+//  border: 1px solid #171c24;
+//}
+//.thumbnail-container{
+//  height: 15rem;
+//}
+//.thumbnail-container .thumbnail{
+//  width: 100%;
+//  height: 100%;
+//  object-fit: cover;
+//}
+//.bridge-name{
+//  font-family: 'Abril Fatface', serif;
+//}
+//.posts-pagination::ng-deep .ngx-pagination {
+//  display: flex;
+//  justify-content: center;
+//  padding: 0;
+//  margin-bottom: 0.1rem;
+//}
+//.posts-pagination::ng-deep .ngx-pagination .current{
+//  background-color: #ff3d00;
+//}
+
+
+//----------------- STYLE BRIDGE CARD ---------------------
+$duration: 0.5s;
+$delay: 0.2s;
+$color: rgba(255, 61, 0, 0.7);
+
+
+.bridge-card {
+  position: relative;
+  //top: 50%;  left: 50%;
+  //transform :  translateX(-50%) translateY(-50%) translateZ(0);
+
+  width: 100%;
+  border-radius: 12px;
+
+  background-color: #fff;
+  box-shadow:0 0 20px rgba(black,0.3);
+
+  overflow:hidden;
+
+  transition: box-shadow $duration;
+
+  a{
+    color:inherit;
+    text-decoration: none;
+  }
+}
+
+.bridge-card:hover{
+  box-shadow:0 0 50px rgba(black,0.5);
+}
+
+
+/**
+* DATE
+**/
+
+.card__date{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  width: 50px;
+  height: 50px;
+  padding-top: 16px;
+
+  background-color: $color;
+  border-radius: 50%;
+
+  color:#fff;
+
+  text-align: center;
+  font-weight: 700;
+  line-height: 13px;
+
+
+  &__day{
+    font-size:14px;
+  }
+
+  &__month{
+    text-transform: uppercase;
+    font-size:10px;
+  }
+}
+
+
+/**
+* THUMB
+**/
+
+.card__thumb{
+  height: 245px;
+
+  overflow:hidden;
+
+  background-color: #000;
+
+  transition: height $duration;
+
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display:block;
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: opacity $duration, transform $duration;
+  }
+
+  .bridge-card:hover &{
+    height: 130px;
+  }
+}
+
+.bridge-card:hover .card__thumb img{
+  opacity: 0.6;
+  transform: scale(1.2);
+}
+
+
+/**
+* BODY
+**/
+
+.card__body{
+  position: relative;
+  height: 185px;
+
+  padding:20px;
+  text-overflow: ellipsis;
+  transition: height $duration;
+
+  .bridge-card:hover &{
+    height: 185px + 115px;
+  }
+}
+
+.card__category{
+  position: absolute;
+  top: -25px;  left: 0;
+
+  height: 25px;
+
+  padding:0 15px;
+  background-color: $color;
+
+  color:#fff;
+  text-transform: uppercase;
+  font-size:11px;
+  line-height: 25px;
+}
+
+.card__title{
+  margin: 0; padding: 0 0 10px 0;
+
+  color: #000;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.card__subtitle{
+  margin: 0; padding: 0 0 10px 0;
+
+  font-size: 19px;
+  color: $color;
+}
+
+.card__description{
+  position: absolute;
+  left: 20px; right: 20px;
+  //bottom: 56px;
+  height: 40%;
+
+  overflow: hidden;
+
+  margin: 0; padding: 0;
+
+  color: #666C74;
+  line-height: 27px;
+
+  opacity:0;
+  transform: translateY(45px);
+
+  transition: opacity $duration -$delay, transform $duration -$delay;
+  transition-delay: 0s;
+
+
+
+  .bridge-card:hover &{
+    opacity:1;
+    transform: translateY(0);
+    transition-delay: $delay;
+  }
+}
+
+.card__footer{
+  position: absolute;
+  bottom: 12px;
+  left: 20px;
+  right: 20px;
+
+  font-size: 11px;
+  color:#A3A9A2;
+}
+
+.icon{
+  display: inline-block;
+  vertical-align: middle;
+  margin: -2px 0 0 2px;
+  font-size: 18px;
+
+  & + &{
+    padding-left:10px;
+  }
+}
+.posts-pagination ::ng-deep .ngx-pagination {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  box-shadow:0 0 20px rgba(black,0.3);
+  border-radius: 10px;
+}
+.posts-pagination ::ng-deep .ngx-pagination .current{
+  background-color: rgba(255, 61, 0, 0.8);
+}
+
+// ------------------------ SECTION TITLE -------------------------
+.section-title{
+  height: 1px;
+  background-color: gainsboro;
+  position: relative;
+  margin-bottom: 1.8rem;
+}
+.section-title span{
+  position: absolute;
+  bottom: -1.2rem;
+  font-weight: lighter;
+  font-size: 2rem;
+  background-color: white;
+  padding-right: 0.5rem;
+  color: gray;
+}
+
+/* ---------- IMAGES (GALLERY) SECTION ---------- */
+.all-images{
+  position: relative;
+}
+.all-images .header{
+  color: white;
+  background-color: #171c24;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: 1px solid #171c24;
+}
+
+/* BASIC*/
+
+.all-images ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.all-images li {
+  height: 12rem;
+  flex-grow: 1;
+  margin: 0.3rem;
+
+  position: relative;
+}
+
+.all-images li:last-child {
+/* There's no science in using "10" here. In all my testing, this delivered the best results.*/
+flex-grow: 10;
+}
+.all-images li span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+  font-size: 6rem;
+  padding: 0rem 1rem;
+  border-radius: 10px;
+  transition: all 300ms;
+}
+.all-images li span:hover{
+  background-color: rgba(255, 255, 255, 0.32);
+  cursor: pointer;
+}
+.all-images img {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+  height: 12rem;
+  border-radius: 10px;
+  box-shadow:0 0 20px rgba(black,0.2);
+  transition: all 300ms;
+}
+.all-images img:hover{
+  transform: scale(1.02);
+  box-shadow:0 0 40px rgba(black,0.5);
+}
+/* ADVANCED*/
+
+/* Portrait*/
+
+@media (max-aspect-ratio: 1/1) {
+  .all-images li {
+    height: 9rem;
+  }
+}
+
+/* Short screens*/
+
+@media (max-height: 480px) {
+  .all-images li {
+    height: 80vh;
+  }
+}
+
+/* Smaller screens in portrait*/
+
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+  .all-images ul {
+    flex-direction: row;
+  }
+
+  .all-images li {
+    height: auto;
+    width: 100%;
+  }
+  .all-images img {
+    width: 100%;
+    max-height: 75vh;
+    min-width: 0;
+  }
+}
+
+//.blur-effect{
+//  position: absolute;
+//  bottom: 0;
+//  width: 100%;
+//  height: 50px;
+//  background: linear-gradient(transparent, white);
+//  z-index: 2;
+//}
+//.show-more-button{
+//  border: 1px solid #171c24;
+//  color: #171c24;
+//  background-color: transparent;
+//  padding: 0.2rem 0;
+//}
+//.show-more-button:hover{
+//  border: 1px solid #ff3d00;
+//  color: #ff3d00;
+//}
+
+
+

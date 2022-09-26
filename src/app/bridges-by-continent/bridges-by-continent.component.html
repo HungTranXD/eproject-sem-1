@@ -1,113 +1,168 @@
-<div class="container">
-  <div class="row align-items-center page-header pt-4 pb-4 mb-3 mx-0">
-    <div class="col-12 col-md-9 col-lg-11 row">
-      <div class="title col-auto fs-3 text-light">{{CONTINENTINFO[0].name}}</div>
-      <div class="col-12 fst-italic text-light">{{CONTINENTINFO[0].intro}}</div>
+<div class="position-relative" *ngIf="loading == true" style="height: 100vh">
+  <ngx-loading
+    [show]="loading"
+    [template]="loadingTemplate"
+  ></ngx-loading>
+</div>
+
+<header *ngIf="loading == false">
+  <!-- First container -->
+  <div class="_container container_solid">
+    <div class="title_wrapper">
+      <h1 [ngStyle]="{'background-image':'url(\'../../assets/images/continent-gif/'+ CONTINENTINFO[0].id +'.gif\')'}">{{CONTINENTINFO[0].name}}</h1>
     </div>
-    <div class="d-none d-md-block col-md-3 col-lg-1">
+  </div>
+  <!-- Second container -->
+  <div class="_container container_image" aria-hidden="true" [ngStyle]="{'background-image':'url(\'../../assets/images/continent-gif/'+ CONTINENTINFO[0].id +'.gif\')'}">
+    <div class="title_wrapper">
+      <h1>{{CONTINENTINFO[0].name}}</h1>
+    </div>
+  </div>
+</header>
+
+<div class="container position-relative" *ngIf="loading == false" style="margin-top: -1.2rem">
+  <div class="section-title">
+    <span>Introduction</span>
+  </div>
+  <div class="row introduction align-items-center pt-4 pb-4 mb-3 mx-0" style="border-radius: 10px">
+    <div class="col-md-3 col-lg-1">
       <img src="{{CONTINENTINFO[0].thumbnail}}"/>
     </div>
+    <div class="col-12 col-md-9 col-lg-11 row">
+      <div class="col-12">{{CONTINENTINFO[0].intro}}</div>
+    </div>
   </div>
 
-  <!--  Record (top) section-->
-  <div class="top-list row g-2 mt-2">
-    <div class="col-12 col-md-auto px-0">
-      <div class="header px-3 py-1">
-        BRIDGE RECORDS IN {{CONTINENTINFO[0].name}}
-      </div>
-    </div>
-    <div class="row border-bottom border-dark mx-0"></div>
+  <div class="section-title mt-5">
+    <span>Top of {{CONTINENTINFO[0].name}}</span>
+  </div>
+  <div class="row g-3 mb-5">
+    <div class="col-12 col-md-6 col-lg-4">
+      <article class="bridge-card">
+        <header class="card__thumb">
+          <a [routerLink]="['/bridge-page', LONGEST[0].id]"><img src="{{LONGEST[0].thumbnail}}"/></a>
+        </header>
+                <div class="card__date">
+<!--                  <span class="card__date__day">Longest</span>-->
+<!--                  <br/>-->
+                  <span class="card__date__month">Longest</span>
+                </div>
+        <div class="card__body">
+          <div class="card__category"><a>Total length: {{LONGEST[0].total_length}}m</a></div>
+          <h2 class="card__title"><a [routerLink]="['/bridge-page', LONGEST[0].id]">{{LONGEST[0].bridge_name}}</a></h2>
+          <div class="card__subtitle">{{LONGEST[0].detail_location}}, {{LONGEST[0].country_name}}</div>
+          <p class="card__description">{{LONGEST[0].introduction}}</p>
+        </div>
 
-    <div class="col-12 col-md-4">
-      <div class="post-card">
-        <a href="#"><img class="latest-post-thumbnail" src="{{LONGEST[0].thumbnail}}"/></a>
-        <div class="record-tag px-3 py-1">LONGEST</div>
-        <div class="title"><a href="#"><span>{{LONGEST[0].bridge_name}}</span> - <i>Length: {{LONGEST[0].total_length}}m</i></a></div>
-      </div>
+        <footer class="card__footer">
+          <span class="icon ion-clock"></span> {{LONGEST[0].posted_date}}
+        </footer>
+      </article>
     </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <article class="bridge-card">
+        <header class="card__thumb">
+          <a [routerLink]="['/bridge-page', HIGHEST[0].id]"><img src="{{HIGHEST[0].thumbnail}}"/></a>
+        </header>
+        <div class="card__date">
+          <!--                  <span class="card__date__day">Longest</span>-->
+          <!--                  <br/>-->
+          <span class="card__date__month">Highest</span>
+        </div>
+        <div class="card__body">
+          <div class="card__category"><a>Clearance below: {{HIGHEST[0].clearance_below}}m</a></div>
+          <h2 class="card__title"><a [routerLink]="['/bridge-page', HIGHEST[0].id]">{{HIGHEST[0].bridge_name}}</a></h2>
+          <div class="card__subtitle">{{HIGHEST[0].detail_location}}, {{HIGHEST[0].country_name}}</div>
+          <p class="card__description">{{HIGHEST[0].introduction}}</p>
+        </div>
 
-    <div class="col-12 col-md-4">
-      <div class="post-card">
-        <a href="#"><img class="latest-post-thumbnail" src="{{HIGHEST[0].thumbnail}}"/></a>
-        <div class="record-tag px-3 py-1">HIGHEST</div>
-        <div class="title"><a href="#"><span>{{HIGHEST[0].bridge_name}}</span> - <i>Clearance below: {{HIGHEST[0].total_length}}m</i></a></div>
-      </div>
+        <footer class="card__footer">
+          <span class="icon ion-clock"></span> {{HIGHEST[0].posted_date}}
+        </footer>
+      </article>
     </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <article class="bridge-card">
+        <header class="card__thumb">
+          <a [routerLink]="['/bridge-page', TALLEST[0].id]"><img src="{{TALLEST[0].thumbnail}}"/></a>
+        </header>
+        <div class="card__date">
+          <!--                  <span class="card__date__day">Longest</span>-->
+          <!--                  <br/>-->
+          <span class="card__date__month">Tallest</span>
+        </div>
+        <div class="card__body">
+          <div class="card__category"><a>Height: {{TALLEST[0].height}}m</a></div>
+          <h2 class="card__title"><a [routerLink]="['/bridge-page', TALLEST[0].id]">{{TALLEST[0].bridge_name}}</a></h2>
+          <div class="card__subtitle">{{TALLEST[0].detail_location}}, {{TALLEST[0].country_name}}</div>
+          <p class="card__description">{{TALLEST[0].introduction}}</p>
+        </div>
 
-    <div class="col-12 col-md-4">
-      <div class="post-card">
-        <a href="#"><img class="latest-post-thumbnail" src="{{TALLEST[0].thumbnail}}"/></a>
-        <div class="record-tag px-3 py-1">TALLEST</div>
-        <div class="title"><a href="#"><span>{{TALLEST[0].bridge_name}}</span> - <i>Height: {{TALLEST[0].total_length}}m</i></a></div>
-      </div>
+        <footer class="card__footer">
+          <span class="icon ion-clock"></span> {{TALLEST[0].posted_date}}
+        </footer>
+      </article>
     </div>
-
-    <div class="row border-bottom border-dark mx-0 mt-2"></div>
   </div>
 
+
+  <div class="banner" [ngStyle]="{'background': 'linear-gradient(#000, transparent, #000), url(\'../../assets/images/paralax-banner/'+ CONTINENTINFO[0].id +'_1.jpg\') 50%/ cover'}"></div>
   <!-- Latest Posts Section -->
-  <div class="latest-post row g-2 mt-4">
-    <div class="col-12 col-md-auto px-0">
-      <div class="header px-3 py-1">
-        LATEST POSTS IN {{CONTINENTINFO[0].name}}
-      </div>
-    </div>
-    <div class="row border-bottom border-dark mx-0 mb-3"></div>
-
-    <div class="row post-card mb-3" *ngFor="let post of POSTS | paginate: {itemsPerPage: listSize, currentPage: page, totalItems: count}; let i = index">
-      <div class="col-12 d-md-none">
-        <div class="bridge-name fs-4">{{post.bridge_name}}</div>
-        <div class="posted-date text-black-50">Posted on {{post.posted_date}}</div>
-      </div>
-      <div class="col-12 col-md-4 thumbnail-container px-1">
-        <img class="thumbnail" src="{{post.thumbnail}}">
-      </div>
-      <div class="col-12 col-md-8">
-        <div class="title row d-none d-md-flex mb-3">
-          <div class="bridge-name fs-4">{{post.bridge_name}}</div>
-          <div class="posted-date text-black-50">Posted on {{post.posted_date}}</div>
-        </div>
-        <div class="detail row">
-          <div class="col-3 col-lg-2"><strong>Location:</strong></div>
-          <div class="col-9 col-lg-10">{{post.detail_location}}</div>
-          <div class="col-3 col-lg-2"><strong>Country:</strong></div>
-          <div class="col-9 col-lg-10">{{post.country_name}}</div>
-          <div class="col-3 col-lg-2"><strong>Continent:</strong></div>
-          <div class="col-9 col-lg-10">{{post.continent_name}}</div>
-          <div class="col-3 col-lg-2"><strong>Type:</strong></div>
-          <div class="col-9 col-lg-10">{{post.type}}</div>
-          <div class="col-3 col-lg-2"><strong>Length:</strong></div>
-          <div class="col-9 col-lg-10">{{post.total_length}} m</div>
-        </div>
-      </div>
-    </div>
-
-    <pagination-controls class="posts-pagination"
-                         previousLabel=""
-                         nextLabel=""
-                         (pageChange)="onListDataChange($event)">
-    </pagination-controls>
-
-    <div class="row border-bottom border-dark mx-0 mt-2"></div>
+  <div class="section-title mt-5">
+    <span>Latest in {{CONTINENTINFO[0].name}}</span>
   </div>
+  <div class="row g-3">
+    <div class="col-12 col-md-6 col-lg-4" *ngFor="let post of POSTS | paginate: {itemsPerPage: listSize, currentPage: page, totalItems: count}; let i = index">
+      <article class="bridge-card">
+        <header class="card__thumb">
+          <a [routerLink]="['/bridge-page', post.id]"><img src="{{post.thumbnail}}"/></a>
+        </header>
+        <!--        <div class="card__date">-->
+        <!--          <span class="card__date__day">11</span>-->
+        <!--          <br/>-->
+        <!--          <span class="card__date__month">Jun</span>-->
+        <!--        </div>-->
+        <div class="card__body">
+          <div class="card__category"><a [routerLink]="['/bridges-by-continent', post.continent_id]">{{post.continent_name}}</a></div>
+          <h2 class="card__title"><a [routerLink]="['/bridge-page', post.id]">{{post.bridge_name}}</a></h2>
+          <div class="card__subtitle">{{post.detail_location}}, {{post.country_name}}</div>
+          <p class="card__description">{{post.introduction}}</p>
+        </div>
+
+        <footer class="card__footer">
+          <span class="icon ion-clock"></span> {{post.posted_date}}
+        </footer>
+      </article>
+    </div>
+  </div>
+
+  <pagination-controls class="posts-pagination"
+                       previousLabel=""
+                       nextLabel=""
+                       (pageChange)="onListDataChange($event)">
+  </pagination-controls>
+
+
+  <div class="banner" [ngStyle]="{'background': 'linear-gradient(#000, transparent, #000), url(\'../../assets/images/paralax-banner/'+ CONTINENTINFO[0].id +'_2.jpg\') 50%/ cover'}"></div>
 
   <!-- All images of the continent -->
-  <div class="all-images row g-2 mt-4">
-    <div class="col-12 col-md-auto px-0">
-      <div class="header px-3 py-1">
-        IMAGES OF {{CONTINENTINFO[0].name}}
-      </div>
-    </div>
-    <div class="row border-bottom border-dark mx-0 mb-0"></div>
-    <ul>
+  <div class="section-title mt-5">
+    <span>Images of {{CONTINENTINFO[0].name}}</span>
+  </div>
+  <div class="all-images mt-4">
+    <ul style="padding: 0">
       <li *ngFor="let image of tempIMAGES, let i = index">
         <img [src]="image.url" [title]="image.title" (click)="open(i)"/>
+        <span *ngIf="i == tempIMAGES.length - 1" (click)="showMore()" [class.d-none]="tempIMAGES.length == IMAGES.length">+ {{IMAGES.length - tempIMAGES.length}}</span>
       </li>
     </ul>
-    <div class="blur-effect" [class.d-none]="tempIMAGES.length == IMAGES.length"></div>
   </div>
-  <button class="show-more-button w-100" (click)="showMore()" [class.d-none]="tempIMAGES.length == IMAGES.length">Show more  <i class="fa-solid fa-chevron-down"></i></button>
-  <button class="show-more-button w-100 my-2" (click)="showLess()" [class.d-none]="tempIMAGES.length == 9">Show less  <i class="fa-regular fa-circle-xmark"></i></button>
+<!--  <button class="show-more-button w-100" (click)="showMore()" [class.d-none]="tempIMAGES.length == IMAGES.length">Show more  <i class="fa-solid fa-chevron-down"></i></button>-->
+<!--  <button class="show-more-button w-100 my-2" (click)="showLess()" [class.d-none]="tempIMAGES.length == 9">Show less  <i class="fa-regular fa-circle-xmark"></i></button>-->
 
+<!--  <ngx-loading-->
+<!--    [show]="loading"-->
+<!--    [template]="loadingTemplate"-->
+<!--  ></ngx-loading>-->
 </div>
 

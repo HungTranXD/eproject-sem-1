@@ -4,7 +4,7 @@ import {HomeService} from "./home.service";
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
   ALLTOPLISTS: any;
@@ -30,7 +30,6 @@ export class HomeComponent implements OnInit {
 
   //Display all top lists
   allTopLists(): void {
-    this.loading = true;
     this.homeService.getAllTopLists().subscribe(
       (response) => {
         this.loading = false;
@@ -45,7 +44,7 @@ export class HomeComponent implements OnInit {
 
   //Display 6 latest posts
   someLatestPosts(): void {
-    this.homeService.getPostsPerPage('all', 'all', 6, 0).subscribe( response => {
+    this.homeService.getPostsPerPage('all', 'all', 8, 0).subscribe( response => {
       this.SOMELATESTPOST = response;
       console.log(this.SOMELATESTPOST);
     })

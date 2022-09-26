@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, TemplateRef} from '@angular/core';
 import {SearchResultService} from "./search-result.service";
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-search-result',
   templateUrl: './search-result.component.html',
-  styleUrls: ['./search-result.component.css']
+  styleUrls: ['./search-result.component.scss']
 })
 export class SearchResultComponent implements OnInit {
 
@@ -14,7 +14,10 @@ export class SearchResultComponent implements OnInit {
   POSTS: any;
   page: number = 1;
   count: number = 0;
-  listSize: number = 10;
+  listSize: number = 12;
+
+  public loading = true;
+  public loadingTemplate !: TemplateRef<any>;
 
   constructor( private searchResultService: SearchResultService,
                private route: ActivatedRoute) { }
@@ -32,6 +35,7 @@ export class SearchResultComponent implements OnInit {
 
   searchResultList(name: string): void {
     this.searchResultService.searchBridgesByName(name).subscribe( response => {
+      this.loading = false;
       this.POSTS = response;
       console.log(this.POSTS);
     })
