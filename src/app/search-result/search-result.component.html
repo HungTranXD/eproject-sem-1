@@ -28,11 +28,11 @@
     <div class="col-12 col-md-6 col-lg-4" *ngFor="let post of POSTS | paginate: {itemsPerPage: listSize, currentPage: page, totalItems: count}; let i = index">
       <article class="bridge-card">
         <header class="card__thumb">
-          <a href="#"><img src="{{post.thumbnail}}"/></a>
+          <a [routerLink]="['/bridge-page', post.id]"><img src="{{post.thumbnail}}"/></a>
         </header>
         <div class="card__body">
-          <div class="card__category"><a href="#">{{post.continent_name}}</a></div>
-          <h2 class="card__title"><a href="#">{{post.bridge_name}}</a></h2>
+          <div class="card__category"><a [routerLink]="['/bridges-by-continent', post.continent_id]">{{post.continent_name}}</a></div>
+          <h2 class="card__title"><a [routerLink]="['/bridge-page', post.id]">{{post.bridge_name}}</a></h2>
           <div class="card__subtitle">{{post.detail_location}}, {{post.country_name}}</div>
           <p class="card__description">{{post.introduction}}</p>
         </div>

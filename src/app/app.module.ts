@@ -26,6 +26,9 @@ import {LightboxModule} from "ngx-lightbox";
 import {ngxLoadingAnimationTypes, NgxLoadingModule} from "ngx-loading";
 import { BridgePageComponent } from './bridge-page/bridge-page.component';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
+import { HistoricalGreatBridgesComponent } from './historical-great-bridges/historical-great-bridges.component';
+import { IconicBridgesComponent } from './iconic-bridges/iconic-bridges.component';
+import { ModernGreatBridgesComponent } from './modern-great-bridges/modern-great-bridges.component';
 
 
 const appRoutes: Routes = [
@@ -41,6 +44,9 @@ const appRoutes: Routes = [
   {path: 'bridges-by-continent/:id', component: BridgesByContinentComponent},
   {path: 'bridges-history', component: BridgesHistoryComponent},
   {path: 'bridge-page/:id', component: BridgePageComponent},
+  {path: 'historical-great-bridges', component: HistoricalGreatBridgesComponent},
+  {path: 'iconic-bridges', component: IconicBridgesComponent},
+  {path: 'modern-great-bridges', component: ModernGreatBridgesComponent},
 ];
 
 @NgModule({
@@ -63,7 +69,10 @@ const appRoutes: Routes = [
     BridgesByContinentComponent,
     BridgesHistoryComponent,
     BridgePageComponent,
-    ScrollToTopComponent
+    ScrollToTopComponent,
+    HistoricalGreatBridgesComponent,
+    IconicBridgesComponent,
+    ModernGreatBridgesComponent
   ],
   imports: [
     BrowserModule,

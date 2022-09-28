@@ -1,0 +1,139 @@
+<div class="position-relative" *ngIf="loading == true" style="height: 100vh">
+  <ngx-loading
+    [show]="loading"
+    [template]="loadingTemplate"
+  ></ngx-loading>
+</div>
+
+<div class="container" *ngIf="loading == false">
+  <div class="banner" [ngStyle]="{'background': 'linear-gradient(#000, transparent, #000), url(\'../../assets/images/paralax-banner/3.jpg\') 50%/ cover', 'background-attachment' : 'fixed', 'background-blend-mode': 'multiply', 'height': '37.5vmin'}"></div>
+  <div class="row page-header">
+    <div class="title col-12">Iconic bridges</div>
+  </div>
+</div>
+
+<div class="container timeline-container" *ngIf="loading == false">
+  <div class="section-title mt-5">
+    <span>One</span>
+  </div>
+  <p class="fs-5 mb-4">Many cities have commissioned eminent engineers to design new “signature” bridges, intended to become symbols of the adjacent city or area. The most prominent bridges identified as “signature” bridges include: Erasmus Bridge, Rotterdam, 1996, a cable-stayed bridge, main span 932 feet; Millennium Bridge, London, 2002, a cable-stayed pedestrian bridge, main span 472 feet; and the Sundial Bridge, CA, 2004, a pedestrian cable-stayed bridge, main span 492 feet. Calatrava’s Alamillo Bridge (Seville, Spain, 1992, 656-foot [200 meters] main span) is a beautiful, yet controversial bridge design due to its deviation from basic cable-stayed systems, resulting in high inefficiency. The notable omission of back span cable-stays creates a dramatic view and contributes to the attractiveness of the bridge, but such a concept has been discouraged for any bridge not built as a monument.</p>
+
+  <article class="postcard light blue">
+    <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[2].id]">
+      <img class="postcard__img" src="{{POSTS[2].thumbnail}}" alt="Image Title" />
+    </a>
+    <div class="postcard__text t-dark">
+      <h1 class="postcard__title blue"><a [routerLink]="['/bridge-page', POSTS[2].id]">{{POSTS[2].bridge_name}}</a></h1>
+      <div class="postcard__subtitle small">
+        <time datetime="2020-05-25 12:00:00">
+          <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[2].posted_date}}
+        </time>
+      </div>
+      <div class="postcard__bar"></div>
+      <div class="postcard__preview-txt">{{POSTS[2].introduction}}</div>
+      <ul class="postcard__tagbox">
+        <li class="tag__item">
+          <a [routerLink]="['/bridges-by-continent', POSTS[2].continent_id]"><i class="fas fa-tag mr-2">
+          </i> {{POSTS[2].continent_name}}</a>
+        </li>
+        <li class="tag__item play blue">
+          <a [routerLink]="['/bridge-page', POSTS[2].id]"><i class="fas fa-play mr-2"></i> More detail</a>
+        </li>
+      </ul>
+    </div>
+  </article>
+  <article class="postcard light red">
+    <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[0].id]">
+      <img class="postcard__img" src="{{POSTS[0].thumbnail}}" alt="Image Title" />
+    </a>
+    <div class="postcard__text t-dark">
+      <h1 class="postcard__title red"><a [routerLink]="['/bridge-page', POSTS[0].id]">{{POSTS[0].bridge_name}}</a></h1>
+      <div class="postcard__subtitle small">
+        <time datetime="2020-05-25 12:00:00">
+          <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[0].posted_date}}
+        </time>
+      </div>
+      <div class="postcard__bar"></div>
+      <div class="postcard__preview-txt">{{POSTS[0].introduction}}</div>
+      <ul class="postcard__tagbox">
+        <li class="tag__item">
+          <a [routerLink]="['/bridges-by-continent', POSTS[0].continent_id]"><i class="fas fa-tag mr-2">
+          </i> {{POSTS[0].continent_name}}</a>
+        </li>
+        <li class="tag__item play red">
+          <a [routerLink]="['/bridge-page', POSTS[0].id]"><i class="fas fa-play mr-2"></i> More detail</a>
+        </li>
+      </ul>
+    </div>
+  </article>
+  <article class="postcard light green">
+    <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[3].id]">
+      <img class="postcard__img" src="{{POSTS[3].thumbnail}}" alt="Image Title" />
+    </a>
+    <div class="postcard__text t-dark">
+      <h1 class="postcard__title green"><a [routerLink]="['/bridge-page', POSTS[3].id]">{{POSTS[3].bridge_name}}</a></h1>
+      <div class="postcard__subtitle small">
+        <time datetime="2020-05-25 12:00:00">
+          <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[3].posted_date}}
+        </time>
+      </div>
+      <div class="postcard__bar"></div>
+      <div class="postcard__preview-txt">{{POSTS[3].introduction}}</div>
+      <ul class="postcard__tagbox">
+        <li class="tag__item">
+          <a [routerLink]="['/bridges-by-continent', POSTS[3].continent_id]"><i class="fas fa-tag mr-2">
+          </i> {{POSTS[3].continent_name}}</a>
+        </li>
+        <li class="tag__item play green">
+          <a [routerLink]="['/bridge-page', POSTS[3].id]"><i class="fas fa-play mr-2"></i> More detail</a>
+        </li>
+      </ul>
+    </div>
+  </article>
+
+</div>
+
+<div class="container mt-3" *ngIf="loading == false">
+  <div class="banner" [ngStyle]="{'background': 'linear-gradient(#000, transparent, #000), url(\'../../assets/images/paralax-banner/5.jpg\') 50%/ cover', 'background-attachment' : 'fixed', 'background-blend-mode': 'multiply', 'height': '37.5vmin'}"></div>
+  <div class="section-title mt-5">
+    <span>Two</span>
+  </div>
+  <p class="fs-5 mb-4">The self-anchored suspension part of the East span of the SF-Oakland Bay Bridge (2016, 1,263 feet) became an example for an inefficient design concept. The cost, construction material quantities, and building schedule were 7 to 8 times greater than for bridges with similar span but with other structural systems.</p>
+
+
+  <article class="postcard light yellow">
+    <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[1].id]">
+      <img class="postcard__img" src="{{POSTS[1].thumbnail}}" alt="Image Title" />
+    </a>
+    <div class="postcard__text t-dark">
+      <h1 class="postcard__title yellow"><a [routerLink]="['/bridge-page', POSTS[1].id]">{{POSTS[1].bridge_name}}</a></h1>
+      <div class="postcard__subtitle small">
+        <time datetime="2020-05-25 12:00:00">
+          <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[1].posted_date}}
+        </time>
+      </div>
+      <div class="postcard__bar"></div>
+      <div class="postcard__preview-txt">{{POSTS[1].introduction}}</div>
+      <ul class="postcard__tagbox">
+        <li class="tag__item">
+          <a [routerLink]="['/bridges-by-continent', POSTS[1].continent_id]"><i class="fas fa-tag mr-2">
+          </i> {{POSTS[1].continent_name}}</a>
+        </li>
+        <li class="tag__item play yellow">
+          <a [routerLink]="['/bridge-page', POSTS[1].id]"><i class="fas fa-play mr-2"></i> More detail</a>
+        </li>
+      </ul>
+    </div>
+  </article>
+
+</div>
+
+<div class="container mt-3" *ngIf="loading == false">
+  <div class="banner" [ngStyle]="{'background': 'linear-gradient(#000, transparent, #000), url(\'../../assets/images/paralax-banner/6.jpg\') 50%/ cover', 'background-attachment' : 'fixed', 'background-blend-mode': 'multiply', 'height': '37.5vmin'}"></div>
+  <div class="section-title mt-5">
+    <span>Three</span>
+  </div>
+  <p class="fs-5 mb-4">All these bridges resulted in very costly projects and proved inefficient in materials and construction time. These “signature” bridges are closer to structural extravagance than to Great Bridges. While these “signature” bridges have interesting, even attractive looking structures and often became symbolic of their locations, none of these exceptional pre-planned structures has gained recognition as a Great Bridge.</p>
+
+</div>
+
