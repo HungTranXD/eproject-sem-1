@@ -27,79 +27,16 @@
           <div class="linkgroup">
             <button class="custom-btn btn-3 mx-1" routerLink="/about-us"><span>About us</span></button>
             <button class="custom-btn btn-3 mx-1" routerLink="/contact-us"><span>Contact us</span></button>
-<!--            <a class="about-link" routerLink="/about-us">About us</a>-->
-<!--            <a class="about-link" routerLink="/contact-us">Contact us</a>-->
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!--<div class="container position-relative">-->
-
-
-  <!--  &lt;!&ndash; Page header with welcome massage and slide show &ndash;&gt;-->
-  <!--&lt;!&ndash;  <video autoplay muted loop id="myVideo2">&ndash;&gt;-->
-  <!--&lt;!&ndash;    <source src="assets/video_header.mp4" type="video/mp4">&ndash;&gt;-->
-  <!--&lt;!&ndash;    Your browser does not support HTML5 video.&ndash;&gt;-->
-  <!--&lt;!&ndash;  </video>&ndash;&gt;-->
-
-
-  <!--&lt;!&ndash;  <div class="page-header row">&ndash;&gt;-->
-  <!--&lt;!&ndash;    <div class="welcome-massage mx-2">&ndash;&gt;-->
-  <!--&lt;!&ndash;      <div class="title">Welcome to Bridge.com</div>&ndash;&gt;-->
-  <!--&lt;!&ndash;      <div class="content">In here you can find information and images about some of the world’s most Incredible bridges, both young and old.</div>&ndash;&gt;-->
-  <!--&lt;!&ndash;      <div class="linkgroup">&ndash;&gt;-->
-  <!--&lt;!&ndash;        <a class="about-link" routerLink="/about-us">About us</a>&ndash;&gt;-->
-  <!--&lt;!&ndash;        <a class="about-link" routerLink="/contact-us">Contact us</a>&ndash;&gt;-->
-  <!--&lt;!&ndash;      </div>&ndash;&gt;-->
-  <!--&lt;!&ndash;    </div>&ndash;&gt;-->
-  <!--&lt;!&ndash;  </div>&ndash;&gt;-->
-  <!--&lt;!&ndash;  <ul class="slideshow">&ndash;&gt;-->
-  <!--&lt;!&ndash;    <li><span></span></li>&ndash;&gt;-->
-  <!--&lt;!&ndash;    <li><span>2</span></li>&ndash;&gt;-->
-  <!--&lt;!&ndash;    <li><span></span></li>&ndash;&gt;-->
-  <!--&lt;!&ndash;    <li><span></span></li>&ndash;&gt;-->
-  <!--&lt;!&ndash;    <li><span></span></li>&ndash;&gt;-->
-  <!--&lt;!&ndash;  </ul>&ndash;&gt;-->
-
-
-  <!--  &lt;!&ndash; TOP sections (like top longest, top tallest, top oldest bridges &ndash;&gt;-->
-
-  <!--  <div class="top-list row g-2">-->
-  <!--    <div class="col-12 col-md-auto px-0">-->
-  <!--      <div class="header px-3">-->
-  <!--        Top lists about bridges-->
-  <!--      </div>-->
-  <!--    </div>-->
-  <!--    <div class="row border-bottom border-dark mx-0"></div>-->
-
-  <!--    <div class="col-12 col-md-6" *ngFor="let all of ALLTOPLISTS; let i = index" [class.col-lg-3]="i >= 2" [class.d-md-block]="i >= 3" [ngClass]="{'d-none': displayMoreTopList == 0 && i >= 3, 'd-block': displayMoreTopList == 1 && i >= 3}">-->
-  <!--      <a [routerLink]="['/top-list-page', all.id]"><div class="top-list-card">-->
-  <!--        <img class="thumbnail" src="{{all.thumbnail}}"/>-->
-  <!--        <div class="title">{{all.name}}</div>-->
-  <!--      </div></a>-->
-  <!--    </div>-->
-
-  <!--    <button class="show-more-button d-md-none" (click)="displayMoreTopList = 1" [class.d-none]="displayMoreTopList == 1">Show more</button>-->
-  <!--    <button class="show-more-button d-md-none" (click)="displayMoreTopList = 0" [class.d-none]="displayMoreTopList == 0">Show less</button>-->
-  <!--    <div class="row border-bottom border-dark mx-0 mt-2"></div>-->
-
-  <!--  </div>-->
-  <!--</div>-->
 
   <div class="container-fluid my-5">
     <div class="container">
       <div class="top-lists-container">
-<!--        <div class="top-lists-header">-->
-
-<!--          <svg>-->
-<!--            <text x="51%" y="60%"  text-anchor="middle"  >-->
-<!--              TOP LISTS-->
-<!--            </text>-->
-<!--          </svg>-->
-
-<!--        </div>-->
         <div class="top-lists-header-2">
           <span>Top lists</span>
         </div>
@@ -126,15 +63,6 @@
         <span>Continents map</span>
       </div>
       <div class="continents-container">
-<!--        <div class="continents-header">-->
-
-<!--          <svg>-->
-<!--            <text x="51%" y="60%"  text-anchor="middle"  >-->
-<!--              CONTINENTS MAP-->
-<!--            </text>-->
-<!--          </svg>-->
-
-<!--        </div>-->
         <div id="map-continents" style="transform: scaleX(1.05)">
           <ul class="continents">
             <li class="c1"><a [routerLink]="['/bridges-by-continent', 4]">Africa</a></li>
@@ -150,47 +78,8 @@
   </div>
 
 
-<!--  <div class="container">-->
-<!--    &lt;!&ndash; Latest Posts/Recently added &ndash;&gt;-->
-<!--    <div class="top-list row g-2 mt-2">-->
-<!--      <div class="col-12 col-md-auto px-0">-->
-<!--        <div class="header px-3">-->
-<!--          Latest posts-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="row border-bottom border-dark mx-0"></div>-->
-
-<!--      <div class="col-12 col-md-6" *ngFor="let latest of SOMELATESTPOST; let i = index" [class.col-lg-3]="i >= 2" [class.d-md-block]="i >= 3" [ngClass]="{'d-none': displayMoreLatestPost == 0 && i >= 3, 'd-block': displayMoreLatestPost == 1 && i >= 3}">-->
-<!--        <div class="post-card">-->
-<!--          <a href="#"><img class="latest-post-thumbnail" src="{{latest.thumbnail}}"/></a>-->
-<!--          <div class="location"><a href="#">{{latest.country_name}}</a> / <a href="#">{{latest.continent_name}}</a></div>-->
-<!--          <div class="title"><a href="#">{{latest.bridge_name}}</a></div>-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--      <button class="show-more-button d-md-none" (click)="displayMoreLatestPost = 1" [class.d-none]="displayMoreLatestPost == 1">Show more</button>-->
-<!--      <button class="show-more-button d-md-none" (click)="displayMoreLatestPost = 0" [class.d-none]="displayMoreLatestPost == 0">Show less</button>-->
-<!--      <button class="show-more-button" href="#">Go to Latest Posts</button>-->
-<!--  &lt;!&ndash;    <div class="row border-bottom border-dark mx-0 mt-2"></div>&ndash;&gt;-->
-<!--    </div>-->
-<!--  </div>-->
-
-
-
-
-
-
   <div class="container mt-3 mb-5">
     <div class="latest-posts-container pb-3" style="padding-top: 2rem">
-<!--      <div class="latest-posts-header">-->
-
-<!--        <svg>-->
-<!--          <text x="51%" y="60%"  text-anchor="middle"  >-->
-<!--            LATEST POSTS-->
-<!--          </text>-->
-<!--        </svg>-->
-
-<!--      </div>-->
       <div class="top-lists-header-2">
         <span>Latest Posts</span>
       </div>
@@ -218,9 +107,6 @@
           </div></a>
         </div>
       </div>
-<!--      <div class="d-flex justify-content-end mt-3 px-3">-->
-<!--        <a class="bn39" routerLink="/latest-posts"><span  class="bn39span">Go to Latest Posts<i class="fa-solid fa-arrow-right" style="position: relative; left:3%; transform: translateY(10%)"></i></span></a>-->
-<!--      </div>-->
       <div class="d-flex justify-content-center mt-2">
         <div class="wrapper">
           <a routerLink="/latest-posts"><div class="icon go-to">
@@ -231,8 +117,6 @@
       </div>
     </div>
   </div>
-
-
 
 
   <div class="container books-section-container">
@@ -306,7 +190,6 @@
       </div>
     </div>
   </div>
-
 </div>
 
 

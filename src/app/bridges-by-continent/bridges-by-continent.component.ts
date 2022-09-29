@@ -63,7 +63,7 @@ export class BridgesByContinentComponent implements OnInit {
     this.bridgesByContinentService.getPostsByContinent(continentId).subscribe(response => {
       setTimeout(() => {
         this.loading = false;
-      }, 500);
+      }, 1000);
       this.POSTS = response;
       console.log(this.POSTS);
     })
