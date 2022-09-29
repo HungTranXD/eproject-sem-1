@@ -42,7 +42,7 @@ const appRoutes: Routes = [
   {path: 'faq', component: FaqComponent},
   {path: 'gallery', component: GalleryComponent},
   {path: 'bridge-detail', component: BridgeDetailComponent},
-  {path: 'achivement', component: AchivementComponent}
+  {path: 'achivement', component: AchivementComponent},
   {path: 'bridges-by-continent/:id', component: BridgesByContinentComponent},
   {path: 'bridges-history', component: BridgesHistoryComponent},
   {path: 'bridge-page/:id', component: BridgePageComponent},
@@ -66,7 +66,7 @@ const appRoutes: Routes = [
     TopListPageComponent,
     LatestPostsComponent,
     BridgeDetailComponent,
-    AchivementComponent
+    AchivementComponent,
     SearchResultComponent,
     BridgeDetailGalleryComponent,
     BridgesByContinentComponent,
@@ -82,7 +82,7 @@ const appRoutes: Routes = [
     FormsModule,
     NgxPaginationModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
     RouterModule.forRoot(appRoutes, {scrollPositionRestoration: 'enabled'}),
     BrowserAnimationsModule,
     LightboxModule,
