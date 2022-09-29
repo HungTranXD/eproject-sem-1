@@ -17,6 +17,7 @@ import { LatestPostsComponent } from './latest-posts/latest-posts.component';
 import { BridgeDetailComponent } from './bridge-detail/bridge-detail.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { TopListPageComponent } from './top-list-page/top-list-page.component';
+import {AchivementComponent} from "./achivement/achivement.component";
 import { SearchResultComponent } from './search-result/search-result.component';
 import { BridgeDetailGalleryComponent } from './bridge-detail-gallery/bridge-detail-gallery.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
@@ -41,6 +42,7 @@ const appRoutes: Routes = [
   {path: 'faq', component: FaqComponent},
   {path: 'gallery', component: GalleryComponent},
   {path: 'bridge-detail', component: BridgeDetailComponent},
+  {path: 'achivement', component: AchivementComponent},
   {path: 'bridges-by-continent/:id', component: BridgesByContinentComponent},
   {path: 'bridges-history', component: BridgesHistoryComponent},
   {path: 'bridge-page/:id', component: BridgePageComponent},
@@ -64,6 +66,7 @@ const appRoutes: Routes = [
     TopListPageComponent,
     LatestPostsComponent,
     BridgeDetailComponent,
+    AchivementComponent,
     SearchResultComponent,
     BridgeDetailGalleryComponent,
     BridgesByContinentComponent,
@@ -79,6 +82,7 @@ const appRoutes: Routes = [
     FormsModule,
     NgxPaginationModule,
     HttpClientModule,
+    RouterModule.forRoot(appRoutes),
     RouterModule.forRoot(appRoutes, {scrollPositionRestoration: 'enabled'}),
     BrowserAnimationsModule,
     LightboxModule,

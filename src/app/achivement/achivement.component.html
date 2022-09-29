@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="achivement-container">
+    <div class="row content-container">
+      <div class="col-md-3 left-content">
+        <div class="check">
+          <h2>Achivement</h2>
+
+          <div class="box">
+            <input type="checkbox" id="radio1" name="radio1"/>
+            <label for="radio1">Longest</label>
+
+            <input type="checkbox" id="radio2" name="radio1"/>
+            <label for="radio2">Shortest</label>
+
+            <input type="checkbox" id="radio3" name="radio1"/>
+            <label for="radio3">Oldest</label>
+
+            <input type="checkbox" id="radio4" name="radio1"/>
+            <label for="radio4">Highest</label>
+
+            <input type="checkbox" id="radio5" name="radio1"/>
+            <label for="radio5">Not an option</label>
+
+            <input type="checkbox" id="radio6" name="radio1"/>
+            <label for="radio6">Not an option</label>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9 right-content">
+        <div class="row card-container">
+          <div class="col-md-15 col-xs-3 item-card" *ngFor="let latest of ALLLISTS | paginate: {itemsPerPage: listSize, currentPage: page, totalItems: count}; let i = index">
+            <div class="img">
+              <a href="#"><img src="{{latest.thumbnail}}" alt=""></a>
+            </div>
+            <div class="title-img">
+              <a href="#">{{latest.bridge_name}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <pagination-controls class="posts-pagination"
+                         previousLabel=""
+                         nextLabel=""
+                         (pageChange)="onListDataChange($event)">
+    </pagination-controls>
+  </div>
+</div>
