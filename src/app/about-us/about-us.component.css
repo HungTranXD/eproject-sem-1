@@ -1,86 +1,93 @@
 /*  ENTIRE PAGE  */
 .about-us {
-  margin-top: -10px;
-  color: #605f5f;
+  margin: -10px 0;
+  padding: 0;
   font-family: 'Nanum Gothic', sans-serif;
 }
 a {
-  color: #881520;
+  color: black;
 }
 a:hover{
   color: #ff3d00;
 }
-.empty-box {
-  height: 200px;
-  background-color: #f1f1f1;
-}
+
 .container {
   background: white;
-  margin-top: -200px;
   padding: 0;
 }
-/*  CAROUSEL  */
-#carouselExampleCaptions {
-  height: 675px;
-  padding: 0;
+
+/*  BACKGROUND VIDEO*/
+.background-video {
+  width: 100%;
+  height: 500px;
+  position: relative;
 }
-#carouselExampleCaptions img{
-  height: 675px;
+.title-background {
+  width: 100%;
+  position: absolute;
+  bottom: 55px;
+  text-align: center;
+  z-index: 1;
+  color: #fff;
+}
+video {
+  width: 100%;
+  height: 500px;
   object-fit: cover;
-  object-position: center;
 }
-.title-num1 a {
-  color: white;
-  font-size: 40px;
+.title-background h1{
+  font-size: 45px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 7px;
+}
+.title-background a {
+  font-size: 25px;
+  color: #fff;
   letter-spacing: 3px;
-  font-weight: bolder;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  padding: 2px 20px 3px;
 }
-.title-num1 a:hover {
+
+.title-background a:hover {
   color: #ff3d00;
+
 }
-.title-num2 {
-  font-size: 24px;
-  letter-spacing: 2px;
-}
+
 /*  GREETING AND GENERAL INTRODUCTION  */
 
 /*  CONTENT 1 -- ABOUT-US  */
 .row.greeting {
   text-transform: uppercase;
   padding: 27px 0;
-  border-top: #0f3f85 1px solid;
-  border-bottom: #0f3f85 1px solid;
-  margin: 27px 0 0 0;
+  margin: 0;
+  letter-spacing: 2px;
+  background-color:  #f5f6f6;
 }
-.row.greeting .col-5 {
-  padding: 0;
-}
-.row.greeting .col-5 .title-about-us {
-  margin-top: 20px;
+
+.row.greeting .content.one {
+  margin-top: 10px;
   margin-bottom: 15px;
   font-weight: bolder;
-  font-size: 35px;
+  font-size: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #0f3f85;
+  color:#ff3d00;
 }
-.row.greeting .col-5 .greeting {
-  padding: 0 20px;
+.row.greeting .content.two {
+  font-weight: bolder;
+  font-size: 18px;
   text-align: center;
-  font-size: 20px;
-}
-.row.greeting .col-5 .greeting p {
-  margin-bottom: 5px;
+  margin-top: 10px;
+  color: #ff3d00;
 }
 
-.row.greeting .col-7 {
-  padding: 0;
-}
 
 /*  CONTENT 2 -- VISION  */
 .row.vision {
-  padding: 10px 0;
+  padding: 25px 0;
 }
 /*  including the CSS of the "MISSION" section  */
 .title-vision, .title-mission {
@@ -91,7 +98,7 @@ a:hover{
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #0f3f85;
+  color: #ff3d00;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -102,11 +109,12 @@ a:hover{
   line-height: 1.4;
   text-align: justify;
   letter-spacing: normal;
+
 }
 
 /*  CONTENT 3 -- MISSION  */
 .mission {
-  border-top: #0f3f85 1px solid;
+  border-top: black 1px solid;
 }
 .mission .title-vision {
   margin-top: 25px;
@@ -116,7 +124,7 @@ a:hover{
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #0f3f85;
+  color: black;
   text-transform: uppercase;
 }
 .content-mission {
@@ -131,56 +139,83 @@ a:hover{
 }
 
 /*  CONTENT 4 -- OUR COMMITMENT  */
-/*  including the CSS of the "OUR TEAM" section  */
-.our-commitment, .our-team {
-  padding: 0;
-}
-.title-commitment p {
-  margin-bottom: 0;
-  width: 200px;
-  font-size: 1rem;
-  text-transform: uppercase;
-  background-color: #0f3f85;
+.our-commitment {
+  background-color: #2b3647;
   color: white;
-  padding-left: 10px;
-  letter-spacing: 2px;
-}
-.content-commitment {
-  border-top: 1px #0f3f85 solid;
+  width: 100%;
   margin: 0;
-  padding-top: 10px;
+  padding: 0 0 50px 0;
+  box-sizing: border-box;
 }
-.content-commitment .col-4 {
-  padding: 6px;
+.row.content-commitment {
+  padding: 0;
+  margin: 0;
 }
-.content-commitment p {
-  background-color: #e2e5e8;
-  padding: 12px;
-  font-family: 'Source Sans Pro', sans-serif;
-  text-align: justify;
-  filter: drop-shadow(1px 2px 1px black);
+.title-commitment {
+  margin-top: 60px;
+  margin-left: 70px;
+  text-transform: uppercase;
+  transform: rotate(-5deg);
+}
+.title-commitment .title {
+  font-size: 30px;
+  padding: 5px 10px;
+  width: 360px;
+  display: flex;
+  letter-spacing: 2px;
+  justify-content: center;
+  border: #ff3d00 4px solid;
+}
+
+.row.content-commitment .col-lg-6.num1 .content {
+  margin: 90px 50px 0 70px;
+  font-size: 22px;
+  font-style: italic;
+  line-height: 1.9;
+  letter-spacing: 1.5px;
+}
+.row.content-commitment .col-lg-6.num2 .img {
+  margin: 40px 30px 20px;
+}
+.row.content-commitment .col-lg-6.num3 .content , .row.content-commitment .col-lg-6.num4 .content {
+  margin: 0 25px 0 70px;
+  font-size: 22px;
+  font-style: italic;
+  line-height: 1.9;
+  letter-spacing: 1.5px;
+}
+.row.content-commitment .col-lg-6.num4 .content {
+  margin: 0 45px 0 40px;
+}
+.hero2-section {
+  transform: rotate(180deg);
+  margin-bottom: -1px;
 }
 
 /*  CONTENT 5 -- OUR TEAM  */
+.our-team {
+  padding: 0;
+  margin-top: 40px;
+}
 .title-our-team p {
-  margin-bottom: 0;
+  margin-bottom: -1px;
   width: 200px;
   font-size: 1rem;
   text-transform: uppercase;
-  background-color: #0f3f85;
+  background-color: #ff3d00;
   color: white;
   padding-left: 10px;
   letter-spacing: 2px;
 }
 .title-our-team {
   margin-bottom: -5px;
-  border-bottom: 1px #0f3f85 solid;
+  border-bottom: 1px black solid;
 }
 .content-our-team {
   margin-top: 10px;
 }
 .content-our-team .member-infor {
-  background-color: #e5e9ea;
+  background-color:  #f5f6f6;
   text-align: center;
   padding-top: 17px;
   filter: drop-shadow(0 0 2px black);
@@ -206,6 +241,27 @@ a:hover{
 
 /*  DISPLAY SCREEN LESS THAN 1400px  */
 @media (max-width: 1400px){
+
+  /*  BACKGROUND VIDEO*/
+  .background-video {
+    height: 470px;
+  }
+  video {
+    height: 470px;
+  }
+
+
+  /*  CONTENT 1 -- ABOUT-US  */
+  .row.greeting {
+    padding: 20px 0;
+  }
+
+  .row.greeting .content.two {
+    font-size: 18px;
+    line-height: 1.8;
+    padding: 0 30px;
+  }
+
   /*  content  */
   .content-main {
     margin: 20px 0;
@@ -217,14 +273,26 @@ a:hover{
   }
 
   /*  CONTENT 4 -- OUR COMMITMENT  */
-  .content-commitment .col-4 {
-    width: 100%;
+  .row.content-commitment .col-lg-6.num3 .content {
+    margin-top: 40px;
   }
-  .content-commitment .col-4 p {
-    width: 100%;
-    padding: 20px;
+  .row.content-commitment .col-lg-6.num4 .content {
+    margin-top: 40px;
   }
-  /*  CONTENT 5 -- OUR TEAM*/
+  .row.content-commitment .col-lg-6.num2 {
+    position: relative;
+  }
+  .row.content-commitment .col-lg-6.num2 .img{
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    margin-left: 0;
+  }
+
+
+
+
+    /*  CONTENT 5 -- OUR TEAM*/
   .content-member-information {
 
   }
@@ -234,18 +302,34 @@ a:hover{
 /*  DISPLAY SCREEN LESS THAN 1024px  */
 @media (max-width: 1024px){
 
-  /*  CONTENT 1 -- ABOUT US  */
-  .row.greeting .col-5 {
-    width: 100%;
-    padding:0 20px 20px;
+  /*  BACKGROUND VIDEO*/
+  .background-video {
+    height: 450px;
   }
-  .row.greeting .col-7 {
-    width: 100%;
+  video {
+    height: 450px;
+  }
+  .title-background h1{
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  .title-background a {
+    font-size: 20px;
+    letter-spacing: 2px;
+    border-radius: 20px;
+  }
+
+  /*  CONTENT 1 -- ABOUT-US  */
+  .row.greeting {
+    padding: 20px 0;
+  }
+  .row.greeting .content.two {
     padding: 0 20px;
   }
-  .row.greeting .col-5 .title-about-us {
-    margin-top: 0;
-    margin-bottom: 5px;
+  .row.greeting .content.one {
+    font-size: 27px;
+    text-align: center;
   }
 
   /*   content  */
@@ -254,16 +338,7 @@ a:hover{
     font-size: 17px;
     line-height: 1.5;
   }
-  /*  CAROUSEL  */
-  #carouselExampleCaptions {
-    height: auto;
-    width: auto;
-  }
-  #carouselExampleCaptions img{
-    height: auto;
-    object-fit: cover;
-    object-position: center;
-  }
+
   /*  CONTENT 2 -- VISION  */
   .row.vision {
     position: relative;
@@ -277,16 +352,62 @@ a:hover{
   }
   .row.vision .col-7 {
     width: 100%;
-    margin: 185px 0 0;
+    margin: 185px 0 20px;
   }
   .row.vision .content-vision {
     padding: 0 10px 10px;
   }
+
   /*  CONTENT 3 -- MISSION  */
   .title-mission {
     margin-top: 20px;
     margin-bottom: 8px;
   }
+
+
+  /*  CONTENT 4 -- OUR COMMITMENT  */
+  .col-lg-6 {
+    width: 100%;
+    text-align: justify;
+  }
+  .row.content-commitment .col-lg-6.num2 {
+    position: static;
+  }
+  .row.content-commitment .col-lg-6.num2 .img{
+    position: static;
+  }
+  .title-commitment {
+    margin-top: 30px;
+    margin-left: 40px;
+    text-transform: uppercase;
+    transform: rotate(0deg);
+    color: #ff3d00;
+  }
+  .title-commitment .title {
+    padding: 0;
+    justify-content: left;
+    border: none;
+  }
+  .row.content-commitment .col-lg-6.num1 .content {
+    margin: 40px 40px 0;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  .row.content-commitment .col-lg-6.num2 .img {
+    display: flex;
+    justify-content: center;
+  }
+  .row.content-commitment .col-lg-6.num2 .img {
+    margin: 20px 20px 0;
+  }
+
+  .row.content-commitment .col-lg-6.num3 .content , .row.content-commitment .col-lg-6.num4 .content {
+    margin: 20px 40px 0;
+    font-size: 20px;
+  }
+  .row.content-commitment .col-lg-6.num4 .content {
+  }
+
 
 }
 
@@ -296,19 +417,32 @@ a:hover{
   .container {
     padding: 0 10px;
   }
-  /*  CAROUSEL  */
-  #carouselExampleCaptions {
-    padding: 0 15px;
+  .title-background {
+    bottom: 40px;
   }
-  /*    CONTENT 1 - ABOUT US  */
-  .row.greeting .col-5 {
-    padding: 0 0 20px 0;
+  .background-video {
+    height: 350px;
   }
-  .row.greeting .col-5 .greeting {
-    padding: 0 20px;
+  video {
+    height: 350px;
+  }
+
+  /*  CONTENT 1 -- ABOUT-US  */
+  .row.greeting {
+    text-transform: uppercase;
+    padding: 27px 0;
+    margin: 0;
+    letter-spacing: 2px;
+  }
+  .row.greeting .content.one {
+    font-size: 22px;
     text-align: center;
-    font-size: 18px;
   }
+  .row.greeting .content.two {
+    font-size: 16px;
+  }
+
+
   /*  CONTENT 2 -- VISION  */
   .title-vision {
     margin-top: 0;
@@ -316,26 +450,71 @@ a:hover{
   }
   .row.vision .col-7 {
     margin-top: 230px;
+    padding: 0 20px;
   }
   .row.vision .col-5 {
     padding: 20px;
   }
+
   /*  CONTENT3 -- MISSION  */
   .content-mission {
     margin: 0 20px;
   }
-  /*  CONTENT 4 -- OUR COMMITMENT  */
-  .our-commitment {
 
-  }
-  .content-commitment .col-4 {
-    padding: 0 15px;
-  }
-  .content-commitment p {
-    padding: 20px;
-  }
+  /*  CONTENT 4 -- OUR COMMITMENT  */
+
+
   /*  CONTENT 5 -- OUR TEAM  */
   .our-team {
-
   }
 }
+
+/*  DISPLAY SCREEN LESS THAN 600px  */
+@media (max-width: 600px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  /*  BACKGROUND VIDEO*/
+  .title-background {
+    bottom: 30px;
+  }
+  .background-video {
+    height: 250px;
+  }
+  video {
+    height: 250px;
+  }
+  .title-background h1{
+    font-size: 25px;
+    letter-spacing: 3px;
+  }
+  .title-background a {
+    font-size: 18px;
+    letter-spacing: 3px;
+    border-radius: 20px;
+    padding: 2px 15px 3px;
+  }
+
+  /*  CONTENT 1 -- ABOUT-US  */
+  .row.greeting {
+    text-transform: uppercase;
+    padding: 27px 0;
+    margin: 0;
+    letter-spacing: 2px;
+  }
+  .row.greeting .content.one {
+    font-size: 18px;
+    text-align: center;
+  }
+  .row.greeting .content.two {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .title-vision, .title-mission {
+    font-size: 27px;
+  }
+
+}
+
