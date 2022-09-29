@@ -17,26 +17,18 @@ import { LatestPostsComponent } from './latest-posts/latest-posts.component';
 import { BridgeDetailComponent } from './bridge-detail/bridge-detail.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { TopListPageComponent } from './top-list-page/top-list-page.component';
-import { SearchResultComponent } from './search-result/search-result.component';
-import { BridgeDetailGalleryComponent } from './bridge-detail-gallery/bridge-detail-gallery.component';
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { BridgesByContinentComponent } from './bridges-by-continent/bridges-by-continent.component';
-import { BridgesHistoryComponent } from './bridges-history/bridges-history.component';
-import {LightboxModule} from "ngx-lightbox";
-import {ngxLoadingAnimationTypes, NgxLoadingModule} from "ngx-loading";
+import {AchivementComponent} from "./achivement/achivement.component";
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'latest-posts', component: LatestPostsComponent},
-  {path: 'top-list-page/:id', component: TopListPageComponent},
-  {path: 'search-result/:name', component: SearchResultComponent},
+  {path: 'top-list-page', component: TopListPageComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'contact-us', component: ContactUsComponent},
   {path: 'faq', component: FaqComponent},
   {path: 'gallery', component: GalleryComponent},
   {path: 'bridge-detail', component: BridgeDetailComponent},
-  {path: 'bridges-by-continent/:id', component: BridgesByContinentComponent},
-  {path: 'bridges-history', component: BridgesHistoryComponent},
+  {path: 'achivement', component: AchivementComponent}
 ];
 
 @NgModule({
@@ -54,27 +46,14 @@ const appRoutes: Routes = [
     TopListPageComponent,
     LatestPostsComponent,
     BridgeDetailComponent,
-    SearchResultComponent,
-    BridgeDetailGalleryComponent,
-    BridgesByContinentComponent,
-    BridgesHistoryComponent
+    AchivementComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     NgxPaginationModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes),
-    BrowserAnimationsModule,
-    LightboxModule,
-    NgxLoadingModule.forRoot({
-      animationType: ngxLoadingAnimationTypes.wanderingCubes,
-      backdropBackgroundColour: "rgba(0,0,0)",
-      backdropBorderRadius: "4px",
-      primaryColour: "#ffffff",
-      secondaryColour: "#ffffff",
-      tertiaryColour: "#ffffff",
-    }),
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
