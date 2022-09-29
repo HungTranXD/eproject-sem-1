@@ -7,7 +7,7 @@ import {Observable} from "rxjs";
 })
 export class SearchResultService {
 
-  constructor( private http: HttpClient) { }
+  constructor( private http: HttpClient ) { }
 
   searchBridgesByName(name: string): Observable<any> {
     const url = 'https://tranhungfptaptech.herokuapp.com/search-bridge';

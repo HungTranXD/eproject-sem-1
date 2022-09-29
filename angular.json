@@ -13,6 +13,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "ngx-lightbox"
+            ],
             "outputPath": "dist/sem1-eproject",
             "index": "src/index.html",
             "main": "src/main.ts",

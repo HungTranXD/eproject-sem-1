@@ -1,37 +1,45 @@
-<div class="container">
-  <div class="row page-header pt-4 pb-4 mb-3 mx-0">
-    <div class="title col-auto fs-3">Search result for "{{searchInputValue}}"</div>
-    <div class="col-auto fs-3">|</div>
-    <div class="col-auto fs-3">{{POSTS.length}} results</div>
-    <div class="col-12 fst-italic">Click on bridge for more details.</div>
+<div class="position-relative" *ngIf="loading == true" style="height: 100vh">
+  <ngx-loading
+    [show]="loading"
+    [template]="loadingTemplate"
+  ></ngx-loading>
+</div>
+
+<div class="container-fluid gradient-background" *ngIf="loading == false">
+  <div class="container py-5">
+    <div class="row page-header pt-4 pb-4 mb-3 mx-0">
+      <div class="title col-12">Search results</div>
+      <!--      <div class="col-auto fs-3">|</div>-->
+      <!--      <div class="col-auto fs-3">{{count}} results</div>-->
+      <div class="desc col-12">— You can search bridges by name —</div>
+    </div>
+  </div>
+</div>
+
+<div class="container position-relative" *ngIf="loading == false">
+  <div class="row filter align-items-center">
+    <div class="col-10 my-3 fs-4 fw-light">
+      Search results for "{{searchInputValue}}"
+    </div>
+    <div class="col-2 text-end my-3 fs-4 fw-light">| {{POSTS.length}} results</div>
   </div>
 
-
-  <div class="row post-card mb-4" *ngFor="let post of POSTS | paginate: {itemsPerPage: listSize, currentPage: page, totalItems: count}; let i = index">
-    <div class="col-12 d-md-none">
-      <div class="bridge-name fs-4">{{post.bridge_name}}</div>
-      <div class="posted-date text-black-50">Posted on {{post.posted_date}}</div>
-    </div>
-    <div class="col-12 col-md-4 thumbnail-container">
-      <img class="thumbnail" src="{{post.thumbnail}}">
-    </div>
-    <div class="col-12 col-md-8">
-      <div class="title row d-none d-md-flex mb-3">
-        <div class="bridge-name fs-4">{{post.bridge_name}}</div>
-        <div class="posted-date text-black-50">Posted on {{post.posted_date}}</div>
-      </div>
-      <div class="detail row">
-        <div class="col-3 col-lg-2"><strong>Location:</strong></div>
-        <div class="col-9 col-lg-10">{{post.detail_location}}</div>
-        <div class="col-3 col-lg-2"><strong>Country:</strong></div>
-        <div class="col-9 col-lg-10">{{post.country_name}}</div>
-        <div class="col-3 col-lg-2"><strong>Continent:</strong></div>
-        <div class="col-9 col-lg-10">{{post.continent_name}}</div>
-        <div class="col-3 col-lg-2"><strong>Type:</strong></div>
-        <div class="col-9 col-lg-10">{{post.type}}</div>
-        <div class="col-3 col-lg-2"><strong>Length:</strong></div>
-        <div class="col-9 col-lg-10">{{post.total_length}} m</div>
-      </div>
+  <div class="row g-3">
+    <div class="col-12 col-md-6 col-lg-4" *ngFor="let post of POSTS | paginate: {itemsPerPage: listSize, currentPage: page, totalItems: count}; let i = index">
+      <article class="bridge-card">
+        <header class="card__thumb">
+          <a [routerLink]="['/bridge-page', post.id]"><img src="{{post.thumbnail}}"/></a>
+        </header>
+        <div class="card__body">
+          <div class="card__category"><a [routerLink]="['/bridges-by-continent', post.continent_id]">{{post.continent_name}}</a></div>
+          <h2 class="card__title"><a [routerLink]="['/bridge-page', post.id]">{{post.bridge_name}}</a></h2>
+          <div class="card__subtitle">{{post.detail_location}}, {{post.country_name}}</div>
+          <p class="card__description">{{post.introduction}}</p>
+        </div>
+        <footer class="card__footer">
+          <span class="icon ion-clock"></span> {{post.posted_date}}
+        </footer>
+      </article>
     </div>
   </div>
 

@@ -1,25 +1,37 @@
-<div class="container">
-  <div class="row align-items-center page-header pt-4 pb-4 mb-3 mx-0">
-    <div class="col-12 col-md-9 col-lg-11 row">
-      <div class="title col-auto fs-3 text-light">Images gallery</div>
-      <div class="col-12 fst-italic text-light">A collection off all bridge images, photos, paintings from all continents.</div>
-    </div>
-    <div class="d-none d-md-block col-md-3 col-lg-1">
-      <img class="w-75" src="assets/images/image_icon.png"/>
+<div class="position-relative" *ngIf="loading == true" style="height: 100vh">
+  <ngx-loading
+    [show]="loading"
+    [template]="loadingTemplate"
+  ></ngx-loading>
+</div>
+
+<div class="container-fluid gradient-background" *ngIf="loading == false">
+  <div class="container py-5">
+    <div class="row page-header pt-4 pb-4 mb-3 mx-0">
+      <div class="title col-12">Images gallery</div>
+      <!--      <div class="col-auto fs-3">|</div>-->
+      <!--      <div class="col-auto fs-3">{{count}} results</div>-->
+      <div class="desc col-12">— A collection off all bridge images, photos, paintings from all continents —</div>
     </div>
   </div>
 </div>
 
-<div class="container">
-  <div class="all-images">
-    <ul>
-      <li *ngFor="let image of tempIMAGES, let i = index">
-        <img [src]="image.url" [title]="image.title" (click)="open(i)"/>
-      </li>
-    </ul>
-    <div class="blur-effect" [class.d-none]="tempIMAGES.length == IMAGES.length"></div>
+<div *ngIf="loading == false">
+  <div class="container">
+    <div class="all-images mt-4 mb-5">
+      <ul style="padding: 0">
+        <li *ngFor="let image of tempIMAGES, let i = index">
+          <img [src]="image.url" [title]="image.title" (click)="open(i)"/>
+          <span *ngIf="i == tempIMAGES.length - 1" (click)="showMore()" [class.d-none]="tempIMAGES.length == IMAGES.length">+{{IMAGES.length - tempIMAGES.length}}</span>
+        </li>
+      </ul>
+    </div>
   </div>
 
-  <button class="show-more-button w-100 my-1" (click)="showMore()" [class.d-none]="tempIMAGES.length == IMAGES.length">Show more  <i class="fa-solid fa-chevron-down"></i></button>
-  <button class="show-more-button w-100" (click)="showLess()" [class.d-none]="tempIMAGES.length == 50">Show less  <i class="fa-regular fa-circle-xmark"></i></button>
+
+<!--  <ngx-loading-->
+<!--    [show]="loading"-->
+<!--    [template]="loadingTemplate"-->
+<!--  ></ngx-loading>-->
 </div>
+

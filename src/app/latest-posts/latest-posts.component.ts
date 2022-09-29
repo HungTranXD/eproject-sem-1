@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, TemplateRef} from '@angular/core';
 import { LatestPostsService } from "./latest-posts.service";
 
 @Component({
   selector: 'app-latest-posts',
   templateUrl: './latest-posts.component.html',
-  styleUrls: ['./latest-posts.component.css']
+  styleUrls: ['./latest-posts.component.scss']
 })
 export class LatestPostsComponent implements OnInit {
   CONTINENTS: any;
@@ -17,12 +17,15 @@ export class LatestPostsComponent implements OnInit {
   POSTS: any;
   page: number = 1;
   count: number = 0;
-  listSize: number = 10;
+  listSize: number = 12;
   listSizes: any = [5, 10, 15, 20];
 
   //Create 2 more variables to store parameters for pagination onListDataChange() function
   continentId: string = 'all';
   countryCode: string = 'all'
+
+  public loading = true;
+  public loadingTemplate !: TemplateRef<any>;
 
   constructor( private latestPostsService: LatestPostsService) { }
 
@@ -46,6 +49,7 @@ export class LatestPostsComponent implements OnInit {
     this.triggerClickContinentButton();
     this.continentId = continent.id;//Store value for pagination onListDataChange() function
     this.countryCode = 'all';//Store value for pagination onListDataChange() function
+
   }
   // --- THIS FUNCTION IS CALLED WHEN CHOOSING COUNTRY TO FILTER ---
   filterByCountry(country: any): void{
@@ -126,6 +130,7 @@ export class LatestPostsComponent implements OnInit {
   //limit = listSize; offset = (page - 1) * listSize
   postListPerPage(continentId: string, countryCode: string): void {
     this.latestPostsService.getPostsPerPage(continentId, countryCode,this.listSize, (this.page - 1) * this.listSize).subscribe(response => {
+      this.loading = false;
       this.POSTS = response;
       console.log(this.POSTS);
     })
