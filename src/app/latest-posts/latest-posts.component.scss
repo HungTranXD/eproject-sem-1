@@ -1,25 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
-// -------------------- GRADIENT BACKGROUND ---------------------
-.gradient-background{
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-  box-shadow: 0 0 20px rgba(black,0.8);
+// -------------- HEADER TEXT -----------
+.page-header-container{
+  background: #f12711; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, rgba(241, 39, 17, 0.8), #f5af19); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, rgba(241, 39, 17, 0.8), #f5af19); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-// -------------- HEADER TEXT IN GRADIENT BBBACKGROUND -----------
+
 .page-header .title{
   font-family: 'Abril Fatface', serif;
   //font-family: "Montserrat", sans-serif;
@@ -34,11 +23,17 @@
 .page-header{
   color: white;
 }
+#continent-button, #country-button, #clear-button{
+  background-color: white;
+}
 
 #continent-button:hover, #country-button:hover{
   color: white;
   background-color: rgba(255, 61, 0, 0.8);
   border-color: rgba(255, 61, 0, 0.8);
+}
+#clear-button:hover {
+  background-color: #171c24;
 }
 .filter-button{
   background-color: transparent;
@@ -66,8 +61,9 @@
   padding: 0;
 
   margin-top: 1.5rem;
-  box-shadow:0 0 20px rgba(black,0.3);
-  border-radius: 10px;
+  box-shadow:0 0 20px rgba(black,0.1);
+  border-radius: 6px;
+  background-color: white;
 }
 .posts-pagination ::ng-deep .ngx-pagination .current{
   background-color: rgba(255, 61, 0, 0.8);
@@ -88,10 +84,10 @@ $color: rgba(255, 61, 0, 0.7);
   //transform :  translateX(-50%) translateY(-50%) translateZ(0);
 
   width: 100%;
-  border-radius: 12px;
+  border-radius: 10px;
 
   background-color: #fff;
-  box-shadow:0 0 20px rgba(black,0.3);
+  box-shadow:0 0 20px rgba(black,0.1);
 
   overflow:hidden;
 
@@ -104,7 +100,7 @@ $color: rgba(255, 61, 0, 0.7);
 }
 
 .bridge-card:hover{
-  box-shadow:0 0 50px rgba(black,0.5);
+  box-shadow:0 0 50px rgba(black,0.3);
 }
 
 
@@ -223,16 +219,20 @@ $color: rgba(255, 61, 0, 0.7);
   margin: 0; padding: 0 0 10px 0;
 
   font-size: 19px;
-  color: $color;
+  color: darkgray;
 }
 
 .card__description{
   position: absolute;
   left: 20px; right: 20px;
-  //bottom: 56px;
-  height: 40%;
-
+  bottom: 50px;
+  //height: 40%;
   overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
 
   margin: 0; padding: 0;
 

@@ -1,8 +1,11 @@
 .background-grey{
-  background-color: #f5f5f7;
+  background-color: #295880;
+  /*#dad9d9*/
   font-size: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 .header{
+  /*color: black;*/
   color: white;
   /*font-weight: bold;*/
 }
@@ -14,12 +17,13 @@ ul.content li{
   padding: 0.1rem 0;
 }
 ul.content li a{
+  /*color: #838383;*/
   color: rgba(255, 255, 255, 0.55);
 }
 ul.content li a:hover{
   color: #ff3d00;
 }
-form{
+.form{
   display: flex;
   height: 40px;
   padding: 2px;
@@ -29,7 +33,7 @@ form{
   border-radius: 2px;
   border: 1px solid rgba(155,155,155,0.2);
 }
-form .email-subscribe{
+.form .email-subscribe{
   width: 100%;
   height: 100%;
   padding: 0 10px;
@@ -39,7 +43,7 @@ form .email-subscribe{
   font-weight: 500;
   background: none;
 }
-form button{
+.form > button{
   padding: 0 15px;
   color: #fff;
   font-size: 15px;
@@ -48,7 +52,7 @@ form button{
   border-radius: 2px;
   cursor: pointer;
 }
-nav form button:hover{
+nav .form > button:hover{
   background: #e63600;
 }
 ul.icon-group{
@@ -61,7 +65,7 @@ ul.icon-group li{
   padding: 0.1rem 0;
 }
 ul.icon-group li a{
-  color: rgba(255, 255, 255, 0.55);;
+  color: rgba(255, 255, 255, 0.55);
 }
 ul.icon-group li a:hover{
   color: #ff3d00;
@@ -96,6 +100,8 @@ ul.icon-group li a:hover{
 .accordion-button:not(.collapsed)::after {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   transform: rotate(-180deg);
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(317deg) brightness(105%) contrast(101%);
+
 }
 .accordion-button::after {
   flex-shrink: 0;
@@ -104,6 +110,7 @@ ul.icon-group li a:hover{
   margin-left: auto;
   content: "";
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(317deg) brightness(105%) contrast(101%);
   background-repeat: no-repeat;
   background-size: 0.8rem;
   transition: transform 0.2s ease-in-out;
@@ -224,63 +231,4 @@ ul.icon-group li a:hover{
 
 
 
-/* -----------------------------------------------------------------------*/
-.waves {
-  position:relative;
-  width: 100%;
-  height:10vh;
-  margin-bottom:-7px; /*Fix for safari gap*/
-  min-height:100px;
-  max-height:150px;
-}
 
-.waves .content {
-  position:relative;
-  height:13vh;
-  text-align:center;
-  background-color: white;
-}
-
-/*!* Animation *!*/
-
-/*.parallax > use {*/
-/*  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;*/
-/*}*/
-.parallax > use:nth-child(1) {
-  /*animation-delay: -2s;*/
-  /*animation-duration: 7s;*/
-  transform: translate3d(-40px,0,0);
-}
-.parallax > use:nth-child(2) {
-  /*animation-delay: -3s;*/
-  /*animation-duration: 10s;*/
-}
-.parallax > use:nth-child(3) {
-  /*animation-delay: -4s;*/
-  /*animation-duration: 13s;*/
-}
-.parallax > use:nth-child(4) {
-  /*animation-delay: -5s;*/
-  /*animation-duration: 20s;*/
-}
-@keyframes move-forever {
-  0% {
-    transform: translate3d(-90px,0,0);
-  }
-  100% {
-    transform: translate3d(85px,0,0);
-  }
-}
-Shrinking for mobile
-@media (max-width: 768px) {
-  .waves {
-    height:40px;
-    min-height:40px;
-  }
-  .content {
-    height:30vh;
-  }
-  h1 {
-    font-size:24px;
-  }
-}

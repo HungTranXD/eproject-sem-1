@@ -5,31 +5,26 @@
   ></ngx-loading>
 </div>
 
-<header *ngIf="loading == false">
-  <!-- First container -->
-  <div class="_container container_solid">
-    <div class="title_wrapper">
-      <h1 [ngStyle]="{'background-image':'url(\'../../assets/images/continent-gif/'+ CONTINENTINFO[0].id +'.gif\')'}">{{CONTINENTINFO[0].name}}</h1>
+<div class="container1" *ngIf="loading == false">
+  <div class="hero">
+    <div class="hero__image" [ngStyle]="{'background-image':'url(\'../../assets/images/continent-gif/'+ CONTINENTINFO[0].id +'.gif\')'}">
+      <div class="hero__image--overlay" [ngStyle]="{'background':' linear-gradient(to bottom, rgba(121,85,72,0) 0%,rgba(121,85,72,0.17) 21%,rgba(121,85,72,0.5) 80%)'}"></div>
+      <p class="hero__title" [ngClass]="{'animation--title-in': loading == false}">{{CONTINENTINFO[0].name}}</p>
+      <p class="hero__icon" [ngClass]="{'animation--title-in': loading == false}"><i class="fa-solid fa-arrow-down-long"></i></p>
     </div>
   </div>
-  <!-- Second container -->
-  <div class="_container container_image" aria-hidden="true" [ngStyle]="{'background-image':'url(\'../../assets/images/continent-gif/'+ CONTINENTINFO[0].id +'.gif\')'}">
-    <div class="title_wrapper">
-      <h1>{{CONTINENTINFO[0].name}}</h1>
-    </div>
-  </div>
-</header>
+</div>
 
-<div class="container position-relative" *ngIf="loading == false" style="margin-top: -1.2rem">
+<div class="container position-relative mt-5" *ngIf="loading == false">
   <div class="section-title">
     <span>Introduction</span>
   </div>
-  <div class="row introduction align-items-center pt-4 pb-4 mb-3 mx-0" style="border-radius: 10px">
+  <div class="row introduction align-items-center pt-4 pb-4 mb-3 mx-0 bg-white">
     <div class="col-md-3 col-lg-1">
       <img src="{{CONTINENTINFO[0].thumbnail}}"/>
     </div>
     <div class="col-12 col-md-9 col-lg-11 row">
-      <div class="col-12">{{CONTINENTINFO[0].intro}}</div>
+      <div class="col-12 fs-5">{{CONTINENTINFO[0].intro}}</div>
     </div>
   </div>
 
@@ -106,7 +101,6 @@
   </div>
 
 
-  <div class="banner" [ngStyle]="{'background': 'linear-gradient(#000, transparent, #000), url(\'../../assets/images/paralax-banner/'+ CONTINENTINFO[0].id +'_1.jpg\') 50%/ cover'}"></div>
   <!-- Latest Posts Section -->
   <div class="section-title mt-5">
     <span>Latest in {{CONTINENTINFO[0].name}}</span>
@@ -143,7 +137,6 @@
   </pagination-controls>
 
 
-  <div class="banner" [ngStyle]="{'background': 'linear-gradient(#000, transparent, #000), url(\'../../assets/images/paralax-banner/'+ CONTINENTINFO[0].id +'_2.jpg\') 50%/ cover'}"></div>
 
   <!-- All images of the continent -->
   <div class="section-title mt-5">
@@ -157,12 +150,6 @@
       </li>
     </ul>
   </div>
-<!--  <button class="show-more-button w-100" (click)="showMore()" [class.d-none]="tempIMAGES.length == IMAGES.length">Show more  <i class="fa-solid fa-chevron-down"></i></button>-->
-<!--  <button class="show-more-button w-100 my-2" (click)="showLess()" [class.d-none]="tempIMAGES.length == 9">Show less  <i class="fa-regular fa-circle-xmark"></i></button>-->
 
-<!--  <ngx-loading-->
-<!--    [show]="loading"-->
-<!--    [template]="loadingTemplate"-->
-<!--  ></ngx-loading>-->
 </div>
 

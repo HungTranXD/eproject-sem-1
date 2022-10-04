@@ -5,8 +5,8 @@
   ></ngx-loading>
 </div>
 
-<div class="container-fluid gradient-background" *ngIf="loading == false">
-  <div class="container py-5">
+<div class="container-fluid page-header-container" *ngIf="loading == false">
+  <div class="container py-4">
     <div class="row page-header pt-4 pb-4 mb-3 mx-0">
       <div class="title col-12">Latest Posts</div>
 <!--      <div class="col-auto fs-3">|</div>-->
@@ -19,21 +19,21 @@
 
 <div class="container position-relative" *ngIf="loading == false">
   <div class="row filter align-items-center">
-    <div class="col-10 my-3">
+    <div class="col-12 col-md-9 mt-3 mb-1 mb-md-3">
       <p class="my-0">
-        <button id="continent-button" class="btn btn-outline-dark me-2 fs-5 fw-light" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">Continent {{continentName}}</button>
-        <button id="country-button" class="btn btn-outline-dark me-2 fs-5 fw-light" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Country {{countryName}}</button>
-        <button class="btn btn-outline-dark fs-5 fw-light" (click)="clearFilter()"><i class="fa-regular fa-circle-xmark"></i>  Clear filter</button>
+        <button id="continent-button" class="btn btn-outline-dark me-2" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">Continent {{continentName}}</button>
+        <button id="country-button" class="btn btn-outline-dark me-2" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Country {{countryName}}</button>
+        <button id="clear-button" class="btn btn-outline-dark" (click)="clearFilter()"><i class="fa-regular fa-circle-xmark"></i>  Clear filter</button>
       </p>
     </div>
-    <div class="col-2 text-end my-3 fs-4 fw-light">| {{count}} results</div>
+    <div class="col-12 col-md-3 text-start text-md-end my-1 my-md-3 fs-5">| {{count}} results</div>
 
     <div class="row pe-0">
       <div class="col-12 pe-0">
         <div class="collapse multi-collapse" id="multiCollapseExample1" style="box-shadow:0 0 20px rgba(0,0,0,0.1)">
           <div class="card card-body py-1 mb-3">
             <div class="row">
-              <button class="filter-button col-6 col-md-auto fs-5 fw-light" *ngFor="let continent of CONTINENTS" (click)="filterByContinent(continent)">{{continent.name}}</button>
+              <button class="filter-button col-6 col-md-auto" *ngFor="let continent of CONTINENTS" (click)="filterByContinent(continent)">{{continent.name}}</button>
             </div>
           </div>
         </div>
@@ -42,7 +42,7 @@
         <div class="collapse multi-collapse" id="multiCollapseExample2" style="box-shadow:0 0 20px rgba(0,0,0,0.1)">
           <div class="card card-body py-1 mb-3">
             <div class="row">
-              <button class="filter-button col-6 col-md-auto fs-5 fw-light" *ngFor="let country of COUNTRIES" (click)="filterByCountry(country)">{{country.country_name}}</button>
+              <button class="filter-button col-6 col-md-auto" *ngFor="let country of COUNTRIES" (click)="filterByCountry(country)">{{country.country_name}}</button>
             </div>
           </div>
         </div>

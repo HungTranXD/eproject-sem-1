@@ -1,8 +1,8 @@
 <div class="position-relative" *ngIf="loading == true" style="height: 100vh">
-<!--  <ngx-loading-->
-<!--    [show]="loading"-->
-<!--    [template]="loadingTemplate"-->
-<!--  ></ngx-loading>-->
+  <ngx-loading
+    [show]="loading"
+    [template]="loadingTemplate"
+  ></ngx-loading>
 </div>
 
 <div class="position-relative">
@@ -55,15 +55,19 @@
     </div>
   </div>
 
-
-  <div class="container-fluid gradient-background">
+  <div class="container pt-3">
+    <div class="top-lists-header-2">
+      <span>Continents map</span>
+    </div>
+  </div>
+  <div class="container-fluid py-5 gradient-grey-background">
     <!-- Browse bridges by continents -->
-    <div class="container py-5">
-      <div class="continents-header-2">
-        <span>Continents map</span>
-      </div>
+<!--    <div class="container py-5">-->
+<!--      <div class="continents-header-2">-->
+<!--        <span>Continents map</span>-->
+<!--      </div>-->
       <div class="continents-container">
-        <div id="map-continents" style="transform: scaleX(1.05)">
+        <div id="map-continents" style="transform: scale(1.4, 1.25)">
           <ul class="continents">
             <li class="c1"><a [routerLink]="['/bridges-by-continent', 4]">Africa</a></li>
             <li class="c2"><a [routerLink]="['/bridges-by-continent', 5]">Asia</a></li>
@@ -73,7 +77,7 @@
             <li class="c6"><a [routerLink]="['/bridges-by-continent', 2]">South America</a></li>
           </ul>
         </div>
-      </div>
+<!--      </div>-->
     </div>
   </div>
 
@@ -90,9 +94,9 @@
               <h1>{{latest.bridge_name}}</h1>
               <img src="{{latest.thumbnail}}" alt="" />
               <figcaption>
-                <h3>
+                <h4 class="pb-2 fw-light">
                   More Info
-                </h3>
+                </h4>
                 <ul style="list-style: none; padding: 0">
                   <li class="py-1">Country: {{latest.country_name}}</li>
                   <li class="py-1">Continent: {{latest.continent_name}}</li>
@@ -124,70 +128,130 @@
       <span>Interesting books</span>
     </div>
     <div class="row gy-4" style="margin-bottom: 5rem">
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="book-container">
-          <div class="book">
-            <div class="book-title">
-              <p>Tower Bridge</p>
+      <div class="col-12 col-md-6">
+        <div class="row py-2 book-card">
+          <div class="col-12 col-lg-6">
+            <div class="book-container">
+              <div class="book">
+                <div class="book-cover cover1">
+                  <div class="effect"></div>
+                  <div class="light"></div>
+                </div>
+                <div class="book-inside">
+                </div>
+              </div>
             </div>
-            <div class="book-cover cover1">
-              <div class="effect"></div>
-              <div class="light"></div>
+          </div>
+          <div class="col-12 col-lg-6 book-info">
+            <div class="book-title-1">Tower Bridge</div>
+            <div class="book-title-2">History Engineering Design</div>
+            <div class="book-author">
+              <i class="fa-solid fa-user"></i>  by Powell Kenneth
             </div>
-            <div class="book-inside">
+            <div class="divider-bar"></div>
+            <div class="book-preview"><i>This new book, published to mark the 125th anniversary of its opening, will explore the history of the bridge, set it into the context of the River Thames and its crossings, and will, above all, focus on its design and construction.</i></div>
+            <div class="book-tagbox">
+              <a target="_blank" href="https://www.amazon.com/dp/0500343497?tag=uuid10-20"><div class="tag-item">
+                <i class="fa-solid fa-cart-shopping"></i>  Avalible at Amazon
+              </div></a>
             </div>
-            <a class="book-btn" href="https://www.amazon.com/dp/0500343497?tag=uuid10-20">34.22$</a>
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="book-container">
-          <div class="book">
-            <div class="book-title">
-              <p>Bridges</p>
+
+      <div class="col-12 col-md-6">
+        <div class="row py-2 book-card">
+          <div class="col-12 col-lg-6">
+            <div class="book-container">
+              <div class="book">
+                <div class="book-cover cover2">
+                  <div class="effect"></div>
+                  <div class="light"></div>
+                </div>
+                <div class="book-inside">
+                </div>
+              </div>
             </div>
-            <div class="book-cover cover2">
-              <div class="effect"></div>
-              <div class="light"></div>
+          </div>
+          <div class="col-12 col-lg-6 book-info">
+            <div class="book-title-1">Bridges</div>
+            <div class="book-title-2">A History of the World's Most Spectacular Spans</div>
+            <div class="book-author">
+              <i class="fa-solid fa-user"></i>  by Judith Dupré
             </div>
-            <div class="book-inside">
+            <div class="divider-bar"></div>
+            <div class="book-preview"><i>From New York Times best-selling author Judith Dupré a revised and updated edition of Bridges, her magnificent chronological tour of the world's most significant and eye-popping spans, covering thousands of years of architectural history.</i></div>
+            <div class="book-tagbox">
+              <a target="_blank" href="https://www.amazon.com/dp/0316507946?tag=uuid10-20"><div class="tag-item">
+                <i class="fa-solid fa-cart-shopping"></i>  Avalible at Amazon
+              </div></a>
             </div>
-            <a class="book-btn" href="https://www.amazon.com/dp/0316507946?tag=uuid10-20">26.49$</a>
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="book-container">
-          <div class="book">
-            <div class="book-title">
-              <p>The Great Bridge</p>
+
+      <div class="col-12 col-md-6">
+        <div class="row py-2 book-card">
+          <div class="col-12 col-lg-6">
+            <div class="book-container">
+              <div class="book">
+                <div class="book-cover cover3">
+                  <div class="effect"></div>
+                  <div class="light"></div>
+                </div>
+                <div class="book-inside">
+                </div>
+              </div>
             </div>
-            <div class="book-cover cover3">
-              <div class="effect"></div>
-              <div class="light"></div>
+          </div>
+          <div class="col-12 col-lg-6 book-info">
+            <div class="book-title-1">The Great Bridge</div>
+            <div class="book-title-2">The Epic Story of the Building of the Brooklyn Bridge</div>
+            <div class="book-author">
+              <i class="fa-solid fa-user"></i>  by David McCullough
             </div>
-            <div class="book-inside">
+            <div class="divider-bar"></div>
+            <div class="book-preview"><i>The dramatic and enthralling story of the building of the Brooklyn Bridge, the world’s longest suspension bridge at the time, a tale of greed, corruption, and obstruction but also of optimism, heroism, and determination, told by master historian David McCullough.</i></div>
+            <div class="book-tagbox">
+              <a target="_blank" href="https://www.amazon.com/dp/1451683235?tag=uuid10-20"><div class="tag-item">
+                <i class="fa-solid fa-cart-shopping"></i>  Avalible at Amazon
+              </div></a>
             </div>
-            <a class="book-btn" href="https://www.amazon.com/dp/1451683235?tag=uuid10-20">33.99$</a>
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="book-container">
-          <div class="book">
-            <div class="book-title">
-              <p>The Bridge</p>
+
+      <div class="col-12 col-md-6">
+        <div class="row py-2 book-card">
+          <div class="col-12 col-lg-6">
+            <div class="book-container">
+              <div class="book">
+                <div class="book-cover cover4">
+                  <div class="effect"></div>
+                  <div class="light"></div>
+                </div>
+                <div class="book-inside">
+                </div>
+              </div>
             </div>
-            <div class="book-cover cover4">
-              <div class="effect"></div>
-              <div class="light"></div>
+          </div>
+          <div class="col-12 col-lg-6 book-info">
+            <div class="book-title-1">The Bridge</div>
+            <div class="book-title-2">The Building of the Verrazano-Narrows Bridge</div>
+            <div class="book-author">
+              <i class="fa-solid fa-user"></i>  by Gay Talese
             </div>
-            <div class="book-inside">
+            <div class="divider-bar"></div>
+            <div class="book-preview"><i>Toward the end of 1964, the Verrazano (or, more properly, Verrazzano) Narrows Bridge―linking the New York City boroughs of Brooklyn and Staten Island―was completed. Fifty years later, it remains an engineering marvel.</i></div>
+            <div class="book-tagbox">
+              <a target="_blank" href="https://www.amazon.com/dp/1620406667?tag=uuid10-20"><div class="tag-item">
+                <i class="fa-solid fa-cart-shopping"></i>  Avalible at Amazon
+              </div></a>
             </div>
-            <a class="book-btn" href="https://www.amazon.com/dp/1620406667?tag=uuid10-20">32.89$</a>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </div>

@@ -21,7 +21,7 @@ export class BridgesByContinentComponent implements OnInit {
   POSTS: any;
   page: number = 1;
   count: number = 0;
-  listSize: number = 12;
+  listSize: number = 9;
 
   public loading = true;
   public loadingTemplate !: TemplateRef<any>;
@@ -63,7 +63,7 @@ export class BridgesByContinentComponent implements OnInit {
     this.bridgesByContinentService.getPostsByContinent(continentId).subscribe(response => {
       setTimeout(() => {
         this.loading = false;
-      }, 1000);
+      }, 1200);
       this.POSTS = response;
       console.log(this.POSTS);
     })

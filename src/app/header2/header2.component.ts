@@ -22,8 +22,11 @@ export class Header2Component implements OnInit {
   ngOnInit(): void {
     this.continentList();
   }
-  submit() {
-    this.router.navigate(['/search-result', this.searchInputValue]);
+  submit(x:any) {
+    if(x == true) {
+      this.router.navigate(['/search-result', this.searchInputValue]);
+      console.log(this.searchInputValue);
+    }
   }
 
   //Display all continents in dropdown list
@@ -33,4 +36,5 @@ export class Header2Component implements OnInit {
       console.log(this.CONTINENTS);
     })
   }
+
 }

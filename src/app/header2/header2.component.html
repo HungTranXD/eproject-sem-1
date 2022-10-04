@@ -1,4 +1,4 @@
-<div class="background fixed-top"  id="{{displaySideMenu == 0 ? 'navbar': ''}}">
+<div class="background fixed-top" style="width: 100vw" id="{{displaySideMenu == 0 ? 'navbar': ''}}">
   <div class="container">
     <nav>
       <div class="menu-icon" id="menuBt">
@@ -8,26 +8,26 @@
         <a routerLink="/"><img src="assets/images/logo-white.png" alt="logo" width="150"/></a>
       </div>
       <div class="nav-items" [class.active]="displaySideMenu == 1">
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/latest-posts">Lastest Post</a></li>
+        <li><a routerLink="/" (click)="displaySideMenu = 0">Home</a></li>
+        <li><a routerLink="/latest-posts" (click)="displaySideMenu = 0">Lastest Post</a></li>
         <li class="dropdown">
-          <a href="#" class="dropbtn">Popular Sections  <i class="fa-solid fa-chevron-down"></i></a>
+          <a class="dropbtn">Popular Sections  <i class="fa-solid fa-chevron-down"></i></a>
           <div class="dropdown-content">
-            <a routerLink="/bridges-history">Bridges History</a>
-            <a routerLink="/historical-great-bridges">Historical Great Bridges</a>
-            <a routerLink="/achivement">High-Level Achivements in Bridges</a>
-            <a routerLink="/iconic-bridges">Iconic Bridges</a>
-            <a routerLink="/modern-great-bridges">Modern Great Bridges</a>
+            <a routerLink="/bridges-history" (click)="displaySideMenu = 0">Bridges History</a>
+            <a routerLink="/historical-great-bridges" (click)="displaySideMenu = 0">Historical Great Bridges</a>
+            <a routerLink="/high-level-achievements" (click)="displaySideMenu = 0">High-Level Achievements in Bridges</a>
+            <a routerLink="/iconic-bridges" (click)="displaySideMenu = 0">Iconic Bridges</a>
+            <a routerLink="/modern-great-bridges" (click)="displaySideMenu = 0">Modern Great Bridges</a>
           </div>
         </li>
         <li class="dropdown">
           <a class="dropbtn">Bridges By Continent  <i class="fa-solid fa-chevron-down"></i></a>
           <div class="dropdown-content">
-            <a [routerLink]="['/bridges-by-continent', c.id]" *ngFor="let c of CONTINENTS">{{c.name}}</a>
+            <a [routerLink]="['/bridges-by-continent', c.id]" *ngFor="let c of CONTINENTS" (click)="displaySideMenu = 0">{{c.name}}</a>
 
           </div>
         </li>
-        <li><a routerLink="/gallery">Gallery</a></li>
+        <li><a routerLink="/gallery" (click)="displaySideMenu = 0">Gallery</a></li>
       </div>
       <div class="search-icon" [class.hide]="displaySideMenu == 1 || displaySearchBar == 1" (click)="displaySearchBar = 1">
         <i class="fa-solid fa-magnifying-glass"></i>
@@ -35,9 +35,10 @@
       <div class="cancel-icon" [class.show]="displaySideMenu == 1 || displaySearchBar == 1" (click)="displaySideMenu = 0; displaySearchBar = 0">
         <i class="fa-solid fa-xmark"></i>
       </div>
-      <div class="form" action="#" [class.active]="displaySearchBar == 1">
-        <input type="text" [(ngModel)]="searchInputValue" class="search-data" placeholder="Search" required (keyup.enter)="submit()"/>
-        <button type="submit" (click)="submit()"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <div class="form" [class.active]="displaySearchBar == 1">
+        <input type="text" name="searchValue" [(ngModel)]="searchInputValue" class="search-data" placeholder="Search" required (keyup.enter)="submit(searchValue.valid)" #searchValue="ngModel"/>
+        <div class="alert alert-danger position-absolute top-100 py-2" *ngIf="!searchValue.valid">Input value required</div>
+        <button type="submit" (click)="submit(searchValue.valid)"><i class="fa-solid fa-magnifying-glass"></i></button>
       </div>
     </nav>
   </div>

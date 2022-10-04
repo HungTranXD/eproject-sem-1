@@ -59,6 +59,9 @@
 .episode__content .story {
   line-height: 26px;
 }
+.episode__content .story a{
+  color: #ff8000;
+}
 .episode__content .story a:hover{
   color: #ff3d00;
 }
@@ -124,26 +127,6 @@
   opacity: .8;
 }
 
-.hero__child--primary {
-  top: -120px;
-  left: 50px;
-
-  width: 819px;
-  height: 1621px;
-
-  background-image: url(https://res.cloudinary.com/mihael/image/upload/v1548409393/codepen/cloud-2.png);
-}
-
-.hero__child--secondary {
-  top: 0;
-  right: 50px;
-
-  width: 300px;
-  height: 500px;
-
-  background-size: 300px auto;
-  background-image: url(https://res.cloudinary.com/mihael/image/upload/v1548409392/codepen/cloud-1.png);
-}
 
 .hero__title {
   position: absolute;
@@ -190,6 +173,21 @@
   text-align: center;
 }
 
+.hero__icon {
+  position: absolute;
+  bottom: 5vh;
+  left: 14vw;
+  right: 14vw;
+
+  opacity: 0;
+  color: white;
+
+  /*font-family: 'Gentium Basic', serif;*/
+  font-family: "Montserrat", sans-serif;
+  font-size: 70px;
+  text-align: center;
+}
+
 /**
 * Animation
 */
@@ -201,7 +199,7 @@
 }
 
 .animation--title-in {
-  animation: title-in 800ms forwards ease-in-out 750ms;
+  animation: title-in 800ms forwards ease-in-out 250ms;
 }
 
 .animation--from-top {
@@ -267,14 +265,7 @@
 
 .animate-charcter
 {
-
-  background-image: linear-gradient(
-    -225deg,
-    #23d5ab 0%,
-    #23a6d5 29%,
-    #e73c7e 67%,
-    #ee7752 100%
-  );
+  background-image: linear-gradient(to right, rgba(241, 39, 17, 0.8), #f5af19);
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
@@ -283,13 +274,7 @@
   text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textclip 2s linear infinite;
   display: inline-block;
 
 }
 
-@keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
-}

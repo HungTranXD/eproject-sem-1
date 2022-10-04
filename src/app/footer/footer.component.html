@@ -1,22 +1,4 @@
-
-<div class="mt-4" style="background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);">
-  <!--Waves Container-->
-  <div style="transform: rotate(180deg)">
-    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-         viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-      <defs>
-        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-      </defs>
-      <g class="parallax">
-        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-<!--        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />-->
-<!--        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />-->
-        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-      </g>
-    </svg>
-  </div>
-  <!--Waves end-->
-
+<div class="mt-4 background-grey">
 
   <div class="container">
     <!-- This row only display on medium screen side and up -->
@@ -27,7 +9,7 @@
           <li><a routerLink="/latest-posts">Latest Post</a></li>
           <li><a routerLink="/bridges-history">Bridges History</a></li>
           <li><a routerLink="/historical-great-bridges">Historical Great Bridges</a></li>
-          <li><a href="#">High-Level Achivements in Bridges</a></li>
+          <li><a routerLink="/high-level-achievements">High-Level Achievements in Bridges</a></li>
           <li><a routerLink="/iconic-bridges">Iconic Bridges</a></li>
           <li><a routerLink="/modern-great-bridges">Modern Great Bridges</a></li>
         </ul>
@@ -55,16 +37,32 @@
       </div>
       <div class="col-md-6 col-lg-3">
         <div class="header">Subscribe</div>
-        <form action="#">
-          <input type="email" class="email-subscribe" placeholder="Email Address" required>
-          <button type="submit">Subscribe</button>
-        </form>
+        <div class="form">
+          <input type="email" name="email" class="email-subscribe text-dark" placeholder="Email Address" required [(ngModel)]="emailInput" #email="ngModel">
+<!--          <div class="alert alert-danger  py-2" *ngIf="!email.valid">Invalid email address</div>-->
+          <!-- Button trigger modal -->
+          <button type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Subscribe</button>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content" style="border: none; border-radius: 8px; box-shadow: 0 0 20px rgba(0,0,0,0.1)">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Massage</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Thank you for subscribing to Bridge.com!
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="header">Follow Us</div>
         <ul class="icon-group">
-          <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-          <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a target="_blank" href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a target="_blank" href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a target="_blank" href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a></li>
+          <li><a target="_blank" href="https://www.twitter.com/"><i class="fa-brands fa-twitter"></i></a></li>
         </ul>
       </div>
     </div>
@@ -79,13 +77,12 @@
         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
           <div class="accordion-body">
             <ul class="content panel" style="height: auto">
-              <li><a href="#">Latest Post</a></li>
-              <li><a href="#">Bridges History</a></li>
-              <li><a href="#">Historical Great Bridges</a></li>
-              <li><a href="#">High-Level Achivements in Bridges</a></li>
-              <li><a href="#">Iconic Bridges</a></li>
-              <li><a href="#">Modern Great Bridges</a></li>
-              <li><a href="#">Bridges Facts</a></li>
+              <li><a routerLink="/latest-posts">Latest Post</a></li>
+              <li><a routerLink="/bridges-history">Bridges History</a></li>
+              <li><a routerLink="/historical-great-bridges">Historical Great Bridges</a></li>
+              <li><a routerLink="/high-level-achievements">High-Level Achievements in Bridges</a></li>
+              <li><a routerLink="/iconic-bridges">Iconic Bridges</a></li>
+              <li><a routerLink="/modern-great-bridges">Modern Great Bridges</a></li>
             </ul>
           </div>
         </div>
@@ -100,14 +97,14 @@
           <div class="accordion-body">
             <ul class="content row" style="height: auto">
               <div class="col-6">
-                <li><a href="#">North America</a></li>
-                <li><a href="#">South America</a></li>
-                <li><a href="#">Europe</a></li>
+                <li><a routerLink="/bridges-by-continent/1">North America</a></li>
+                <li><a routerLink="/bridges-by-continent/2">South America</a></li>
+                <li><a routerLink="/bridges-by-continent/3">Europe</a></li>
               </div>
               <div class="col-6">
-                <li><a href="#">Africa</a></li>
-                <li><a href="#">Asia</a></li>
-                <li><a href="#">Australia</a></li>
+                <li><a routerLink="/bridges-by-continent/4">Africa</a></li>
+                <li><a routerLink="/bridges-by-continent/5">Asia</a></li>
+                <li><a routerLink="/bridges-by-continent/6">Australia</a></li>
               </div>
             </ul>
           </div>
@@ -123,9 +120,9 @@
           <div class="accordion-body">
             <ul class="content row" style="height: auto">
               <div class="col-6">
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a routerLink="/gallery">Gallery</a></li>
+                <li><a routerLink="/about-us">About Us</a></li>
+                <li><a routerLink="/contact-us">Contact Us</a></li>
               </div>
               <div class="col-6">
                 <li><a routerLink="/faq">FAQ</a></li>
@@ -144,16 +141,17 @@
         <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
           <div class="accordion-body">
             <div class="header">Subscribe</div>
-            <form action="#">
+            <div class="form" action="#">
               <input type="email" class="email-subscribe" placeholder="Email Address" required>
-              <button type="submit">Subscribe</button>
-            </form>
+              <!-- Button trigger modal -->
+              <button type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">Subscribe</button>
+            </div>
             <div class="header">Follow Us</div>
             <ul class="icon-group">
-              <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-              <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+              <li><a target="_blank" href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a></li>
+              <li><a target="_blank" href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a target="_blank" href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a></li>
+              <li><a target="_blank" href="https://www.twitter.com/"><i class="fa-brands fa-twitter"></i></a></li>
             </ul>
           </div>
         </div>
@@ -163,7 +161,7 @@
 </div>
 
 <!--Continuous scrolling ticker-->
-<div class="background-dark py-2">
+<div class="background-dark py-1">
   <div class="container">
     <div class="ticker">
       <div class="ticker__list">

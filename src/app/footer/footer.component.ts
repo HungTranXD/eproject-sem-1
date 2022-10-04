@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
   id = 0;
+  emailInput: string | undefined;
 
   constructor() { }
 
@@ -24,10 +25,10 @@ export class FooterComponent implements OnInit {
     }
   }
   currentDate = new Date();
+  currentDateNum = parseInt(String(this.currentDate.getDate()));
   callMethod() {
     this.currentDate = new Date();
   }
-
   // Get location
   lat = 0;
   lng = 0;
@@ -44,4 +45,5 @@ export class FooterComponent implements OnInit {
       alert("Geolocation is not supported by this browser.");
     }
   }
+
 }

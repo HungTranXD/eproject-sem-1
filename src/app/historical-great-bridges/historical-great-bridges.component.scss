@@ -5,8 +5,8 @@ $main-green: #79dd09 !default;
 $main-green-rgb-015: rgba(121, 221, 9, 0.1) !default;
 $main-yellow: #bdbb49 !default;
 $main-yellow-rgb-015: rgba(189, 187, 73, 0.1) !default;
-$main-red: #bd150b !default;
-$main-red-rgb-015: rgba(189, 21, 11, 0.1) !default;
+$main-red: #ff3d00 !default;
+$main-red-rgb-015: rgba(255, 61, 0, 0.1) !default;
 $main-blue: #0076bd !default;
 $main-blue-rgb-015: rgba(0, 118, 189, 0.1) !default;
 .postcard {
@@ -356,20 +356,26 @@ $main-blue-rgb-015: rgba(0, 118, 189, 0.1) !default;
 /* ---------- PAGE HEADER SECTION ---------- */
 .page-header .title{
   font-family: 'Abril Fatface', serif;
-  font-size: 3rem;
+  font-size: 4rem;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .page-header .title{
+    font-size: 3.5rem;
+  }
 }
 .page-header{
   color: white;
   position: relative;
   height: 0;
-  top: -10vh;
+  top: -20vh;
 }
 .banner {
   margin-left: calc(50% - 50vw);
   width: 100vw;
   height: 37.5vmin;
   min-height: 15em;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 /* ------------------------ SECTION TITLE -------------------------*/
 .section-title{
@@ -383,7 +389,7 @@ $main-blue-rgb-015: rgba(0, 118, 189, 0.1) !default;
   bottom: -1.2rem;
   font-weight: lighter;
   font-size: 2rem;
-  background-color: white;
+  background-color: #f2f2f2;
   padding-right: 0.5rem;
   color: gray;
 }

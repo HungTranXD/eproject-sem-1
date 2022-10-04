@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
@@ -14,12 +13,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FaqComponent } from './faq/faq.component';
 import { Header2Component } from './header2/header2.component';
 import { LatestPostsComponent } from './latest-posts/latest-posts.component';
-import { BridgeDetailComponent } from './bridge-detail/bridge-detail.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { TopListPageComponent } from './top-list-page/top-list-page.component';
-import {AchivementComponent} from "./achivement/achivement.component";
 import { SearchResultComponent } from './search-result/search-result.component';
-import { BridgeDetailGalleryComponent } from './bridge-detail-gallery/bridge-detail-gallery.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { BridgesByContinentComponent } from './bridges-by-continent/bridges-by-continent.component';
 import { BridgesHistoryComponent } from './bridges-history/bridges-history.component';
@@ -30,6 +26,7 @@ import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 import { HistoricalGreatBridgesComponent } from './historical-great-bridges/historical-great-bridges.component';
 import { IconicBridgesComponent } from './iconic-bridges/iconic-bridges.component';
 import { ModernGreatBridgesComponent } from './modern-great-bridges/modern-great-bridges.component';
+import {HighLevelAchievementsComponent} from "./high-level-achievements/high-level-achievements.component";
 
 
 const appRoutes: Routes = [
@@ -41,20 +38,18 @@ const appRoutes: Routes = [
   {path: 'contact-us', component: ContactUsComponent},
   {path: 'faq', component: FaqComponent},
   {path: 'gallery', component: GalleryComponent},
-  {path: 'bridge-detail', component: BridgeDetailComponent},
-  {path: 'achivement', component: AchivementComponent},
   {path: 'bridges-by-continent/:id', component: BridgesByContinentComponent},
   {path: 'bridges-history', component: BridgesHistoryComponent},
   {path: 'bridge-page/:id', component: BridgePageComponent},
   {path: 'historical-great-bridges', component: HistoricalGreatBridgesComponent},
   {path: 'iconic-bridges', component: IconicBridgesComponent},
   {path: 'modern-great-bridges', component: ModernGreatBridgesComponent},
+  {path: 'high-level-achievements', component: HighLevelAchievementsComponent},
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     FooterComponent,
     HomeComponent,
     GalleryComponent,
@@ -64,18 +59,15 @@ const appRoutes: Routes = [
     Header2Component,
     LatestPostsComponent,
     TopListPageComponent,
-    LatestPostsComponent,
-    BridgeDetailComponent,
-    AchivementComponent,
     SearchResultComponent,
-    BridgeDetailGalleryComponent,
     BridgesByContinentComponent,
     BridgesHistoryComponent,
     BridgePageComponent,
     ScrollToTopComponent,
     HistoricalGreatBridgesComponent,
     IconicBridgesComponent,
-    ModernGreatBridgesComponent
+    ModernGreatBridgesComponent,
+    HighLevelAchievementsComponent,
   ],
   imports: [
     BrowserModule,

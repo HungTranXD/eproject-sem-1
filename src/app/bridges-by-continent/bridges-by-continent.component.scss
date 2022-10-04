@@ -1,159 +1,341 @@
 /* -------------------------- NEW HEADER --------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
-header {
-  height: 200vh;
+.container1 {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  height: 100vh;
 }
-._container {
-  /* hide fixed overflow contents */
-  clip: rect(0, auto, auto, 0);
 
-  /* does not work if overflow = visible */
-  overflow: hidden;
+.hero {
+  position: relative;
 
-  /* only works with absolute positioning */
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero__image {
   position: absolute;
 
-  /* Make sure containers are full-width and height */
+  width: 100%;
   height: 100vh;
-  left: 0;
-  width: 100%;
 
+  clip: rect(0, auto, auto, 0);
 
-  /* safari hack */
-  -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%);
-}
-
-.container_solid {
-  background: white;
-
-  /* position this container at the top of its parent element */
-  top: 0;
-}
-.title_wrapper {
-  position: fixed;
-  display: block;
-  margin: auto;
-  width: 100%;
-  /* center the text wrapper vertically */
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.title_wrapper h1 {
-  text-align: center;
-  font-size: 74px;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: 'Fraunces', serif;
-  /*font-family: 'Abril Fatface', serif;*/
-  font-weight: 900;
-}
-
-.container_solid .title_wrapper h1 {
-  /* the text background */
-  background: url('../../assets/images/continent-gif/1.gif');
-  background-size: 100vw auto;
-  background-position: center;
-
-  /* clip the text is possible */
-  text-fill-color: transparent;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-
-  /* fallback text color */
-  color: black;
-}
-
-.container_image {
-
-  background-image: url('../../assets/images/continent-gif/1.gif');
-  background-size:100vw auto;
-  background-position: center;
   background-attachment: fixed;
-
-  /* position the second container below the first container */
-  top: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.container_image .title_wrapper h1 {
+.hero__image--overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+
+}
+
+.hero__child {
+  position: fixed;
+
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  opacity: .8;
+}
+
+
+.hero__title {
+  position: absolute;
+  bottom: 38vh;
+  left: 14vw;
+  right: 14vw;
+  z-index: 1;
+
+  opacity: 0;
+
+  font-size: calc(8px * 10);
+  line-height: calc(8px * 12);
+
   color: white;
+
+  font-family: 'Abril Fatface', serif;
+  font-weight: 200;
+
+  text-align: center;
 }
 
-section {
-  min-height: 100vh;
-  padding: 2em;
-  margin: auto;
-  max-width: 800px;
-}
+@media screen and (min-width: 768px) {
 
-// --------------- BANNER DIV USED TO SEPARATE SECTION --------------
-.banner {
-  margin-left: calc(50% - 50vw);
-  width: 100vw; height: 37.5vmin;
-  min-height: 15em;
-  background: linear-gradient(#000, transparent, #000),
-  var(--img) 50%/ cover;
-  background-attachment: fixed!important;
-  background-blend-mode: multiply!important;
-
-  &:nth-of-type(1) {
-    --img: url('../../assets/images/paralax-banner/1.jpg');
-  }
-
-  &:nth-of-type(2) {
-    --img: url('../../assets/images/paralax-banner/1.jpg');
-  }
-
-  &:nth-of-type(3) {
-    --img: url('../../assets/images/paralax-banner/1.jpg')
-  }
-
-  &:nth-of-type(4) {
-    --img: url('../../assets/images/paralax-banner/1.jpg')
-  }
-
-  &:nth-of-type(5) {
-    --img: url('../../assets/images/paralax-banner/1.jpg');
-  }
-
-  &:nth-of-type(6) {
-    --img: url('../../assets/images/paralax-banner/1.jpg');
-  }
-
-  &:nth-of-type(7) {
-    --img: url('../../assets/images/paralax-banner/1.jpg')
-  }
-
-  &:nth-of-type(8) {
-    --img: url('../../assets/images/paralax-banner/1.jpg')
-  }
-
-  &:nth-of-type(9) {
-    --img: url('../../assets/images/paralax-banner/1.jpg')
-  }
-
-  &:nth-of-type(10) {
-    --img: url('../../assets/images/paralax-banner/1.jpg')
-  }
-
-  &:nth-of-type(11) {
-    --img: url('../../assets/images/paralax-banner/1.jpg')
-  }
-
-  &:nth-of-type(12) {
-    --img: url('../../assets/images/paralax-banner/1.jpg')
-  }
-
-  &:nth-of-type(13) {
-    --img: url('../../assets/images/paralax-banner/1.jpg')
+  .hero__title {
+    bottom: 45vh;
+    font-size: calc(8px * 16);
+    line-height: calc(8px * 18)
   }
 }
 
+.hero__subtitle {
+  position: absolute;
+  bottom: 28vh;
+  left: 14vw;
+  right: 14vw;
 
+  opacity: 0;
+  color: white;
+
+  /*font-family: 'Gentium Basic', serif;*/
+  font-family: "Montserrat", sans-serif;
+  font-size: 50px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.hero__icon {
+  position: absolute;
+  bottom: 5vh;
+  left: 14vw;
+  right: 14vw;
+
+  opacity: 0;
+  color: white;
+
+  /*font-family: 'Gentium Basic', serif;*/
+  font-family: "Montserrat", sans-serif;
+  font-size: 70px;
+  text-align: center;
+  z-index: 99;
+}
+
+/**
+* Animation
+*/
+
+.animation--floating {
+  animation-name: floating;
+  animation-duration: 200000ms;
+  animation-iteration-count: infinite;
+}
+
+.animation--title-in {
+  animation: title-in 800ms forwards ease-in-out 200ms;
+}
+
+.animation--from-top {
+  animation: from-top 350ms forwards cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.animation--from-bottom {
+  animation: from-bottom 350ms forwards cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+/**
+* Keyframes for specific animation
+*/
+@keyframes floating {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes title-in {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-25%);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+@keyframes from-top {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+@keyframes from-bottom {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(15%);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+//header {
+//  height: 100vh;
+//}
+//._container {
+//  /* hide fixed overflow contents */
+//  clip: rect(0, auto, auto, 0);
+//
+//  /* does not work if overflow = visible */
+//  overflow: hidden;
+//
+//  /* only works with absolute positioning */
+//  position: absolute;
+//
+//  /* Make sure containers are full-width and height */
+//  height: 100vh;
+//  left: 0;
+//  width: 100%;
+//
+//
+//  /* safari hack */
+//  -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%);
+//}
+//
+//.container_solid {
+//  background: white;
+//
+//  /* position this container at the top of its parent element */
+//  top: 0;
+//}
+//.title_wrapper {
+//  position: fixed;
+//  display: block;
+//  margin: auto;
+//  width: 100%;
+//  /* center the text wrapper vertically */
+//  top: 50%;
+//  -webkit-transform: translateY(-50%);
+//  -ms-transform: translateY(-50%);
+//  transform: translateY(-50%);
+//}
+//
+//.title_wrapper h1 {
+//  text-align: center;
+//  font-size: 74px;
+//  text-transform: uppercase;
+//  text-align: center;
+//  font-family: 'Fraunces', serif;
+//  /*font-family: 'Abril Fatface', serif;*/
+//  font-weight: 900;
+//}
+//
+//.container_solid .title_wrapper h1 {
+//  /* the text background */
+//  background: url('../../assets/images/continent-gif/1.gif');
+//  background-size: 100vw auto;
+//  background-position: center;
+//
+//  /* clip the text is possible */
+//  text-fill-color: transparent;
+//  -webkit-text-fill-color: transparent;
+//  background-clip: text;
+//  -webkit-background-clip: text;
+//
+//  /* fallback text color */
+//  color: black;
+//}
+//
+//.container_image {
+//
+//  background-image: url('../../assets/images/continent-gif/1.gif');
+//  background-size:100vw auto;
+//  background-position: center;
+//  background-attachment: fixed;
+//
+//  /* position the second container below the first container */
+//}
+//
+//.container_image .title_wrapper h1 {
+//  color: white;
+//}
+//
+//section {
+//  min-height: 100vh;
+//  padding: 2em;
+//  margin: auto;
+//  max-width: 800px;
+//}
+
+//// --------------- BANNER DIV USED TO SEPARATE SECTION --------------
+//.banner {
+//  margin-left: calc(50% - 50vw);
+//  width: 100vw; height: 37.5vmin;
+//  min-height: 15em;
+//  background: linear-gradient(#000, transparent, #000),
+//  var(--img) 50%/ cover;
+//  background-attachment: fixed!important;
+//  background-blend-mode: multiply!important;
+//
+//  &:nth-of-type(1) {
+//    --img: url('../../assets/images/paralax-banner/1.jpg');
+//  }
+//
+//  &:nth-of-type(2) {
+//    --img: url('../../assets/images/paralax-banner/1.jpg');
+//  }
+//
+//  &:nth-of-type(3) {
+//    --img: url('../../assets/images/paralax-banner/1.jpg')
+//  }
+//
+//  &:nth-of-type(4) {
+//    --img: url('../../assets/images/paralax-banner/1.jpg')
+//  }
+//
+//  &:nth-of-type(5) {
+//    --img: url('../../assets/images/paralax-banner/1.jpg');
+//  }
+//
+//  &:nth-of-type(6) {
+//    --img: url('../../assets/images/paralax-banner/1.jpg');
+//  }
+//
+//  &:nth-of-type(7) {
+//    --img: url('../../assets/images/paralax-banner/1.jpg')
+//  }
+//
+//  &:nth-of-type(8) {
+//    --img: url('../../assets/images/paralax-banner/1.jpg')
+//  }
+//
+//  &:nth-of-type(9) {
+//    --img: url('../../assets/images/paralax-banner/1.jpg')
+//  }
+//
+//  &:nth-of-type(10) {
+//    --img: url('../../assets/images/paralax-banner/1.jpg')
+//  }
+//
+//  &:nth-of-type(11) {
+//    --img: url('../../assets/images/paralax-banner/1.jpg')
+//  }
+//
+//  &:nth-of-type(12) {
+//    --img: url('../../assets/images/paralax-banner/1.jpg')
+//  }
+//
+//  &:nth-of-type(13) {
+//    --img: url('../../assets/images/paralax-banner/1.jpg')
+//  }
+//}
+//
+//
 
 /* ---------- PAGE HEADER SECTION ---------- */
 //.page-header .title{
@@ -168,7 +350,7 @@ section {
 // --------------------INTRODUCTION SECTION ---------------------
 .introduction{
   border-radius: 10px;
-  box-shadow:0 0 20px rgba(black,0.2);
+  box-shadow:0 0 10px rgba(black,0.1);
 }
 
 
@@ -250,10 +432,10 @@ $color: rgba(255, 61, 0, 0.7);
   //transform :  translateX(-50%) translateY(-50%) translateZ(0);
 
   width: 100%;
-  border-radius: 12px;
+  border-radius: 10px;
 
   background-color: #fff;
-  box-shadow:0 0 20px rgba(black,0.3);
+  box-shadow:0 0 20px rgba(black,0.1);
 
   overflow:hidden;
 
@@ -266,7 +448,7 @@ $color: rgba(255, 61, 0, 0.7);
 }
 
 .bridge-card:hover{
-  box-shadow:0 0 50px rgba(black,0.5);
+  box-shadow:0 0 50px rgba(black,0.3);
 }
 
 
@@ -279,9 +461,9 @@ $color: rgba(255, 61, 0, 0.7);
   top: 20px;
   right: 20px;
 
-  width: 50px;
-  height: 50px;
-  padding-top: 16px;
+  width: 48px;
+  height: 48px;
+  padding-top:14px;
 
   background-color: $color;
   border-radius: 50%;
@@ -385,16 +567,20 @@ $color: rgba(255, 61, 0, 0.7);
   margin: 0; padding: 0 0 10px 0;
 
   font-size: 19px;
-  color: $color;
+  color: darkgray;
 }
 
 .card__description{
   position: absolute;
   left: 20px; right: 20px;
-  //bottom: 56px;
-  height: 40%;
-
+  bottom: 50px;
+  //height: 40%;
   overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
 
   margin: 0; padding: 0;
 
@@ -442,9 +628,9 @@ $color: rgba(255, 61, 0, 0.7);
   padding: 0;
 
   margin-top: 1rem;
-  margin-bottom: 3rem;
-  box-shadow:0 0 20px rgba(black,0.3);
-  border-radius: 10px;
+  box-shadow:0 0 20px rgba(black,0.1);
+  border-radius: 6px;
+  background-color: white;
 }
 .posts-pagination ::ng-deep .ngx-pagination .current{
   background-color: rgba(255, 61, 0, 0.8);
@@ -462,7 +648,7 @@ $color: rgba(255, 61, 0, 0.7);
   bottom: -1.2rem;
   font-weight: lighter;
   font-size: 2rem;
-  background-color: white;
+  background-color: #f2f2f2;
   padding-right: 0.5rem;
   color: gray;
 }
@@ -522,7 +708,7 @@ flex-grow: 10;
   object-fit: cover;
   vertical-align: bottom;
   height: 12rem;
-  border-radius: 10px;
+  border-radius: 6px;
   box-shadow:0 0 20px rgba(black,0.2);
   transition: all 300ms;
 }
