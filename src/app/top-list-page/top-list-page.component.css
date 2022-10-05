@@ -40,7 +40,7 @@
   position: sticky;
   top: 0;
   text-align: center;
-  height: calc(10.5vw + 22px);
+  height: calc(10.5vw + 23px);
   transition: all 0.2s ease-in;
 }
 
@@ -60,7 +60,7 @@
   line-height: 26px;
 }
 .episode__content .story a{
-  color: #ff8000;
+  /*color: #ff8000;*/
 }
 .episode__content .story a:hover{
   color: #ff3d00;

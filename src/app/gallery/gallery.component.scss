@@ -19,9 +19,9 @@
 //}
 // -------------- HEADER TEXT IN GRADIENT BACKGROUND -----------
 .page-header-container{
-  background: #f12711; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, rgba(241, 39, 17, 0.8), #f5af19); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, rgba(241, 39, 17, 0.8), #f5af19); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #3371a6, #348b9d, #3ab3b7);
+  //background: rgba(39, 80, 115, 0.75);
+  
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 .page-header .title{

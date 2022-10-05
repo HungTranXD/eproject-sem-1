@@ -74,13 +74,13 @@ video {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: gray;
+  /*color: gray;*/
 }
 .row.greeting .content.two {
   font-size: 24px;
   text-align: center;
   margin-top: 10px;
-  color: gray;
+  /*color: gray;*/
 }
 
 
@@ -105,7 +105,7 @@ video {
   font-weight: lighter;
   font-size: 2.5rem;
   padding-right: 0.5rem;
-  color: gray;
+  /*color: gray;*/
 
 }
 .row.vision .content-vision {
@@ -217,7 +217,7 @@ video {
   font-size: 2.5rem;
   background-color: #f2f2f2;
   padding-right: 0.5rem;
-  color: gray;
+  color: black;
 
 }
 .our-team {

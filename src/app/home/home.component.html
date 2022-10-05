@@ -66,7 +66,7 @@
 <!--      <div class="continents-header-2">-->
 <!--        <span>Continents map</span>-->
 <!--      </div>-->
-      <div class="continents-container">
+      <div class="continents-container d-none d-md-block">
         <div id="map-continents">
           <ul class="continents">
             <li class="c1"><a [routerLink]="['/bridges-by-continent', 4]">Africa</a></li>
@@ -78,6 +78,46 @@
           </ul>
         </div>
 <!--      </div>-->
+    </div>
+    <div class="container px-0 py-3 d-md-none">
+      <div class="row g-2">
+        <div class="col-6">
+          <div class="p-2" style="background-color: rgba(255,255,255,0.3); border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1)" [routerLink]="['/bridges-by-continent', 1]">
+            <img src="assets/images/north_america_orange.png">
+            <div class="text-center pt-2 fs-3 text-white ">North America</div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="p-2" style="background-color: rgba(255,255,255,0.3); border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1)" [routerLink]="['/bridges-by-continent', 2]">
+            <img src="assets/images/south_america_orange.png">
+            <div class="text-center pt-2 fs-3 text-white ">South America</div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="p-2" style="background-color: rgba(255,255,255,0.3); border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1)" [routerLink]="['/bridges-by-continent', 3]">
+            <img src="assets/images/europe_orange.png">
+            <div class="text-center pt-2 fs-3 text-white ">Europe</div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="p-2" style="background-color: rgba(255,255,255,0.3); border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1)" [routerLink]="['/bridges-by-continent', 4]">
+            <img src="assets/images/africa_orange.png">
+            <div class="text-center pt-2 fs-3 text-white ">Africa</div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="p-2" style="background-color: rgba(255,255,255,0.3); border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1)" [routerLink]="['/bridges-by-continent', 5]">
+            <img src="assets/images/asia_orange.png">
+            <div class="text-center pt-2 fs-3 text-white ">Asia</div>
+          </div>
+        </div><div class="col-6">
+        <div class="p-2" style="background-color: rgba(255,255,255,0.3); border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1)" [routerLink]="['/bridges-by-continent', 6]">
+          <img src="assets/images/australia_orange.png">
+          <div class="text-center pt-2 fs-3 text-white ">Australia</div>
+        </div>
+      </div>
+
+      </div>
     </div>
   </div>
 
