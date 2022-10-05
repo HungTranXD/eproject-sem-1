@@ -1,426 +1,434 @@
-<div class="container">
-  <div class="banner" [ngStyle]="{'background': 'linear-gradient(#000, transparent, #000), url(\'../../assets/images/paralax-banner/3_1.jpg\') 50%/ cover', 'background-attachment' : 'fixed', 'background-blend-mode': 'multiply', 'height': '37.5vmin'}"></div>
-  <div class="row page-header">
-    <div class="title col-12">Bridge history</div>
+<div style="width: 100%; overflow-x: hidden">
+  <div class="container">
+    <div class="banner" [ngStyle]="{'background': 'linear-gradient(#000, transparent, #000), url(\'../../assets/images/paralax-banner/3_1.jpg\') 50%/ cover', 'background-attachment' : 'fixed', 'background-blend-mode': 'multiply', 'height': '37.5vmin'}"></div>
+    <div class="row page-header">
+      <div class="title col-12">Bridge history</div>
+    </div>
   </div>
+
+
+  <div class="container timeline-container">
+    <div class="section-title mt-5">
+      <span>History</span>
+    </div>
+    <div class="timeline fs-5">
+      <div class="content-container left">
+        <div class="content">
+          <p>The simplest and earliest types of bridges were stepping stones. Neolithic people also built a form of boardwalk across marshes; examples of such bridges include the Sweet Track and the Post Track in England, approximately 6000 years old.</p>
+          <ul>
+            <li>
+              <img src="assets/images/bridges_history_stepping_stone_1.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_stepping_stone_2.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_stepping_stone_3.jpg">
+            </li>
+          </ul>
+          <p>Undoubtedly, ancient people would also have used log bridges; that is a timber bridge that fall naturally or are intentionally felled or placed across streams. Some of the first man-made bridges with significant span were probably intentionally felled trees.</p>
+          <ul>
+            <li>
+              <img src="assets/images/bridges_history_log_bridge_1.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_log_bridge_2.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_log_bridge_3.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_timber_bridge_1.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_timber_bridge_2.jpg">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-container right">
+        <div class="content">
+          <p>Among the oldest timber bridges is the Holzbrücke Rapperswil-Hurden crossing upper Lake Zürich in Switzerland; the prehistoric timber piles discovered to the west of the Seedamm date back to 1523 BC. The first wooden footbridge led across Lake Zürich, followed by several reconstructions at least until the late 2nd century AD, when the Roman Empire built a 6-metre-wide (20 ft) wooden bridge. Between 1358 and 1360, Rudolf IV, Duke of Austria, built a 'new' wooden bridge across the lake that has been used to 1878 – measuring approximately 1,450 metres (4,760 ft) in length and 4 metres (13 ft) wide. On April 6, 2001, the reconstructed wooden footbridge was opened, being the longest wooden bridge in Switzerland.</p>
+          <ul>
+            <li>
+              <img src="assets/images/bridges_history_holzbrucke_bridge_1.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_holzbrucke_bridge_2.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_holzbrucke_bridge_3.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_holzbrucke_bridge_4.jpg">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-container left" [ngClass]="{'d-none': displayMoreHistory == 0, 'd-block': displayMoreHistory == 1}">
+        <div class="content">
+          <p>The Arkadiko Bridge is one of four Mycenaean corbel arch bridges part of a former network of roads, designed to accommodate chariots, between the fort of Tiryns and town of Epidauros in the Peloponnese, in southern Greece. Dating to the Greek Bronze Age (13th century BC), it is one of the oldest arch bridges still in existence and use. Several intact arched stone bridges from the Hellenistic era can be found in the Peloponnese.</p>
+          <ul>
+            <li>
+              <img src="assets/images/bridges_history_arkadiko_bridge_1.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_arkadiko_bridge_2.jpg">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-container right" [ngClass]="{'d-none': displayMoreHistory == 0, 'd-block': displayMoreHistory == 1}">
+        <div class="content">
+          <p>The greatest bridge builders of antiquity were the ancient Romans. The Romans built arch bridges and aqueducts that could stand in conditions that would damage or destroy earlier designs. Some stand today. An example is the Alcántara Bridge, built over the river Tagus, in Spain. The Romans also used cement, which reduced the variation of strength found in natural stone. One type of cement, called pozzolana, consisted of water, lime, sand, and volcanic rock. Brick and mortar bridges were built after the Roman era, as the technology for cement was lost (then later rediscovered).</p>
+          <ul>
+            <li>
+              <img src="assets/images/bridges_history_alcantara_bridge_1.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_alcantara_bridge_2.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_alcantara_bridge_3.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_alcantara_bridge_4.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_alcantara_bridge_5.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_alcantara_bridge_6.jpg">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-container left" [ngClass]="{'d-none': displayMoreHistory == 0, 'd-block': displayMoreHistory == 1}">
+        <div class="content">
+          <p>In India, the Arthashastra treatise by Kautilya mentions the construction of dams and bridges. A Mauryan bridge near Girnar was surveyed by James Princep. The bridge was swept away during a flood, and later repaired by Puspagupta, the chief architect of emperor Chandragupta I. The use of stronger bridges using plaited bamboo and iron chain was visible in India by about the 4th century. A number of bridges, both for military and commercial purposes, were constructed by the Mughal administration in India.</p>
+        </div>
+      </div>
+      <div class="content-container right" [ngClass]="{'d-none': displayMoreHistory == 0, 'd-block': displayMoreHistory == 1}">
+        <div class="content">
+          <p>Although large Chinese bridges of wooden construction existed at the time of the Warring States period, the oldest surviving stone bridge in China is the Zhaozhou Bridge, built from 595 to 605 AD during the Sui dynasty. This bridge is also historically significant as it is the world's oldest open-spandrel stone segmental arch bridge.</p>
+          <ul>
+            <li>
+              <img src="assets/images/bridges_history_anji_bridge_1.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_anji_bridge_2.jpg">
+            </li>
+          </ul>
+          <p>European segmental arch bridges date back to at least the Alconétar Bridge (approximately 2nd century AD),</p>
+          <ul>
+            <li>
+              <img src="assets/images/bridges_history_alconetar_bridge_1.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_alconetar_bridge_2.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_alconetar_bridge_3.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_alconetar_bridge_4.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_alconetar_bridge_5.jpg">
+            </li>
+          </ul>
+          <p>while the enormous Roman era Trajan's Bridge (105 AD) featured open-spandrel segmental arches in wooden construction.</p>
+          <ul>
+            <li>
+              <img src="assets/images/bridges_history_trajan_bridge_1.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_trajan_bridge_2.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_trajan_bridge_3.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_trajan_bridge_4.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_trajan_bridge_5.jpg">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-container left" [ngClass]="{'d-none': displayMoreHistory == 0, 'd-block': displayMoreHistory == 1}">
+        <div class="content">
+          <p>Rope bridges, a simple type of suspension bridge, were used by the Inca civilization in the Andes mountains of South America, just prior to European colonization in the 16th century.</p>
+          <ul>
+            <li>
+              <img src="assets/images/bridges_history_inca_rope_bridge_1.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_inca_rope_bridge_2.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_inca_rope_bridge_3.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_inca_rope_bridge_4.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_inca_rope_bridge_5.jpg">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-container right" [ngClass]="{'d-none': displayMoreHistory == 0, 'd-block': displayMoreHistory == 1}">
+        <div class="content">
+          <p>The Ashanti built bridges over streams and rivers. They were constructed by pounding four large forked tree trunks into the stream bed, placing beams along these forked pillars, then positioning cross-beams that were finally covered with four to six inches of dirt.</p>
+        </div>
+      </div>
+      <div class="content-container left" [ngClass]="{'d-none': displayMoreHistory == 0, 'd-block': displayMoreHistory == 1}">
+        <div class="content">
+          <p>During the 18th century, there were many innovations in the design of timber bridges by Hans Ulrich Grubenmann, Johannes Grubenmann, and others. The first book on bridge engineering was written by Hubert Gautier in 1716.</p>
+          <ul>
+            <li>
+              <img src="assets/images/bridges_history_first_book_2.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_first_book_1.jpg">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-container right" [ngClass]="{'d-none': displayMoreHistory == 0, 'd-block': displayMoreHistory == 1}">
+        <div class="content">
+          <p>A major breakthrough in bridge technology came with the erection of the Iron Bridge in Shropshire, England in 1779. It used cast iron for the first time as arches to cross the river Severn. With the Industrial Revolution in the 19th century, truss systems of wrought iron were developed for larger bridges, but iron does not have the tensile strength to support large loads. With the advent of steel, which has a high tensile strength, much larger bridges were built, many using the ideas of Gustave Eiffel.</p>
+          <ul>
+            <li>
+              <img src="assets/images/bridges_history_iron_bridge_bridge_1.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_iron_bridge_bridge_2.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_iron_bridge_bridge_3.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_iron_bridge_bridge_4.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_iron_bridge_bridge_5.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_iron_bridge_bridge_6.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_iron_bridge_bridge_7.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_iron_bridge_bridge_8.jpg">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-container left" [ngClass]="{'d-none': displayMoreHistory == 0, 'd-block': displayMoreHistory == 1}">
+        <div class="content">
+          <p>In Canada and the United States, numerous timber covered bridges were built in the late 1700s to the late 1800s, reminiscent of earlier designs in Germany and Switzerland. Some covered bridges were also built in Asia. In later years, some were partly made of stone or metal but the trusses were usually still made of wood; in the United States, there were three styles of trusses, the Queen Post, the Burr Arch and the Town Lattice. Hundreds of these structures still stand in North America. They were brought to the attention of the general public in the 1990s by the novel, movie, and play The Bridges of Madison County.</p>
+          <ul>
+            <li>
+              <img src="assets/images/bridges_history_covered_bridge_1.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_covered_bridge_2.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_covered_bridge_3.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_covered_bridge_4.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_covered_bridge_5.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_covered_bridge_6.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_covered_bridge_7.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_covered_bridge_8.jpg">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="content-container right" [ngClass]="{'d-none': displayMoreHistory == 0, 'd-block': displayMoreHistory == 1}">
+        <div class="content">
+          <p>In 1927 welding pioneer Stefan Bryła designed the first welded road bridge in the world, the Maurzyce Bridge which was later built across the river Słudwia at Maurzyce near Łowicz, Poland in 1929. In 1995, the American Welding Society presented the Historic Welded Structure Award for the bridge to Poland.</p>
+          <ul>
+            <li>
+              <img src="assets/images/bridges_history_maurzyce_bridge_1.jpg">
+            </li>
+            <li>
+              <img src="assets/images/bridges_history_maurzyce_bridge_2.jpg">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="blur-effect" [ngClass]="{'d-none': displayMoreHistory == 1, 'd-block': displayMoreHistory == 0}"></div>
+    </div>
+    <div class="d-flex justify-content-center mt-2">
+      <div class="wrapper">
+        <div class="icon go-to" (click)="displayMoreHistory = 1" [class.d-none]="displayMoreHistory == 1">
+          <span class="tooltip">Show more</span>
+          <span><i class="fa-solid fa-arrow-down"></i></span>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center mt-2">
+      <div class="wrapper">
+        <div class="icon go-to" (click)="displayMoreHistory = 0" [class.d-none]="displayMoreHistory == 0">
+          <span class="tooltip">Show less</span>
+          <span><i class="fa-solid fa-arrow-up"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-3">
+    <div class="section-title mt-5">
+      <span>Structure types</span>
+    </div>
+    <div class="row align-items-center fs-5 px-3 py-4 bg-white" style="border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.1)">
+      <div class="col-12 col-md-2">
+        <img src="assets/images/beam_bridge.png">
+        <div class="text-center fw-bold">Beam bridge</div>
+      </div>
+      <div class="col-12 col-md-10" style="text-align: justify">
+        Beam bridges are horizontal beams supported at each end by substructure units and can be either simply supported when the beams only connect across a single span, or continuous when the beams are connected across two or more spans. When there are multiple spans, the intermediate supports are known as piers. The earliest beam bridges were simple logs that sat across streams and similar simple structures. In modern times, beam bridges can range from small, wooden beams to large, steel boxes. The vertical force on the bridge becomes a shear and flexural load on the beam which is transferred down its length to the substructures on either side They are typically made of steel, concrete or wood.
+      </div>
+      <div class="border-bottom my-2"></div>
+      <div class="col-12 col-md-2">
+        <img src="assets/images/truss_bridge.png">
+        <div class="text-center fw-bold">Truss bridge</div>
+      </div>
+      <div class="col-12 col-md-10" style="text-align: justify">
+        A truss bridge is a bridge whose load-bearing superstructure is composed of a truss. This truss is a structure of connected elements forming triangular units. The connected elements (typically straight) may be stressed from tension, compression, or sometimes both in response to dynamic loads. Truss bridges are one of the oldest types of modern bridges. The basic types of truss bridges shown in this article have simple designs which could be easily analyzed by nineteenth and early twentieth-century engineers. A truss bridge is economical to construct owing to its efficient use of materials.
+      </div>
+      <div class="border-bottom my-2"></div>
+      <div class="col-12 col-md-2">
+        <img src="assets/images/cantilever_bridge.png">
+        <div class="text-center fw-bold">Cantilever bridge</div>
+      </div>
+      <div class="col-12 col-md-10" style="text-align: justify">
+        Cantilever bridges are built using cantilevers—horizontal beams supported on only one end. Most cantilever bridges use a pair of continuous spans that extend from opposite sides of the supporting piers to meet at the center of the obstacle the bridge crosses. Cantilever bridges are constructed using much the same materials and techniques as beam bridges. The difference comes in the action of the forces through the bridge. Some cantilever bridges also have a smaller beam connecting the two cantilevers, for extra strength.
+      </div>
+      <div class="border-bottom my-2"></div>
+      <div class="col-12 col-md-2">
+        <img src="assets/images/arch_bridge.png">
+        <div class="text-center fw-bold">Arch bridge</div>
+      </div>
+      <div class="col-12 col-md-10" style="text-align: justify">
+        Arch bridges have abutments at each end. The weight of the bridge is thrust into the abutments at either side. The earliest known arch bridges were built by the Greeks, and include the Arkadiko Bridge.
+      </div>
+      <div class="border-bottom my-2"></div>
+      <div class="col-12 col-md-2">
+        <img src="assets/images/tied_arch_bridge.png">
+        <div class="text-center fw-bold">Tied arch bridge</div>
+      </div>
+      <div class="col-12 col-md-10" style="text-align: justify">
+        Tied-arch bridges have an arch-shaped superstructure, but differ from conventional arch bridges. Instead of transferring the weight of the bridge and traffic loads into thrust forces into the abutments, the ends of the arches are restrained by tension in the bottom chord of the structure. They are also called bowstring arches.
+      </div>
+      <div class="border-bottom my-2"></div>
+      <div class="col-12 col-md-2">
+        <img src="assets/images/suspension_bridge.png">
+        <div class="text-center fw-bold">Suspension bridge</div>
+      </div>
+      <div class="col-12 col-md-10" style="text-align: justify">
+        Suspension bridges are suspended from cables. The earliest suspension bridges were made of ropes or vines covered with pieces of bamboo. In modern bridges, the cables hang from towers that are attached to caissons or cofferdams. The caissons or cofferdams are implanted deep into the bed of the lake, river or sea. Sub-types include the simple suspension bridge, the stressed ribbon bridge, the underspanned suspension bridge, the suspended-deck suspension bridge, and the self-anchored suspension bridge.
+      </div>
+      <div class="border-bottom my-2"></div>
+      <div class="col-12 col-md-2">
+        <img src="assets/images/cable_stayed_bridge.png">
+        <div class="text-center fw-bold">Cable-stayed bridge</div>
+      </div>
+      <div class="col-12 col-md-10" style="text-align: justify">
+        Cable-stayed bridges, like suspension bridges, are held up by cables. However, in a cable-stayed bridge, less cable is required and the towers holding the cables are proportionately higher. The first known cable-stayed bridge was designed in 1784 by C. T. (or C. J.) Löscher.
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-3">
+    <div class="section-title mt-5">
+      <span>Famous Designers, Architects and Engineers</span>
+    </div>
+    <div class="row align-items-center justify-content-center fs-5 px-3 py-4 bg-white" style="border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.1)">
+      <div class="col-9 col-md-2">
+        <img class="rounded" src="assets/images/ThomasTelford.jpg">
+      </div>
+      <div class="col-12 col-md-10" style="text-align: justify">
+        <b>Thomas Telford</b> - (1757 – 1834) will be remembered in history as one of the most accomplished Scottish civil engineers, road and canal builders of the 19th century. His reputation for fast and reliable work gave the birth of nickname “The Colossus of Roads”. He is best known today as the designer and builder of The Menai Suspension Bridge (417 m), one of the first long-span suspension bridges that were ever made.
+      </div>
+      <div class="border-bottom my-2"></div>
+      <div class="col-9 col-md-2">
+        <img class="rounded" src="">
+      </div>
+      <div class="col-12 col-md-10" style="text-align: justify">
+        <b>Santiago Calatrava</b> – Spanish architect and structural engineer Santiago Calatrava is one of the most famous bridge designers of all time. His notable claim to fame is unique bridge designing style that involved supporting bridge decks using single-leaning pylons. Bridges and other structures he designed (such as stadiums, railway stadiums, and museums) often have a form that resembles living organisms. His most famous bridge is cable-stayed Margaret Hunt Hill Bridge in Dallas, Texas.
+      </div>
+      <div class="border-bottom my-2"></div>
+      <div class="col-9 col-md-2">
+        <img class="rounded" src="assets/images/ChristianMenn.jpg">
+      </div>
+      <div class="col-12 col-md-10" style="text-align: justify">
+        <b>Christian Menn</b> – (1927 - 2018) Bridge designer from Switzerland became famous for the many bridges he designed during his active career that lasted between 1971 and 1992. Two of his most famous designs today are most likely Sunniberg Bridge and the Ganter Bridge.
+      </div>
+      <div class="border-bottom my-2"></div>
+      <div class="col-9 col-md-2">
+        <img class="rounded" src="">
+      </div>
+      <div class="col-12 col-md-10" style="text-align: justify">
+        <b>Jean Muller</b> –  This bridge designer from France who has dedicated his career on building bridges from concrete. He revolutionized the process of bridge building by developing modern concept of match-casting precast segments. One of his most famous designs is Confederation Bridge in Canada.
+      </div>
+      <div class="border-bottom my-2"></div>
+      <div class="col-9 col-md-2">
+        <img class="rounded" src="">
+      </div>
+      <div class="col-12 col-md-10" style="text-align: justify">
+        <b>Eugene Figg</b> –  is American structural engineers who have revolutionized the way modern bridges are built by the introduction of new cable-stayed bridge systems and segmental concrete construction method. Some of his most famous designs are Natchez Trace Parkway Bridge and the Sunshine Skyway Bridge.
+      </div>
+      <div class="border-bottom my-2"></div>
+      <div class="col-9 col-md-2">
+        <img class="rounded" src="assets/images/GustaveEiffel.jpg">
+      </div>
+      <div class="col-12 col-md-10" style="text-align: justify">
+        <b>Gustave Eiffel</b> –  While this Frech civil engineer and architect is known all around the world for his famous Eiffel Tower in Paris, he was also an accomplished bridge builder. You can admire his work by looking at Maria Pia bridge and the Garabit viaduct.
+      </div>
+      <div class="border-bottom my-2"></div>
+      <div class="col-9 col-md-2">
+        <img class="rounded" src="assets/images/OthmarAmmann.jpg">
+      </div>
+      <div class="col-12 col-md-10" style="text-align: justify">
+        <b>Othmar Ammann</b> –  This famous Swiss engineer is most famous for his designs of the George Washington Bridge and the Bayonne Bridge in New York City.
+      </div>
+      <div class="border-bottom my-2"></div>
+      <div class="col-9 col-md-2">
+        <img class="rounded" src="assets/images/CondeMcCullough.jpg">
+      </div>
+      <div class="col-12 col-md-10" style="text-align: justify">
+        <b>Conde McCullough</b> –  (1887 – 1946) was an American bridge engineer who designed the majority of the bridges on U.S. Route 101, including big Yaquina Bay Bridge.
+      </div>
+      <div class="border-bottom my-2"></div>
+      <div class="col-9 col-md-2">
+        <img class="rounded" src="assets/images/RobertMaillart.jpg">
+      </div>
+      <div class="col-12 col-md-10" style="text-align: justify">
+        <b>Robert Maillart</b> –  Robert Maillart’s contribution to the field of bridge building is still examined today, including one of this most daring works, the incredible Salginatobel Bridge in Switzerland.
+      </div>
+
+    </div>
+  </div>
+
+
 </div>
 
-<div class="container timeline-container">
-  <div class="section-title mt-5">
-    <span>History</span>
-  </div>
-  <div class="timeline fs-5">
-    <div class="content-container left">
-      <div class="content">
-        <p>The simplest and earliest types of bridges were stepping stones. Neolithic people also built a form of boardwalk across marshes; examples of such bridges include the Sweet Track and the Post Track in England, approximately 6000 years old.</p>
-        <ul>
-          <li>
-            <img src="assets/images/bridges_history_stepping_stone_1.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_stepping_stone_2.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_stepping_stone_3.jpg">
-          </li>
-        </ul>
-        <p>Undoubtedly, ancient people would also have used log bridges; that is a timber bridge that fall naturally or are intentionally felled or placed across streams. Some of the first man-made bridges with significant span were probably intentionally felled trees.</p>
-        <ul>
-          <li>
-            <img src="assets/images/bridges_history_log_bridge_1.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_log_bridge_2.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_log_bridge_3.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_timber_bridge_1.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_timber_bridge_2.jpg">
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="content-container right">
-      <div class="content">
-        <p>Among the oldest timber bridges is the Holzbrücke Rapperswil-Hurden crossing upper Lake Zürich in Switzerland; the prehistoric timber piles discovered to the west of the Seedamm date back to 1523 BC. The first wooden footbridge led across Lake Zürich, followed by several reconstructions at least until the late 2nd century AD, when the Roman Empire built a 6-metre-wide (20 ft) wooden bridge. Between 1358 and 1360, Rudolf IV, Duke of Austria, built a 'new' wooden bridge across the lake that has been used to 1878 – measuring approximately 1,450 metres (4,760 ft) in length and 4 metres (13 ft) wide. On April 6, 2001, the reconstructed wooden footbridge was opened, being the longest wooden bridge in Switzerland.</p>
-        <ul>
-          <li>
-            <img src="assets/images/bridges_history_holzbrucke_bridge_1.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_holzbrucke_bridge_2.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_holzbrucke_bridge_3.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_holzbrucke_bridge_4.jpg">
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="content-container left" [ngClass]="{'d-none': displayMoreHistory == 0, 'd-block': displayMoreHistory == 1}">
-      <div class="content">
-        <p>The Arkadiko Bridge is one of four Mycenaean corbel arch bridges part of a former network of roads, designed to accommodate chariots, between the fort of Tiryns and town of Epidauros in the Peloponnese, in southern Greece. Dating to the Greek Bronze Age (13th century BC), it is one of the oldest arch bridges still in existence and use. Several intact arched stone bridges from the Hellenistic era can be found in the Peloponnese.</p>
-        <ul>
-          <li>
-            <img src="assets/images/bridges_history_arkadiko_bridge_1.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_arkadiko_bridge_2.jpg">
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="content-container right" [ngClass]="{'d-none': displayMoreHistory == 0, 'd-block': displayMoreHistory == 1}">
-      <div class="content">
-        <p>The greatest bridge builders of antiquity were the ancient Romans. The Romans built arch bridges and aqueducts that could stand in conditions that would damage or destroy earlier designs. Some stand today. An example is the Alcántara Bridge, built over the river Tagus, in Spain. The Romans also used cement, which reduced the variation of strength found in natural stone. One type of cement, called pozzolana, consisted of water, lime, sand, and volcanic rock. Brick and mortar bridges were built after the Roman era, as the technology for cement was lost (then later rediscovered).</p>
-        <ul>
-          <li>
-            <img src="assets/images/bridges_history_alcantara_bridge_1.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_alcantara_bridge_2.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_alcantara_bridge_3.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_alcantara_bridge_4.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_alcantara_bridge_5.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_alcantara_bridge_6.jpg">
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="content-container left" [ngClass]="{'d-none': displayMoreHistory == 0, 'd-block': displayMoreHistory == 1}">
-      <div class="content">
-        <p>In India, the Arthashastra treatise by Kautilya mentions the construction of dams and bridges. A Mauryan bridge near Girnar was surveyed by James Princep. The bridge was swept away during a flood, and later repaired by Puspagupta, the chief architect of emperor Chandragupta I. The use of stronger bridges using plaited bamboo and iron chain was visible in India by about the 4th century. A number of bridges, both for military and commercial purposes, were constructed by the Mughal administration in India.</p>
-      </div>
-    </div>
-    <div class="content-container right" [ngClass]="{'d-none': displayMoreHistory == 0, 'd-block': displayMoreHistory == 1}">
-      <div class="content">
-        <p>Although large Chinese bridges of wooden construction existed at the time of the Warring States period, the oldest surviving stone bridge in China is the Zhaozhou Bridge, built from 595 to 605 AD during the Sui dynasty. This bridge is also historically significant as it is the world's oldest open-spandrel stone segmental arch bridge.</p>
-        <ul>
-          <li>
-            <img src="assets/images/bridges_history_anji_bridge_1.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_anji_bridge_2.jpg">
-          </li>
-        </ul>
-        <p>European segmental arch bridges date back to at least the Alconétar Bridge (approximately 2nd century AD),</p>
-        <ul>
-          <li>
-            <img src="assets/images/bridges_history_alconetar_bridge_1.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_alconetar_bridge_2.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_alconetar_bridge_3.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_alconetar_bridge_4.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_alconetar_bridge_5.jpg">
-          </li>
-        </ul>
-        <p>while the enormous Roman era Trajan's Bridge (105 AD) featured open-spandrel segmental arches in wooden construction.</p>
-        <ul>
-          <li>
-            <img src="assets/images/bridges_history_trajan_bridge_1.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_trajan_bridge_2.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_trajan_bridge_3.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_trajan_bridge_4.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_trajan_bridge_5.jpg">
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="content-container left" [ngClass]="{'d-none': displayMoreHistory == 0, 'd-block': displayMoreHistory == 1}">
-      <div class="content">
-        <p>Rope bridges, a simple type of suspension bridge, were used by the Inca civilization in the Andes mountains of South America, just prior to European colonization in the 16th century.</p>
-        <ul>
-          <li>
-            <img src="assets/images/bridges_history_inca_rope_bridge_1.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_inca_rope_bridge_2.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_inca_rope_bridge_3.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_inca_rope_bridge_4.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_inca_rope_bridge_5.jpg">
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="content-container right" [ngClass]="{'d-none': displayMoreHistory == 0, 'd-block': displayMoreHistory == 1}">
-      <div class="content">
-        <p>The Ashanti built bridges over streams and rivers. They were constructed by pounding four large forked tree trunks into the stream bed, placing beams along these forked pillars, then positioning cross-beams that were finally covered with four to six inches of dirt.</p>
-      </div>
-    </div>
-    <div class="content-container left" [ngClass]="{'d-none': displayMoreHistory == 0, 'd-block': displayMoreHistory == 1}">
-      <div class="content">
-        <p>During the 18th century, there were many innovations in the design of timber bridges by Hans Ulrich Grubenmann, Johannes Grubenmann, and others. The first book on bridge engineering was written by Hubert Gautier in 1716.</p>
-        <ul>
-          <li>
-            <img src="assets/images/bridges_history_first_book_2.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_first_book_1.jpg">
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="content-container right" [ngClass]="{'d-none': displayMoreHistory == 0, 'd-block': displayMoreHistory == 1}">
-      <div class="content">
-        <p>A major breakthrough in bridge technology came with the erection of the Iron Bridge in Shropshire, England in 1779. It used cast iron for the first time as arches to cross the river Severn. With the Industrial Revolution in the 19th century, truss systems of wrought iron were developed for larger bridges, but iron does not have the tensile strength to support large loads. With the advent of steel, which has a high tensile strength, much larger bridges were built, many using the ideas of Gustave Eiffel.</p>
-        <ul>
-          <li>
-            <img src="assets/images/bridges_history_iron_bridge_bridge_1.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_iron_bridge_bridge_2.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_iron_bridge_bridge_3.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_iron_bridge_bridge_4.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_iron_bridge_bridge_5.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_iron_bridge_bridge_6.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_iron_bridge_bridge_7.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_iron_bridge_bridge_8.jpg">
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="content-container left" [ngClass]="{'d-none': displayMoreHistory == 0, 'd-block': displayMoreHistory == 1}">
-      <div class="content">
-        <p>In Canada and the United States, numerous timber covered bridges were built in the late 1700s to the late 1800s, reminiscent of earlier designs in Germany and Switzerland. Some covered bridges were also built in Asia. In later years, some were partly made of stone or metal but the trusses were usually still made of wood; in the United States, there were three styles of trusses, the Queen Post, the Burr Arch and the Town Lattice. Hundreds of these structures still stand in North America. They were brought to the attention of the general public in the 1990s by the novel, movie, and play The Bridges of Madison County.</p>
-        <ul>
-          <li>
-            <img src="assets/images/bridges_history_covered_bridge_1.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_covered_bridge_2.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_covered_bridge_3.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_covered_bridge_4.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_covered_bridge_5.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_covered_bridge_6.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_covered_bridge_7.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_covered_bridge_8.jpg">
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="content-container right" [ngClass]="{'d-none': displayMoreHistory == 0, 'd-block': displayMoreHistory == 1}">
-      <div class="content">
-        <p>In 1927 welding pioneer Stefan Bryła designed the first welded road bridge in the world, the Maurzyce Bridge which was later built across the river Słudwia at Maurzyce near Łowicz, Poland in 1929. In 1995, the American Welding Society presented the Historic Welded Structure Award for the bridge to Poland.</p>
-        <ul>
-          <li>
-            <img src="assets/images/bridges_history_maurzyce_bridge_1.jpg">
-          </li>
-          <li>
-            <img src="assets/images/bridges_history_maurzyce_bridge_2.jpg">
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="blur-effect" [ngClass]="{'d-none': displayMoreHistory == 1, 'd-block': displayMoreHistory == 0}"></div>
-  </div>
-  <div class="d-flex justify-content-center mt-2">
-    <div class="wrapper">
-      <div class="icon go-to" (click)="displayMoreHistory = 1" [class.d-none]="displayMoreHistory == 1">
-        <span class="tooltip">Show more</span>
-        <span><i class="fa-solid fa-arrow-down"></i></span>
-      </div>
-    </div>
-  </div>
-  <div class="d-flex justify-content-center mt-2">
-    <div class="wrapper">
-      <div class="icon go-to" (click)="displayMoreHistory = 0" [class.d-none]="displayMoreHistory == 0">
-        <span class="tooltip">Show less</span>
-        <span><i class="fa-solid fa-arrow-up"></i></span>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="container mt-3">
-  <div class="section-title mt-5">
-    <span>Structure types</span>
-  </div>
-  <div class="row align-items-center fs-5 px-3 py-4 bg-white" style="border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.1)">
-    <div class="col-12 col-md-2">
-      <img src="assets/images/beam_bridge.png">
-      <div class="text-center fw-bold">Beam bridge</div>
-    </div>
-    <div class="col-12 col-md-10" style="text-align: justify">
-      Beam bridges are horizontal beams supported at each end by substructure units and can be either simply supported when the beams only connect across a single span, or continuous when the beams are connected across two or more spans. When there are multiple spans, the intermediate supports are known as piers. The earliest beam bridges were simple logs that sat across streams and similar simple structures. In modern times, beam bridges can range from small, wooden beams to large, steel boxes. The vertical force on the bridge becomes a shear and flexural load on the beam which is transferred down its length to the substructures on either side They are typically made of steel, concrete or wood.
-    </div>
-    <div class="border-bottom my-2"></div>
-    <div class="col-12 col-md-2">
-      <img src="assets/images/truss_bridge.png">
-      <div class="text-center fw-bold">Truss bridge</div>
-    </div>
-    <div class="col-12 col-md-10" style="text-align: justify">
-      A truss bridge is a bridge whose load-bearing superstructure is composed of a truss. This truss is a structure of connected elements forming triangular units. The connected elements (typically straight) may be stressed from tension, compression, or sometimes both in response to dynamic loads. Truss bridges are one of the oldest types of modern bridges. The basic types of truss bridges shown in this article have simple designs which could be easily analyzed by nineteenth and early twentieth-century engineers. A truss bridge is economical to construct owing to its efficient use of materials.
-    </div>
-    <div class="border-bottom my-2"></div>
-    <div class="col-12 col-md-2">
-      <img src="assets/images/cantilever_bridge.png">
-      <div class="text-center fw-bold">Cantilever bridge</div>
-    </div>
-    <div class="col-12 col-md-10" style="text-align: justify">
-      Cantilever bridges are built using cantilevers—horizontal beams supported on only one end. Most cantilever bridges use a pair of continuous spans that extend from opposite sides of the supporting piers to meet at the center of the obstacle the bridge crosses. Cantilever bridges are constructed using much the same materials and techniques as beam bridges. The difference comes in the action of the forces through the bridge. Some cantilever bridges also have a smaller beam connecting the two cantilevers, for extra strength.
-    </div>
-    <div class="border-bottom my-2"></div>
-    <div class="col-12 col-md-2">
-      <img src="assets/images/arch_bridge.png">
-      <div class="text-center fw-bold">Arch bridge</div>
-    </div>
-    <div class="col-12 col-md-10" style="text-align: justify">
-      Arch bridges have abutments at each end. The weight of the bridge is thrust into the abutments at either side. The earliest known arch bridges were built by the Greeks, and include the Arkadiko Bridge.
-    </div>
-    <div class="border-bottom my-2"></div>
-    <div class="col-12 col-md-2">
-      <img src="assets/images/tied_arch_bridge.png">
-      <div class="text-center fw-bold">Tied arch bridge</div>
-    </div>
-    <div class="col-12 col-md-10" style="text-align: justify">
-      Tied-arch bridges have an arch-shaped superstructure, but differ from conventional arch bridges. Instead of transferring the weight of the bridge and traffic loads into thrust forces into the abutments, the ends of the arches are restrained by tension in the bottom chord of the structure. They are also called bowstring arches.
-    </div>
-    <div class="border-bottom my-2"></div>
-    <div class="col-12 col-md-2">
-      <img src="assets/images/suspension_bridge.png">
-      <div class="text-center fw-bold">Suspension bridge</div>
-    </div>
-    <div class="col-12 col-md-10" style="text-align: justify">
-      Suspension bridges are suspended from cables. The earliest suspension bridges were made of ropes or vines covered with pieces of bamboo. In modern bridges, the cables hang from towers that are attached to caissons or cofferdams. The caissons or cofferdams are implanted deep into the bed of the lake, river or sea. Sub-types include the simple suspension bridge, the stressed ribbon bridge, the underspanned suspension bridge, the suspended-deck suspension bridge, and the self-anchored suspension bridge.
-    </div>
-    <div class="border-bottom my-2"></div>
-    <div class="col-12 col-md-2">
-      <img src="assets/images/cable_stayed_bridge.png">
-      <div class="text-center fw-bold">Cable-stayed bridge</div>
-    </div>
-    <div class="col-12 col-md-10" style="text-align: justify">
-      Cable-stayed bridges, like suspension bridges, are held up by cables. However, in a cable-stayed bridge, less cable is required and the towers holding the cables are proportionately higher. The first known cable-stayed bridge was designed in 1784 by C. T. (or C. J.) Löscher.
-    </div>
-  </div>
-</div>
 
-<div class="container mt-3">
-  <div class="section-title mt-5">
-    <span>Famous Designers, Architects and Engineers</span>
-  </div>
-  <div class="row align-items-center justify-content-center fs-5 px-3 py-4 bg-white" style="border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.1)">
-    <div class="col-9 col-md-2">
-      <img class="rounded" src="assets/images/ThomasTelford.jpg">
-    </div>
-    <div class="col-12 col-md-10" style="text-align: justify">
-      <b>Thomas Telford</b> - (1757 – 1834) will be remembered in history as one of the most accomplished Scottish civil engineers, road and canal builders of the 19th century. His reputation for fast and reliable work gave the birth of nickname “The Colossus of Roads”. He is best known today as the designer and builder of The Menai Suspension Bridge (417 m), one of the first long-span suspension bridges that were ever made.
-    </div>
-    <div class="border-bottom my-2"></div>
-    <div class="col-9 col-md-2">
-      <img class="rounded" src="">
-    </div>
-    <div class="col-12 col-md-10" style="text-align: justify">
-      <b>Santiago Calatrava</b> – Spanish architect and structural engineer Santiago Calatrava is one of the most famous bridge designers of all time. His notable claim to fame is unique bridge designing style that involved supporting bridge decks using single-leaning pylons. Bridges and other structures he designed (such as stadiums, railway stadiums, and museums) often have a form that resembles living organisms. His most famous bridge is cable-stayed Margaret Hunt Hill Bridge in Dallas, Texas.
-    </div>
-    <div class="border-bottom my-2"></div>
-    <div class="col-9 col-md-2">
-      <img class="rounded" src="assets/images/ChristianMenn.jpg">
-    </div>
-    <div class="col-12 col-md-10" style="text-align: justify">
-      <b>Christian Menn</b> – (1927 - 2018) Bridge designer from Switzerland became famous for the many bridges he designed during his active career that lasted between 1971 and 1992. Two of his most famous designs today are most likely Sunniberg Bridge and the Ganter Bridge.
-    </div>
-    <div class="border-bottom my-2"></div>
-    <div class="col-9 col-md-2">
-      <img class="rounded" src="">
-    </div>
-    <div class="col-12 col-md-10" style="text-align: justify">
-      <b>Jean Muller</b> –  This bridge designer from France who has dedicated his career on building bridges from concrete. He revolutionized the process of bridge building by developing modern concept of match-casting precast segments. One of his most famous designs is Confederation Bridge in Canada.
-    </div>
-    <div class="border-bottom my-2"></div>
-    <div class="col-9 col-md-2">
-      <img class="rounded" src="">
-    </div>
-    <div class="col-12 col-md-10" style="text-align: justify">
-      <b>Eugene Figg</b> –  is American structural engineers who have revolutionized the way modern bridges are built by the introduction of new cable-stayed bridge systems and segmental concrete construction method. Some of his most famous designs are Natchez Trace Parkway Bridge and the Sunshine Skyway Bridge.
-    </div>
-    <div class="border-bottom my-2"></div>
-    <div class="col-9 col-md-2">
-      <img class="rounded" src="assets/images/GustaveEiffel.jpg">
-    </div>
-    <div class="col-12 col-md-10" style="text-align: justify">
-      <b>Gustave Eiffel</b> –  While this Frech civil engineer and architect is known all around the world for his famous Eiffel Tower in Paris, he was also an accomplished bridge builder. You can admire his work by looking at Maria Pia bridge and the Garabit viaduct.
-    </div>
-    <div class="border-bottom my-2"></div>
-    <div class="col-9 col-md-2">
-      <img class="rounded" src="assets/images/OthmarAmmann.jpg">
-    </div>
-    <div class="col-12 col-md-10" style="text-align: justify">
-      <b>Othmar Ammann</b> –  This famous Swiss engineer is most famous for his designs of the George Washington Bridge and the Bayonne Bridge in New York City.
-    </div>
-    <div class="border-bottom my-2"></div>
-    <div class="col-9 col-md-2">
-      <img class="rounded" src="assets/images/CondeMcCullough.jpg">
-    </div>
-    <div class="col-12 col-md-10" style="text-align: justify">
-      <b>Conde McCullough</b> –  (1887 – 1946) was an American bridge engineer who designed the majority of the bridges on U.S. Route 101, including big Yaquina Bay Bridge.
-    </div>
-    <div class="border-bottom my-2"></div>
-    <div class="col-9 col-md-2">
-      <img class="rounded" src="assets/images/RobertMaillart.jpg">
-    </div>
-    <div class="col-12 col-md-10" style="text-align: justify">
-      <b>Robert Maillart</b> –  Robert Maillart’s contribution to the field of bridge building is still examined today, including one of this most daring works, the incredible Salginatobel Bridge in Switzerland.
-    </div>
-
-  </div>
-</div>
 

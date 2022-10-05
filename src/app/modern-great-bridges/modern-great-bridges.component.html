@@ -5,190 +5,193 @@
   ></ngx-loading>
 </div>
 
-<div class="container" *ngIf="loading == false">
-  <div class="banner" [ngStyle]="{'background': 'linear-gradient(#000, transparent, #000), url(\'../../assets/images/paralax-banner/3.jpg\') 50%/ cover', 'background-attachment' : 'fixed', 'background-blend-mode': 'multiply', 'height': '37.5vmin'}"></div>
-  <div class="row page-header">
-    <div class="title col-12">Modern great bridges</div>
-  </div>
-</div>
-
-<div class="container timeline-container" *ngIf="loading == false">
-  <div class="section-title mt-5">
-    <span>Intro</span>
-  </div>
-  <p class="fs-5 mb-4">The fast development of structural analysis and construction technologies in the 20th century provided a significant development and improvement in bridge construction, resulting in the creation of the modern Great Bridges. Some of their forerunners among late-19th-century bridges are also included in this group.</p>
-  <div class="section-title mt-5">
-    <span>Modern great bridges</span>
+<div style="width: 100%; overflow-x: hidden" *ngIf="loading == false">
+  <div class="container">
+    <div class="banner" [ngStyle]="{'background': 'linear-gradient(#000, transparent, #000), url(\'../../assets/images/paralax-banner/3.jpg\') 50%/ cover', 'background-attachment' : 'fixed', 'background-blend-mode': 'multiply', 'height': '37.5vmin'}"></div>
+    <div class="row page-header">
+      <div class="title col-12">Modern great bridges</div>
+    </div>
   </div>
 
-  <article class="postcard light blue">
-    <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[0].id]">
-      <img class="postcard__img" src="{{POSTS[0].thumbnail}}" alt="Image Title" />
-    </a>
-    <div class="postcard__text t-dark">
-      <h1 class="postcard__title blue"><a [routerLink]="['/bridge-page', POSTS[0].id]">{{POSTS[0].bridge_name}}</a></h1>
-      <div class="postcard__subtitle small">
-        <time datetime="2020-05-25 12:00:00">
-          <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[0].posted_date}}
-        </time>
-      </div>
-      <div class="postcard__bar"></div>
-      <div class="postcard__preview-txt">{{POSTS[0].introduction}}</div>
-      <ul class="postcard__tagbox">
-        <li class="tag__item">
-          <a [routerLink]="['/bridges-by-continent', POSTS[0].continent_id]"><i class="fas fa-tag mr-2">
-          </i> {{POSTS[0].continent_name}}</a>
-        </li>
-        <li class="tag__item play blue">
-          <a [routerLink]="['/bridge-page', POSTS[0].id]"><i class="fas fa-play mr-2"></i> More detail</a>
-        </li>
-      </ul>
+  <div class="container timeline-container">
+    <div class="section-title mt-5">
+      <span>Intro</span>
     </div>
-  </article>
-  <article class="postcard light red">
-    <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[1].id]">
-      <img class="postcard__img" src="{{POSTS[1].thumbnail}}" alt="Image Title" />
-    </a>
-    <div class="postcard__text t-dark">
-      <h1 class="postcard__title red"><a [routerLink]="['/bridge-page', POSTS[1].id]">{{POSTS[1].bridge_name}}</a></h1>
-      <div class="postcard__subtitle small">
-        <time datetime="2020-05-25 12:00:00">
-          <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[1].posted_date}}
-        </time>
-      </div>
-      <div class="postcard__bar"></div>
-      <div class="postcard__preview-txt">{{POSTS[1].introduction}}</div>
-      <ul class="postcard__tagbox">
-        <li class="tag__item">
-          <a [routerLink]="['/bridges-by-continent', POSTS[1].continent_id]"><i class="fas fa-tag mr-2">
-          </i> {{POSTS[1].continent_name}}</a>
-        </li>
-        <li class="tag__item play red">
-          <a [routerLink]="['/bridge-page', POSTS[1].id]"><i class="fas fa-play mr-2"></i> More detail</a>
-        </li>
-      </ul>
+    <p class="fs-5 mb-4">The fast development of structural analysis and construction technologies in the 20th century provided a significant development and improvement in bridge construction, resulting in the creation of the modern Great Bridges. Some of their forerunners among late-19th-century bridges are also included in this group.</p>
+    <div class="section-title mt-5">
+      <span>Modern great bridges</span>
     </div>
-  </article>
-  <article class="postcard light blue">
-    <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[2].id]">
-      <img class="postcard__img" src="{{POSTS[2].thumbnail}}" alt="Image Title" />
-    </a>
-    <div class="postcard__text t-dark">
-      <h1 class="postcard__title blue"><a [routerLink]="['/bridge-page', POSTS[2].id]">{{POSTS[2].bridge_name}}</a></h1>
-      <div class="postcard__subtitle small">
-        <time datetime="2020-05-25 12:00:00">
-          <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[2].posted_date}}
-        </time>
+
+    <article class="postcard light blue">
+      <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[0].id]">
+        <img class="postcard__img" src="{{POSTS[0].thumbnail}}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title blue"><a [routerLink]="['/bridge-page', POSTS[0].id]">{{POSTS[0].bridge_name}}</a></h1>
+        <div class="postcard__subtitle small">
+          <time datetime="2020-05-25 12:00:00">
+            <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[0].posted_date}}
+          </time>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">{{POSTS[0].introduction}}</div>
+        <ul class="postcard__tagbox">
+          <li class="tag__item">
+            <a [routerLink]="['/bridges-by-continent', POSTS[0].continent_id]"><i class="fas fa-tag mr-2">
+            </i> {{POSTS[0].continent_name}}</a>
+          </li>
+          <li class="tag__item play blue">
+            <a [routerLink]="['/bridge-page', POSTS[0].id]"><i class="fas fa-play mr-2"></i> More detail</a>
+          </li>
+        </ul>
       </div>
-      <div class="postcard__bar"></div>
-      <div class="postcard__preview-txt">{{POSTS[2].introduction}}</div>
-      <ul class="postcard__tagbox">
-        <li class="tag__item">
-          <a [routerLink]="['/bridges-by-continent', POSTS[2].continent_id]"><i class="fas fa-tag mr-2">
-          </i> {{POSTS[2].continent_name}}</a>
-        </li>
-        <li class="tag__item play blue">
-          <a [routerLink]="['/bridge-page', POSTS[2].id]"><i class="fas fa-play mr-2"></i> More detail</a>
-        </li>
-      </ul>
-    </div>
-  </article>
-  <article class="postcard light red">
-    <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[3].id]">
-      <img class="postcard__img" src="{{POSTS[3].thumbnail}}" alt="Image Title" />
-    </a>
-    <div class="postcard__text t-dark">
-      <h1 class="postcard__title red"><a [routerLink]="['/bridge-page', POSTS[3].id]">{{POSTS[3].bridge_name}}</a></h1>
-      <div class="postcard__subtitle small">
-        <time datetime="2020-05-25 12:00:00">
-          <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[3].posted_date}}
-        </time>
+    </article>
+    <article class="postcard light red">
+      <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[1].id]">
+        <img class="postcard__img" src="{{POSTS[1].thumbnail}}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title red"><a [routerLink]="['/bridge-page', POSTS[1].id]">{{POSTS[1].bridge_name}}</a></h1>
+        <div class="postcard__subtitle small">
+          <time datetime="2020-05-25 12:00:00">
+            <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[1].posted_date}}
+          </time>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">{{POSTS[1].introduction}}</div>
+        <ul class="postcard__tagbox">
+          <li class="tag__item">
+            <a [routerLink]="['/bridges-by-continent', POSTS[1].continent_id]"><i class="fas fa-tag mr-2">
+            </i> {{POSTS[1].continent_name}}</a>
+          </li>
+          <li class="tag__item play red">
+            <a [routerLink]="['/bridge-page', POSTS[1].id]"><i class="fas fa-play mr-2"></i> More detail</a>
+          </li>
+        </ul>
       </div>
-      <div class="postcard__bar"></div>
-      <div class="postcard__preview-txt">{{POSTS[3].introduction}}</div>
-      <ul class="postcard__tagbox">
-        <li class="tag__item">
-          <a [routerLink]="['/bridges-by-continent', POSTS[3].continent_id]"><i class="fas fa-tag mr-2">
-          </i> {{POSTS[3].continent_name}}</a>
-        </li>
-        <li class="tag__item play red">
-          <a [routerLink]="['/bridge-page', POSTS[3].id]"><i class="fas fa-play mr-2"></i> More detail</a>
-        </li>
-      </ul>
-    </div>
-  </article>
-  <article class="postcard light blue">
-    <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[4].id]">
-      <img class="postcard__img" src="{{POSTS[4].thumbnail}}" alt="Image Title" />
-    </a>
-    <div class="postcard__text t-dark">
-      <h1 class="postcard__title blue"><a [routerLink]="['/bridge-page', POSTS[4].id]">{{POSTS[4].bridge_name}}</a></h1>
-      <div class="postcard__subtitle small">
-        <time datetime="2020-05-25 12:00:00">
-          <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[4].posted_date}}
-        </time>
+    </article>
+    <article class="postcard light blue">
+      <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[2].id]">
+        <img class="postcard__img" src="{{POSTS[2].thumbnail}}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title blue"><a [routerLink]="['/bridge-page', POSTS[2].id]">{{POSTS[2].bridge_name}}</a></h1>
+        <div class="postcard__subtitle small">
+          <time datetime="2020-05-25 12:00:00">
+            <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[2].posted_date}}
+          </time>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">{{POSTS[2].introduction}}</div>
+        <ul class="postcard__tagbox">
+          <li class="tag__item">
+            <a [routerLink]="['/bridges-by-continent', POSTS[2].continent_id]"><i class="fas fa-tag mr-2">
+            </i> {{POSTS[2].continent_name}}</a>
+          </li>
+          <li class="tag__item play blue">
+            <a [routerLink]="['/bridge-page', POSTS[2].id]"><i class="fas fa-play mr-2"></i> More detail</a>
+          </li>
+        </ul>
       </div>
-      <div class="postcard__bar"></div>
-      <div class="postcard__preview-txt">{{POSTS[4].introduction}}</div>
-      <ul class="postcard__tagbox">
-        <li class="tag__item">
-          <a [routerLink]="['/bridges-by-continent', POSTS[4].continent_id]"><i class="fas fa-tag mr-2">
-          </i> {{POSTS[4].continent_name}}</a>
-        </li>
-        <li class="tag__item play blue">
-          <a [routerLink]="['/bridge-page', POSTS[4].id]"><i class="fas fa-play mr-2"></i> More detail</a>
-        </li>
-      </ul>
-    </div>
-  </article>
-  <article class="postcard light red">
-    <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[5].id]">
-      <img class="postcard__img" src="{{POSTS[5].thumbnail}}" alt="Image Title" />
-    </a>
-    <div class="postcard__text t-dark">
-      <h1 class="postcard__title red"><a [routerLink]="['/bridge-page', POSTS[5].id]">{{POSTS[5].bridge_name}}</a></h1>
-      <div class="postcard__subtitle small">
-        <time datetime="2020-05-25 12:00:00">
-          <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[5].posted_date}}
-        </time>
+    </article>
+    <article class="postcard light red">
+      <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[3].id]">
+        <img class="postcard__img" src="{{POSTS[3].thumbnail}}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title red"><a [routerLink]="['/bridge-page', POSTS[3].id]">{{POSTS[3].bridge_name}}</a></h1>
+        <div class="postcard__subtitle small">
+          <time datetime="2020-05-25 12:00:00">
+            <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[3].posted_date}}
+          </time>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">{{POSTS[3].introduction}}</div>
+        <ul class="postcard__tagbox">
+          <li class="tag__item">
+            <a [routerLink]="['/bridges-by-continent', POSTS[3].continent_id]"><i class="fas fa-tag mr-2">
+            </i> {{POSTS[3].continent_name}}</a>
+          </li>
+          <li class="tag__item play red">
+            <a [routerLink]="['/bridge-page', POSTS[3].id]"><i class="fas fa-play mr-2"></i> More detail</a>
+          </li>
+        </ul>
       </div>
-      <div class="postcard__bar"></div>
-      <div class="postcard__preview-txt">{{POSTS[5].introduction}}</div>
-      <ul class="postcard__tagbox">
-        <li class="tag__item">
-          <a [routerLink]="['/bridges-by-continent', POSTS[5].continent_id]"><i class="fas fa-tag mr-2">
-          </i> {{POSTS[5].continent_name}}</a>
-        </li>
-        <li class="tag__item play red">
-          <a [routerLink]="['/bridge-page', POSTS[5].id]"><i class="fas fa-play mr-2"></i> More detail</a>
-        </li>
-      </ul>
-    </div>
-  </article>
-  <article class="postcard light blue">
-    <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[6].id]">
-      <img class="postcard__img" src="{{POSTS[6].thumbnail}}" alt="Image Title" />
-    </a>
-    <div class="postcard__text t-dark">
-      <h1 class="postcard__title blue"><a [routerLink]="['/bridge-page', POSTS[6].id]">{{POSTS[6].bridge_name}}</a></h1>
-      <div class="postcard__subtitle small">
-        <time datetime="2020-05-25 12:00:00">
-          <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[6].posted_date}}
-        </time>
+    </article>
+    <article class="postcard light blue">
+      <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[4].id]">
+        <img class="postcard__img" src="{{POSTS[4].thumbnail}}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title blue"><a [routerLink]="['/bridge-page', POSTS[4].id]">{{POSTS[4].bridge_name}}</a></h1>
+        <div class="postcard__subtitle small">
+          <time datetime="2020-05-25 12:00:00">
+            <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[4].posted_date}}
+          </time>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">{{POSTS[4].introduction}}</div>
+        <ul class="postcard__tagbox">
+          <li class="tag__item">
+            <a [routerLink]="['/bridges-by-continent', POSTS[4].continent_id]"><i class="fas fa-tag mr-2">
+            </i> {{POSTS[4].continent_name}}</a>
+          </li>
+          <li class="tag__item play blue">
+            <a [routerLink]="['/bridge-page', POSTS[4].id]"><i class="fas fa-play mr-2"></i> More detail</a>
+          </li>
+        </ul>
       </div>
-      <div class="postcard__bar"></div>
-      <div class="postcard__preview-txt">{{POSTS[6].introduction}}</div>
-      <ul class="postcard__tagbox">
-        <li class="tag__item">
-          <a [routerLink]="['/bridges-by-continent', POSTS[6].continent_id]"><i class="fas fa-tag mr-2">
-          </i> {{POSTS[6].continent_name}}</a>
-        </li>
-        <li class="tag__item play blue">
-          <a [routerLink]="['/bridge-page', POSTS[6].id]"><i class="fas fa-play mr-2"></i> More detail</a>
-        </li>
-      </ul>
-    </div>
-  </article>
+    </article>
+    <article class="postcard light red">
+      <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[5].id]">
+        <img class="postcard__img" src="{{POSTS[5].thumbnail}}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title red"><a [routerLink]="['/bridge-page', POSTS[5].id]">{{POSTS[5].bridge_name}}</a></h1>
+        <div class="postcard__subtitle small">
+          <time datetime="2020-05-25 12:00:00">
+            <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[5].posted_date}}
+          </time>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">{{POSTS[5].introduction}}</div>
+        <ul class="postcard__tagbox">
+          <li class="tag__item">
+            <a [routerLink]="['/bridges-by-continent', POSTS[5].continent_id]"><i class="fas fa-tag mr-2">
+            </i> {{POSTS[5].continent_name}}</a>
+          </li>
+          <li class="tag__item play red">
+            <a [routerLink]="['/bridge-page', POSTS[5].id]"><i class="fas fa-play mr-2"></i> More detail</a>
+          </li>
+        </ul>
+      </div>
+    </article>
+    <article class="postcard light blue">
+      <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[6].id]">
+        <img class="postcard__img" src="{{POSTS[6].thumbnail}}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title blue"><a [routerLink]="['/bridge-page', POSTS[6].id]">{{POSTS[6].bridge_name}}</a></h1>
+        <div class="postcard__subtitle small">
+          <time datetime="2020-05-25 12:00:00">
+            <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[6].posted_date}}
+          </time>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">{{POSTS[6].introduction}}</div>
+        <ul class="postcard__tagbox">
+          <li class="tag__item">
+            <a [routerLink]="['/bridges-by-continent', POSTS[6].continent_id]"><i class="fas fa-tag mr-2">
+            </i> {{POSTS[6].continent_name}}</a>
+          </li>
+          <li class="tag__item play blue">
+            <a [routerLink]="['/bridge-page', POSTS[6].id]"><i class="fas fa-play mr-2"></i> More detail</a>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
 
 </div>
 

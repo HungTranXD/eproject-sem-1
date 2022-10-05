@@ -5,252 +5,255 @@
   ></ngx-loading>
 </div>
 
-<div class="container" *ngIf="loading == false">
-  <div class="banner" [ngStyle]="{'background': 'linear-gradient(#000, transparent, #000), url(\'../../assets/images/paralax-banner/6.jpg\') 50%/ cover', 'background-attachment' : 'fixed', 'background-blend-mode': 'multiply', 'height': '37.5vmin'}"></div>
-  <div class="row page-header">
-    <div class="title col-12">Historical great bridges</div>
+<div style="width: 100%; overflow-x: hidden" *ngIf="loading == false">
+  <div class="container">
+    <div class="banner" [ngStyle]="{'background': 'linear-gradient(#000, transparent, #000), url(\'../../assets/images/paralax-banner/6.jpg\') 50%/ cover', 'background-attachment' : 'fixed', 'background-blend-mode': 'multiply', 'height': '37.5vmin'}"></div>
+    <div class="row page-header">
+      <div class="title col-12">Historical great bridges</div>
+    </div>
+  </div>
+
+  <div class="container timeline-container">
+    <div class="section-title mt-5">
+      <span>One</span>
+    </div>
+    <p class="fs-5 mb-4">Based on the historical development of construction, remarkable bridges can be subdivided into ancient, medieval, industrial revolution, and modern Great Bridges. <i>Ancient greats</i> include those bridges serving as aqueducts or bridges for military conquests. Examples include the Pont du Gard aqueduct (40–60 AD), a three tiered stone bridge, Caesar’s bridges over the Rhine river during his conquest of Gaul (50s BC), and Trajan’s Bridge (104 AD) and Constantine’s Bridge (328 AD), both over the Danube river.</p>
+
+    <article class="postcard light blue">
+      <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[3].id]">
+        <img class="postcard__img" src="{{POSTS[3].thumbnail}}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title blue"><a [routerLink]="['/bridge-page', POSTS[3].id]">{{POSTS[3].bridge_name}}</a></h1>
+        <div class="postcard__subtitle small">
+          <time datetime="2020-05-25 12:00:00">
+            <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[3].posted_date}}
+          </time>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">{{POSTS[3].introduction}}</div>
+        <ul class="postcard__tagbox">
+          <li class="tag__item">
+            <a [routerLink]="['/bridges-by-continent', POSTS[3].continent_id]"><i class="fas fa-tag mr-2">
+            </i> {{POSTS[3].continent_name}}</a>
+          </li>
+          <li class="tag__item play blue">
+            <a [routerLink]="['/bridge-page', POSTS[3].id]"><i class="fas fa-play mr-2"></i> More detail</a>
+          </li>
+        </ul>
+      </div>
+    </article>
+    <article class="postcard light red">
+      <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[6].id]">
+        <img class="postcard__img" src="{{POSTS[6].thumbnail}}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title red"><a [routerLink]="['/bridge-page', POSTS[6].id]">{{POSTS[6].bridge_name}}</a></h1>
+        <div class="postcard__subtitle small">
+          <time datetime="2020-05-25 12:00:00">
+            <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[6].posted_date}}
+          </time>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">{{POSTS[6].introduction}}</div>
+        <ul class="postcard__tagbox">
+          <li class="tag__item">
+            <a [routerLink]="['/bridges-by-continent', POSTS[6].continent_id]"><i class="fas fa-tag mr-2">
+            </i> {{POSTS[6].continent_name}}</a>
+          </li>
+          <li class="tag__item play red">
+            <a [routerLink]="['/bridge-page', POSTS[6].id]"><i class="fas fa-play mr-2"></i> More detail</a>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="container mt-3" *ngIf="loading == false">
+    <div class="section-title mt-5">
+      <span>Two</span>
+    </div>
+    <p class="fs-5 mb-4"><i>Medieval and Renaissance bridges</i> were often stone bridges serving as crossings within cities, and including buildings and shops on top of the bridge structure. Examples include the Ponte Vecchio in Florence (1564), the Rialto Bridge in Venice (1591) and the “Old” London Bridge (1209).</p>
+
+    <article class="postcard light blue">
+      <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[1].id]">
+        <img class="postcard__img" src="{{POSTS[1].thumbnail}}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title blue"><a [routerLink]="['/bridge-page', POSTS[1].id]">{{POSTS[1].bridge_name}}</a></h1>
+        <div class="postcard__subtitle small">
+          <time datetime="2020-05-25 12:00:00">
+            <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[1].posted_date}}
+          </time>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">{{POSTS[1].introduction}}</div>
+        <ul class="postcard__tagbox">
+          <li class="tag__item">
+            <a [routerLink]="['/bridges-by-continent', POSTS[1].continent_id]"><i class="fas fa-tag mr-2">
+            </i> {{POSTS[1].continent_name}}</a>
+          </li>
+          <li class="tag__item play blue">
+            <a [routerLink]="['/bridge-page', POSTS[1].id]"><i class="fas fa-play mr-2"></i> More detail</a>
+          </li>
+        </ul>
+      </div>
+    </article>
+    <article class="postcard light red">
+      <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[0].id]">
+        <img class="postcard__img" src="{{POSTS[0].thumbnail}}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title red"><a [routerLink]="['/bridge-page', POSTS[0].id]">{{POSTS[0].bridge_name}}</a></h1>
+        <div class="postcard__subtitle small">
+          <time datetime="2020-05-25 12:00:00">
+            <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[0].posted_date}}
+          </time>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">{{POSTS[0].introduction}}</div>
+        <ul class="postcard__tagbox">
+          <li class="tag__item">
+            <a [routerLink]="['/bridges-by-continent', POSTS[0].continent_id]"><i class="fas fa-tag mr-2">
+            </i> {{POSTS[0].continent_name}}</a>
+          </li>
+          <li class="tag__item play red">
+            <a [routerLink]="['/bridge-page', POSTS[0].id]"><i class="fas fa-play mr-2"></i> More detail</a>
+          </li>
+        </ul>
+      </div>
+    </article>
+    <article class="postcard light blue">
+      <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[2].id]">
+        <img class="postcard__img" src="{{POSTS[2].thumbnail}}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title blue"><a [routerLink]="['/bridge-page', POSTS[2].id]">{{POSTS[2].bridge_name}}</a></h1>
+        <div class="postcard__subtitle small">
+          <time datetime="2020-05-25 12:00:00">
+            <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[2].posted_date}}
+          </time>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">{{POSTS[2].introduction}}</div>
+        <ul class="postcard__tagbox">
+          <li class="tag__item">
+            <a [routerLink]="['/bridges-by-continent', POSTS[2].continent_id]"><i class="fas fa-tag mr-2">
+            </i> {{POSTS[2].continent_name}}</a>
+          </li>
+          <li class="tag__item play blue">
+            <a [routerLink]="['/bridge-page', POSTS[2].id]"><i class="fas fa-play mr-2"></i> More detail</a>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="container mt-3" *ngIf="loading == false">
+    <div class="section-title mt-5">
+      <span>Three</span>
+    </div>
+    <p class="fs-5 mb-4">The bridges of the <i>Industrial Revolution</i> were some of the first long span bridges. These heroic era bridges include: the Menai Strait Suspension Bridge (1826, 577-foot span); the Britannia Bridge (1850, two 459-foot spans, a wrought continuous box girder bridge), also over the Menai Strait; the Clifton Suspension Bridge (1864, 702-foot span) over the Avon Gorge; the Garabit Viaduct (1884, 541-foot span) by Gustave Eiffel; and the Firth of Forth Bridge (1890, two 1,709-foot spans).</p>
+
+    <article class="postcard light red">
+      <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[7].id]">
+        <img class="postcard__img" src="{{POSTS[7].thumbnail}}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title red"><a [routerLink]="['/bridge-page', POSTS[7].id]">{{POSTS[7].bridge_name}}</a></h1>
+        <div class="postcard__subtitle small">
+          <time datetime="2020-05-25 12:00:00">
+            <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[7].posted_date}}
+          </time>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">{{POSTS[7].introduction}}</div>
+        <ul class="postcard__tagbox">
+          <li class="tag__item">
+            <a [routerLink]="['/bridges-by-continent', POSTS[7].continent_id]"><i class="fas fa-tag mr-2">
+            </i> {{POSTS[7].continent_name}}</a>
+          </li>
+          <li class="tag__item play red">
+            <a [routerLink]="['/bridge-page', POSTS[7].id]"><i class="fas fa-play mr-2"></i> More detail</a>
+          </li>
+        </ul>
+      </div>
+    </article>
+    <article class="postcard light blue">
+      <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[4].id]">
+        <img class="postcard__img" src="{{POSTS[4].thumbnail}}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title blue"><a [routerLink]="['/bridge-page', POSTS[4].id]">{{POSTS[4].bridge_name}}</a></h1>
+        <div class="postcard__subtitle small">
+          <time datetime="2020-05-25 12:00:00">
+            <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[4].posted_date}}
+          </time>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">{{POSTS[4].introduction}}</div>
+        <ul class="postcard__tagbox">
+          <li class="tag__item">
+            <a [routerLink]="['/bridges-by-continent', POSTS[4].continent_id]"><i class="fas fa-tag mr-2">
+            </i> {{POSTS[4].continent_name}}</a>
+          </li>
+          <li class="tag__item play blue">
+            <a [routerLink]="['/bridge-page', POSTS[4].id]"><i class="fas fa-play mr-2"></i> More detail</a>
+          </li>
+        </ul>
+      </div>
+    </article>
+    <article class="postcard light red">
+      <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[8].id]">
+        <img class="postcard__img" src="{{POSTS[8].thumbnail}}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title red"><a [routerLink]="['/bridge-page', POSTS[8].id]">{{POSTS[8].bridge_name}}</a></h1>
+        <div class="postcard__subtitle small">
+          <time datetime="2020-05-25 12:00:00">
+            <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[8].posted_date}}
+          </time>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">{{POSTS[8].introduction}}</div>
+        <ul class="postcard__tagbox">
+          <li class="tag__item">
+            <a [routerLink]="['/bridges-by-continent', POSTS[8].continent_id]"><i class="fas fa-tag mr-2">
+            </i> {{POSTS[8].continent_name}}</a>
+          </li>
+          <li class="tag__item play red">
+            <a [routerLink]="['/bridge-page', POSTS[8].id]"><i class="fas fa-play mr-2"></i> More detail</a>
+          </li>
+        </ul>
+      </div>
+    </article>
+    <article class="postcard light blue">
+      <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[5].id]">
+        <img class="postcard__img" src="{{POSTS[5].thumbnail}}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+        <h1 class="postcard__title blue"><a [routerLink]="['/bridge-page', POSTS[5].id]">{{POSTS[5].bridge_name}}</a></h1>
+        <div class="postcard__subtitle small">
+          <time datetime="2020-05-25 12:00:00">
+            <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[5].posted_date}}
+          </time>
+        </div>
+        <div class="postcard__bar"></div>
+        <div class="postcard__preview-txt">{{POSTS[5].introduction}}</div>
+        <ul class="postcard__tagbox">
+          <li class="tag__item">
+            <a [routerLink]="['/bridges-by-continent', POSTS[5].continent_id]"><i class="fas fa-tag mr-2">
+            </i> {{POSTS[5].continent_name}}</a>
+          </li>
+          <li class="tag__item play blue">
+            <a [routerLink]="['/bridge-page', POSTS[5].id]"><i class="fas fa-play mr-2"></i> More detail</a>
+          </li>
+        </ul>
+      </div>
+    </article>
   </div>
 </div>
 
-<div class="container timeline-container" *ngIf="loading == false">
-  <div class="section-title mt-5">
-    <span>One</span>
-  </div>
-  <p class="fs-5 mb-4">Based on the historical development of construction, remarkable bridges can be subdivided into ancient, medieval, industrial revolution, and modern Great Bridges. <i>Ancient greats</i> include those bridges serving as aqueducts or bridges for military conquests. Examples include the Pont du Gard aqueduct (40–60 AD), a three tiered stone bridge, Caesar’s bridges over the Rhine river during his conquest of Gaul (50s BC), and Trajan’s Bridge (104 AD) and Constantine’s Bridge (328 AD), both over the Danube river.</p>
-
-  <article class="postcard light blue">
-    <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[3].id]">
-      <img class="postcard__img" src="{{POSTS[3].thumbnail}}" alt="Image Title" />
-    </a>
-    <div class="postcard__text t-dark">
-      <h1 class="postcard__title blue"><a [routerLink]="['/bridge-page', POSTS[3].id]">{{POSTS[3].bridge_name}}</a></h1>
-      <div class="postcard__subtitle small">
-        <time datetime="2020-05-25 12:00:00">
-          <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[3].posted_date}}
-        </time>
-      </div>
-      <div class="postcard__bar"></div>
-      <div class="postcard__preview-txt">{{POSTS[3].introduction}}</div>
-      <ul class="postcard__tagbox">
-        <li class="tag__item">
-          <a [routerLink]="['/bridges-by-continent', POSTS[3].continent_id]"><i class="fas fa-tag mr-2">
-          </i> {{POSTS[3].continent_name}}</a>
-        </li>
-        <li class="tag__item play blue">
-          <a [routerLink]="['/bridge-page', POSTS[3].id]"><i class="fas fa-play mr-2"></i> More detail</a>
-        </li>
-      </ul>
-    </div>
-  </article>
-  <article class="postcard light red">
-    <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[6].id]">
-      <img class="postcard__img" src="{{POSTS[6].thumbnail}}" alt="Image Title" />
-    </a>
-    <div class="postcard__text t-dark">
-      <h1 class="postcard__title red"><a [routerLink]="['/bridge-page', POSTS[6].id]">{{POSTS[6].bridge_name}}</a></h1>
-      <div class="postcard__subtitle small">
-        <time datetime="2020-05-25 12:00:00">
-          <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[6].posted_date}}
-        </time>
-      </div>
-      <div class="postcard__bar"></div>
-      <div class="postcard__preview-txt">{{POSTS[6].introduction}}</div>
-      <ul class="postcard__tagbox">
-        <li class="tag__item">
-          <a [routerLink]="['/bridges-by-continent', POSTS[6].continent_id]"><i class="fas fa-tag mr-2">
-          </i> {{POSTS[6].continent_name}}</a>
-        </li>
-        <li class="tag__item play red">
-          <a [routerLink]="['/bridge-page', POSTS[6].id]"><i class="fas fa-play mr-2"></i> More detail</a>
-        </li>
-      </ul>
-    </div>
-  </article>
-
-</div>
-
-<div class="container mt-3" *ngIf="loading == false">
-  <div class="section-title mt-5">
-    <span>Two</span>
-  </div>
-  <p class="fs-5 mb-4"><i>Medieval and Renaissance bridges</i> were often stone bridges serving as crossings within cities, and including buildings and shops on top of the bridge structure. Examples include the Ponte Vecchio in Florence (1564), the Rialto Bridge in Venice (1591) and the “Old” London Bridge (1209).</p>
-
-  <article class="postcard light blue">
-    <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[1].id]">
-      <img class="postcard__img" src="{{POSTS[1].thumbnail}}" alt="Image Title" />
-    </a>
-    <div class="postcard__text t-dark">
-      <h1 class="postcard__title blue"><a [routerLink]="['/bridge-page', POSTS[1].id]">{{POSTS[1].bridge_name}}</a></h1>
-      <div class="postcard__subtitle small">
-        <time datetime="2020-05-25 12:00:00">
-          <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[1].posted_date}}
-        </time>
-      </div>
-      <div class="postcard__bar"></div>
-      <div class="postcard__preview-txt">{{POSTS[1].introduction}}</div>
-      <ul class="postcard__tagbox">
-        <li class="tag__item">
-          <a [routerLink]="['/bridges-by-continent', POSTS[1].continent_id]"><i class="fas fa-tag mr-2">
-          </i> {{POSTS[1].continent_name}}</a>
-        </li>
-        <li class="tag__item play blue">
-          <a [routerLink]="['/bridge-page', POSTS[1].id]"><i class="fas fa-play mr-2"></i> More detail</a>
-        </li>
-      </ul>
-    </div>
-  </article>
-  <article class="postcard light red">
-    <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[0].id]">
-      <img class="postcard__img" src="{{POSTS[0].thumbnail}}" alt="Image Title" />
-    </a>
-    <div class="postcard__text t-dark">
-      <h1 class="postcard__title red"><a [routerLink]="['/bridge-page', POSTS[0].id]">{{POSTS[0].bridge_name}}</a></h1>
-      <div class="postcard__subtitle small">
-        <time datetime="2020-05-25 12:00:00">
-          <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[0].posted_date}}
-        </time>
-      </div>
-      <div class="postcard__bar"></div>
-      <div class="postcard__preview-txt">{{POSTS[0].introduction}}</div>
-      <ul class="postcard__tagbox">
-        <li class="tag__item">
-          <a [routerLink]="['/bridges-by-continent', POSTS[0].continent_id]"><i class="fas fa-tag mr-2">
-          </i> {{POSTS[0].continent_name}}</a>
-        </li>
-        <li class="tag__item play red">
-          <a [routerLink]="['/bridge-page', POSTS[0].id]"><i class="fas fa-play mr-2"></i> More detail</a>
-        </li>
-      </ul>
-    </div>
-  </article>
-  <article class="postcard light blue">
-    <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[2].id]">
-      <img class="postcard__img" src="{{POSTS[2].thumbnail}}" alt="Image Title" />
-    </a>
-    <div class="postcard__text t-dark">
-      <h1 class="postcard__title blue"><a [routerLink]="['/bridge-page', POSTS[2].id]">{{POSTS[2].bridge_name}}</a></h1>
-      <div class="postcard__subtitle small">
-        <time datetime="2020-05-25 12:00:00">
-          <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[2].posted_date}}
-        </time>
-      </div>
-      <div class="postcard__bar"></div>
-      <div class="postcard__preview-txt">{{POSTS[2].introduction}}</div>
-      <ul class="postcard__tagbox">
-        <li class="tag__item">
-          <a [routerLink]="['/bridges-by-continent', POSTS[2].continent_id]"><i class="fas fa-tag mr-2">
-          </i> {{POSTS[2].continent_name}}</a>
-        </li>
-        <li class="tag__item play blue">
-          <a [routerLink]="['/bridge-page', POSTS[2].id]"><i class="fas fa-play mr-2"></i> More detail</a>
-        </li>
-      </ul>
-    </div>
-  </article>
-
-</div>
-
-<div class="container mt-3" *ngIf="loading == false">
-  <div class="section-title mt-5">
-    <span>Three</span>
-  </div>
-  <p class="fs-5 mb-4">The bridges of the <i>Industrial Revolution</i> were some of the first long span bridges. These heroic era bridges include: the Menai Strait Suspension Bridge (1826, 577-foot span); the Britannia Bridge (1850, two 459-foot spans, a wrought continuous box girder bridge), also over the Menai Strait; the Clifton Suspension Bridge (1864, 702-foot span) over the Avon Gorge; the Garabit Viaduct (1884, 541-foot span) by Gustave Eiffel; and the Firth of Forth Bridge (1890, two 1,709-foot spans).</p>
-
-  <article class="postcard light red">
-    <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[7].id]">
-      <img class="postcard__img" src="{{POSTS[7].thumbnail}}" alt="Image Title" />
-    </a>
-    <div class="postcard__text t-dark">
-      <h1 class="postcard__title red"><a [routerLink]="['/bridge-page', POSTS[7].id]">{{POSTS[7].bridge_name}}</a></h1>
-      <div class="postcard__subtitle small">
-        <time datetime="2020-05-25 12:00:00">
-          <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[7].posted_date}}
-        </time>
-      </div>
-      <div class="postcard__bar"></div>
-      <div class="postcard__preview-txt">{{POSTS[7].introduction}}</div>
-      <ul class="postcard__tagbox">
-        <li class="tag__item">
-          <a [routerLink]="['/bridges-by-continent', POSTS[7].continent_id]"><i class="fas fa-tag mr-2">
-          </i> {{POSTS[7].continent_name}}</a>
-        </li>
-        <li class="tag__item play red">
-          <a [routerLink]="['/bridge-page', POSTS[7].id]"><i class="fas fa-play mr-2"></i> More detail</a>
-        </li>
-      </ul>
-    </div>
-  </article>
-  <article class="postcard light blue">
-    <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[4].id]">
-      <img class="postcard__img" src="{{POSTS[4].thumbnail}}" alt="Image Title" />
-    </a>
-    <div class="postcard__text t-dark">
-      <h1 class="postcard__title blue"><a [routerLink]="['/bridge-page', POSTS[4].id]">{{POSTS[4].bridge_name}}</a></h1>
-      <div class="postcard__subtitle small">
-        <time datetime="2020-05-25 12:00:00">
-          <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[4].posted_date}}
-        </time>
-      </div>
-      <div class="postcard__bar"></div>
-      <div class="postcard__preview-txt">{{POSTS[4].introduction}}</div>
-      <ul class="postcard__tagbox">
-        <li class="tag__item">
-          <a [routerLink]="['/bridges-by-continent', POSTS[4].continent_id]"><i class="fas fa-tag mr-2">
-          </i> {{POSTS[4].continent_name}}</a>
-        </li>
-        <li class="tag__item play blue">
-          <a [routerLink]="['/bridge-page', POSTS[4].id]"><i class="fas fa-play mr-2"></i> More detail</a>
-        </li>
-      </ul>
-    </div>
-  </article>
-  <article class="postcard light red">
-    <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[8].id]">
-      <img class="postcard__img" src="{{POSTS[8].thumbnail}}" alt="Image Title" />
-    </a>
-    <div class="postcard__text t-dark">
-      <h1 class="postcard__title red"><a [routerLink]="['/bridge-page', POSTS[8].id]">{{POSTS[8].bridge_name}}</a></h1>
-      <div class="postcard__subtitle small">
-        <time datetime="2020-05-25 12:00:00">
-          <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[8].posted_date}}
-        </time>
-      </div>
-      <div class="postcard__bar"></div>
-      <div class="postcard__preview-txt">{{POSTS[8].introduction}}</div>
-      <ul class="postcard__tagbox">
-        <li class="tag__item">
-          <a [routerLink]="['/bridges-by-continent', POSTS[8].continent_id]"><i class="fas fa-tag mr-2">
-          </i> {{POSTS[8].continent_name}}</a>
-        </li>
-        <li class="tag__item play red">
-          <a [routerLink]="['/bridge-page', POSTS[8].id]"><i class="fas fa-play mr-2"></i> More detail</a>
-        </li>
-      </ul>
-    </div>
-  </article>
-  <article class="postcard light blue">
-    <a class="postcard__img_link" [routerLink]="['/bridge-page', POSTS[5].id]">
-      <img class="postcard__img" src="{{POSTS[5].thumbnail}}" alt="Image Title" />
-    </a>
-    <div class="postcard__text t-dark">
-      <h1 class="postcard__title blue"><a [routerLink]="['/bridge-page', POSTS[5].id]">{{POSTS[5].bridge_name}}</a></h1>
-      <div class="postcard__subtitle small">
-        <time datetime="2020-05-25 12:00:00">
-          <i class="fas fa-calendar-alt mr-2"></i> {{POSTS[5].posted_date}}
-        </time>
-      </div>
-      <div class="postcard__bar"></div>
-      <div class="postcard__preview-txt">{{POSTS[5].introduction}}</div>
-      <ul class="postcard__tagbox">
-        <li class="tag__item">
-          <a [routerLink]="['/bridges-by-continent', POSTS[5].continent_id]"><i class="fas fa-tag mr-2">
-          </i> {{POSTS[5].continent_name}}</a>
-        </li>
-        <li class="tag__item play blue">
-          <a [routerLink]="['/bridge-page', POSTS[5].id]"><i class="fas fa-play mr-2"></i> More detail</a>
-        </li>
-      </ul>
-    </div>
-  </article>
-</div>
 
