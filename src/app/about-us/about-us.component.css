@@ -1,8 +1,8 @@
-/*  ENTIRE PAGE  */
+/*----------------  ENTIRE PAGE  --------------------*/
 .about-us {
   margin: -10px 0;
   padding: 0;
-  font-family: 'Nanum Gothic', sans-serif;
+  background-color:  #f2f2f2
 }
 a {
   color: black;
@@ -12,11 +12,11 @@ a:hover{
 }
 
 .container {
-  background: white;
   padding: 0;
+  background-color:  #f2f2f2
 }
 
-/*  BACKGROUND VIDEO*/
+/*--------------------  BACKGROUND VIDEO -------------------*/
 .background-video {
   width: 100%;
   height: 500px;
@@ -55,56 +55,61 @@ video {
 
 }
 
-/*  GREETING AND GENERAL INTRODUCTION  */
+/*-----------------  GREETING AND GENERAL INTRODUCTION  ---------------------*/
 
 /*  CONTENT 1 -- ABOUT-US  */
 .row.greeting {
   text-transform: uppercase;
   padding: 27px 0;
   margin: 0;
-  letter-spacing: 2px;
-  background-color:  #f5f6f6;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+
 }
 
 .row.greeting .content.one {
   margin-top: 10px;
   margin-bottom: 15px;
-  font-weight: bolder;
-  font-size: 30px;
+  font-size: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color:#ff3d00;
+  color: gray;
 }
 .row.greeting .content.two {
-  font-weight: bolder;
-  font-size: 18px;
+  font-size: 24px;
   text-align: center;
   margin-top: 10px;
-  color: #ff3d00;
+  color: gray;
 }
 
 
-/*  CONTENT 2 -- VISION  */
+/*-----------------  CONTENT 2 -- VISION  -----------------------*/
 .row.vision {
   padding: 25px 0;
+  margin: 0 0 45px 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgb(0 0 0 / 20%);
 }
 /*  including the CSS of the "MISSION" section  */
 .title-vision, .title-mission {
   margin-top: 25px;
   margin-bottom: 15px;
-  font-weight: bolder;
-  font-size: 35px;
   display: flex;
+  font-style: italic;
   justify-content: center;
   align-items: center;
-  color: #ff3d00;
-  text-transform: uppercase;
   letter-spacing: 2px;
+  bottom: -1.2rem;
+  font-weight: lighter;
+  font-size: 2.5rem;
+  padding-right: 0.5rem;
+  color: gray;
+
 }
 .row.vision .content-vision {
   padding: 0 20px;
-  font-family: 'Source Sans Pro', sans-serif;
   font-size: 20px;
   line-height: 1.4;
   text-align: justify;
@@ -112,9 +117,13 @@ video {
 
 }
 
-/*  CONTENT 3 -- MISSION  */
+/*-------------------  CONTENT 3 -- MISSION  ------------------------*/
 .mission {
-  border-top: black 1px solid;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgb(0 0 0 / 20%);
+  padding: 10px 0;
+  margin-bottom: 35px;
 }
 .mission .title-vision {
   margin-top: 25px;
@@ -129,8 +138,7 @@ video {
 }
 .content-mission {
   margin: 0 230px;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 17px;
+  font-size: 20px;
   line-height: 1.7;
   text-align: justify;
 }
@@ -138,7 +146,7 @@ video {
   margin-bottom: 20px;
 }
 
-/*  CONTENT 4 -- OUR COMMITMENT  */
+/*---------------------  CONTENT 4 -- OUR COMMITMENT  ------------------------*/
 .our-commitment {
   background-color: #2b3647;
   color: white;
@@ -169,7 +177,7 @@ video {
 
 .row.content-commitment .col-lg-6.num1 .content {
   margin: 90px 50px 0 70px;
-  font-size: 22px;
+  font-size: 20px;
   font-style: italic;
   line-height: 1.9;
   letter-spacing: 1.5px;
@@ -179,7 +187,7 @@ video {
 }
 .row.content-commitment .col-lg-6.num3 .content , .row.content-commitment .col-lg-6.num4 .content {
   margin: 0 25px 0 70px;
-  font-size: 22px;
+  font-size: 20px;
   font-style: italic;
   line-height: 1.9;
   letter-spacing: 1.5px;
@@ -189,47 +197,63 @@ video {
 }
 .hero2-section {
   transform: rotate(180deg);
-  margin-bottom: -1px;
+  margin-bottom: -2px;
 }
+.hero-section {
+  margin-top: -1px;
+}
+/*----------------------  CONTENT 5 -- OUR TEAM  ----------------------------*/
+.title-our-team{
+  height: 1px;
+  background-color: #d3d3d3;
+  position: relative;
+  margin-bottom: 1.8rem;
+  z-index: 1;
+}
+.title-our-team span{
+  position: absolute;
+  bottom: -1.2rem;
+  font-weight: lighter;
+  font-size: 2.5rem;
+  background-color: #f2f2f2;
+  padding-right: 0.5rem;
+  color: gray;
 
-/*  CONTENT 5 -- OUR TEAM  */
+}
 .our-team {
   padding: 0;
   margin-top: 40px;
+  font-style: italic;
+  color: grey;
 }
-.title-our-team p {
-  margin-bottom: -1px;
-  width: 200px;
-  font-size: 1rem;
-  text-transform: uppercase;
-  background-color: #ff3d00;
-  color: white;
-  padding-left: 10px;
-  letter-spacing: 2px;
-}
-.title-our-team {
-  margin-bottom: -5px;
-  border-bottom: 1px black solid;
-}
+
 .content-our-team {
   margin-top: 10px;
 }
 .content-our-team .member-infor {
-  background-color:  #f5f6f6;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgb(0 0 0 / 20%);
   text-align: center;
   padding-top: 17px;
-  filter: drop-shadow(0 0 2px black);
 }
 .fa-sharp.fa-solid.fa-circle-user {
   font-size: 150px;
   display: flex;
   justify-content: center;
+  color: #dff0fa;
 }
 .member-infor .content-main {
   padding-top: 10px;
 }
 .content-main .name {
   text-transform: uppercase;
+  font-weight: 500;
+  font-style: normal;
+  color: black;
+}
+.content-main .position.num1 {
+  font-weight: 500;
 }
 .content-main .position {
   font-family: 'Source Sans Pro', sans-serif;
@@ -239,10 +263,10 @@ video {
 }
 
 
-/*  DISPLAY SCREEN LESS THAN 1400px  */
+/*-------------------  DISPLAY SCREEN LESS THAN 1400px  ------------------------*/
 @media (max-width: 1400px){
 
-  /*  BACKGROUND VIDEO*/
+  /*---------  BACKGROUND VIDEO -----------------*/
   .background-video {
     height: 470px;
   }
@@ -251,7 +275,7 @@ video {
   }
 
 
-  /*  CONTENT 1 -- ABOUT-US  */
+  /*--------------  CONTENT 1 -- ABOUT-US  -----------------------*/
   .row.greeting {
     padding: 20px 0;
   }
@@ -262,17 +286,17 @@ video {
     padding: 0 30px;
   }
 
-  /*  content  */
+  /*-----------  content  ---------------*/
   .content-main {
     margin: 20px 0;
     line-height: 1.6;
   }
-  /*  CONTENT 3 -- MISSION  */
+  /*-----------------  CONTENT 3 -- MISSION  -----------------*/
   .content-mission {
     margin: 0 40px;
   }
 
-  /*  CONTENT 4 -- OUR COMMITMENT  */
+  /*-----------------  CONTENT 4 -- OUR COMMITMENT  ------------------*/
   .row.content-commitment .col-lg-6.num3 .content {
     margin-top: 40px;
   }
@@ -292,7 +316,7 @@ video {
 
 
 
-    /*  CONTENT 5 -- OUR TEAM*/
+    /*---------------  CONTENT 5 -- -----------------OUR TEAM*/
   .content-member-information {
 
   }

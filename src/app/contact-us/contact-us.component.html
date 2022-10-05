@@ -1,1 +1,85 @@
-<p>contact-us works!</p>
+<div class="contact-us">
+  <div class="contact">
+    <p class="title-main">contact us</p>
+    <div class="solid">
+      <div class="solid1">
+        <div class="solid2"></div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="row message-form">
+        <div class="col-5">
+          <p class="intro">
+            To help you get the best out of <a routerLink="">Bridge.com</a> , check out <a routerLink="/faq">our FAQ section</a>, which has heaps of great advice, or search our community forum.
+            And if you want to know more about us check out <a routerLink="/about-us">About us</a>.
+            Need more help? Jump over to our contact form to message the support team.
+          </p>
+        </div>
+        <div class="col-7">
+          <form action="#" class="contact-form" (ngSubmit)="submitForm()">
+            <div class="row">
+              <div class="col-xl-6">
+                <input type="text" name="name" placeholder="name" [(ngModel)]="name" [ngModelOptions]="{standalone: true}">
+              </div>
+              <div class="col-xl-6">
+                <input type="email"  placeholder="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+              </div>
+              <div class="col-xl-12">
+                <input type="text" name="tel" placeholder="telephone" [(ngModel)]="telephone" [ngModelOptions]="{standalone: true}">
+              </div>
+              <div class="col-xl-12">
+                <textarea placeholder="message" cols="30" rows="10" [(ngModel)]="message" [ngModelOptions]="{standalone: true}"></textarea>
+                <div class="submit" (click)="submitForm()">
+                  <input type="submit" value="submit">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row map">
+        <div class="col-7">
+          <google-map height="400px"
+                      width="750px"
+                      [center]="center"
+                      [zoom]="zoom"
+          >
+            <map-marker
+              [position]="markerPositions"
+            ></map-marker>
+          </google-map>
+        </div>
+        <div class="col-5">
+          <div class="row single-contact">
+            <div class="col-1">
+              <i class="fa fa-map-marker"></i>
+            </div>
+            <div class="col-11">
+              <h5>Address</h5>
+              <p>No. 8 Ton That Thuyet, My Dinh, Nam Tu Liem, Hanoi, Vietnam</p>
+            </div>
+          </div>
+          <div class="row single-contact">
+            <div class="col-1">
+              <i class="fa fa-phone"></i>
+            </div>
+            <div class="col-11">
+              <h5>Phone</h5>
+              <p>(+84) 98 157 89 20</p>
+            </div>
+          </div>
+          <div class="row single-contact">
+            <div class="col-1">
+              <i class="fa fa-envelope"></i>
+            </div>
+            <div class="col-11">
+              <h5>Email</h5>
+              <p>Fpt_aptech_t2204m_no2.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

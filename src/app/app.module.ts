@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { GoogleMapsModule } from '@angular/google-maps'
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
@@ -72,6 +73,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    GoogleMapsModule,
     NgxPaginationModule,
     HttpClientModule,
     RouterModule.forRoot(appRoutes),

@@ -1,1 +1,240 @@
+/* CSS card a */
+a {
+  text-decoration: underline ;
+  color: #fff;
+}
+.contact-us {
+ background-image: url("https://lp-cms-production.imgix.net/2019-06/26f612f3e998b29f3c8fdb8d6efebc94-sydney-harbour-bridge.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  margin-bottom: -25px;
+}
+.contact {
+  background-color: rgba(0, 0, 0, 0.7);
+}
 
+/*  CSS TITLE MAIN */
+.title-main {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding-top: 27px;
+  letter-spacing: 2px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+.solid {
+  height: 5px;
+}
+.solid1 {
+  width: 100px;
+  height: 5px;
+  margin: auto;
+  background-color: #fff;
+  opacity: 0.8;
+  border-radius: 3px;
+}
+.solid2 {
+  width: 70px;
+  height: 5px;
+  margin: auto;
+  background-color: #ff3d00;
+  border-radius: 3px;
+}
+/* CSS CONTENT */
+.content {
+  margin-top: 25px;
+}
+
+/* CSS CONTACT FORM - INTRO SECTION */
+.content .row.message-form {
+  margin: 0;
+}
+.content .row.message-form .intro {
+  margin: 0 50px 0 90px;
+  text-align: justify;
+  font-style: oblique;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+
+/* CSS CONTACT FORM */
+.row.message-form .col-7 {
+  padding-right: 102px;
+}
+.contact-form input,
+textarea {
+  width: 100%;
+  border: 1px solid #555;
+  padding: 5px 10px;
+  text-transform: capitalize;
+  margin-top: 15px;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 3px;
+}
+.contact-form textarea {
+  height: 120px
+}
+.contact-form input[type="submit"] {
+  background-color: #ff3d00;
+  border: 0;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-transition: .4s;
+  transition: .4s;
+  width: 200px;
+}
+.contact-form .submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #CC5B00
+}
+.contact-form input:focus, textarea:focus {
+  border-color: #CC5B00
+}
+
+/* CSS MAP */
+.row.map {
+  margin: 0;
+  padding-bottom: 45px;
+  padding-top: 55px;
+}
+.row.map .col-7 {
+  padding: 0;
+}
+.row.map .col-5 {
+  padding: 0;
+}
+google-map {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* CSS SINGLE CONTACT */
+.row.single-contact  {
+  margin: 0 0 30px ;
+}
+.row.map .col-5 {
+  border-left: 2px #ff3d00 solid;
+  margin-left: -36px;
+  padding-left: 26px;
+}
+.row.single-contact .col-1 {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+.row.single-contact .col-11 {
+  padding: 0 0 0 15px;
+}
+.row.single-contact .col-1 .fa {
+  padding: 8px 12px;
+  background-color: #ff3d00;
+}
+.row.single-contact .col-11 p {
+  margin-bottom: 0;
+}
+
+
+/*-------------------  DISPLAY SCREEN LESS THAN 1400px  ------------------------*/
+@media (max-width: 1400px){
+  .content .row.message-form .intro {
+    margin: 0 35px 0 70px;
+  }
+  /* CSS MAP */
+  .row.map .col-7 {
+    padding: 0 40px 0 40px;
+  }
+  .row.map .col-5 {
+    border-left: none;
+    padding-left: 30px;
+  }
+  /* CSS CONTACT FORM */
+  .row.message-form .col-7 {
+    padding-right: 82px;
+  }
+}
+/*-------------------  DISPLAY SCREEN LESS THAN 1024px  ------------------------*/
+@media (max-width: 1024px){
+  /* CSS CONTACT FORM - INTRO SECTION */
+  .content .row.message-form .col-5 {
+    width: 100%;
+  }
+  .content .row.message-form .intro {
+    width: 100%;
+    margin: 0;
+    padding: 0 45px 20px ;
+    text-align: center;
+    font-size: 18px;
+  }
+  /* CSS CONTACT FORM */
+  .row.message-form .col-7 {
+    padding: 0;
+    width: 100%;
+  }
+  .contact-form .row {
+    margin: 0;
+    padding: 0 50px;
+  }
+  .contact-form textarea {
+    height: 100px
+  }
+}
+/*-------------------  DISPLAY SCREEN LESS THAN 880px  ------------------------*/
+@media (max-width: 880px){
+  /*  CSS MAP  */
+  .row.map {
+    position: relative;
+  }
+  .row.map .col-5 {
+    position: absolute;
+    top: 25px;
+    width: 100%;
+  }
+  .row.single-contact {
+    padding-left: 70px;
+  }
+  .row.map .col-7 {
+    margin-top: 230px;
+    width: 100%;
+  }
+}
+/*-------------------  DISPLAY SCREEN LESS THAN 740px  ------------------------*/
+@media (max-width: 740px){
+  /* CSS CONTACT FORM - INTRO SECTION */
+  .content .row.message-form .intro {
+    padding: 0 30px 20px ;
+  }
+  /* CSS CONTACT FORM */
+  .contact-form .row {
+    padding: 0 30px;
+  }
+}
+/*-------------------  DISPLAY SCREEN LESS THAN 500px  ------------------------*/
+@media (max-width: 500px){
+  /* CSS CONTACT FORM - INTRO SECTION */
+  .content .row.message-form .intro {
+    padding: 0 20px 20px ;
+  }
+  /* CSS CONTACT FORM */
+  .contact-form .row {
+    padding: 0 20px;
+  }
+  /* CSS SINGLE CONTACT */
+  .row.single-contact {
+    padding-left: 50px;
+  }
+}
