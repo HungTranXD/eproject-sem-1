@@ -70,17 +70,18 @@ video {
 .row.greeting .content.one {
   margin-top: 10px;
   margin-bottom: 15px;
-  font-size: 35px;
+  font-size: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: gray;
 }
 .row.greeting .content.two {
-  font-size: 24px;
+  font-size: 22px;
   text-align: center;
   margin-top: 10px;
   color: gray;
+  font-weight: 500;
 }
 
 
