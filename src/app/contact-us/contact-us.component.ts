@@ -9,6 +9,7 @@ import {ContactUsService} from "./contact-us.service";
 export class ContactUsComponent implements OnInit {
 
   public name = '';
+  public country= '';
   public email = '';
   public telephone = '';
   public message = '';
@@ -24,7 +25,7 @@ export class ContactUsComponent implements OnInit {
     // console.log('submit form: email = ', this.email);
     // console.log('submit form: telephone = ', this.telephone);
     // console.log('submit form: message = ', this.message);
-    this.common.submitData({name: this.name, email: this.email, telephone: this.telephone, message: this.message});
+    this.common.submitData({name: this.name, country: this.country, email: this.email, telephone: this.telephone, message: this.message});
 
   }
 

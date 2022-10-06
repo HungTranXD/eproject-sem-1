@@ -47,7 +47,7 @@ video {
   letter-spacing: 3px;
   border: 2px solid #fff;
   border-radius: 30px;
-  padding: 2px 20px 3px;
+  padding: 2px 22px 3px;
 }
 
 .title-background a:hover {
@@ -60,16 +60,16 @@ video {
 /*  CONTENT 1 -- ABOUT-US  */
 .row.greeting {
   text-transform: uppercase;
-  padding: 27px 0;
+  padding: 20px 0;
   margin: 0;
   letter-spacing: 1.5px;
-  font-weight: 600;
+  font-weight: 500;
 
 }
 
 .row.greeting .content.one {
-  margin-top: 10px;
-  margin-bottom: 15px;
+  margin-top: 12px;
+  margin-bottom: 10px;
   font-size: 30px;
   display: flex;
   justify-content: center;
@@ -79,19 +79,22 @@ video {
 .row.greeting .content.two {
   font-size: 22px;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 12px;
   color: gray;
-  font-weight: 500;
+  font-weight: 450;
 }
 
 
 /*-----------------  CONTENT 2 -- VISION  -----------------------*/
 .row.vision {
-  padding: 25px 0;
-  margin: 0 0 45px 0;
+  padding: 24px 0 24px 24px;
+  margin: 0 0 48px 0;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 20px rgb(0 0 0 / 20%);
+}
+.row.vision .col-7 {
+  padding: 0;
 }
 /*  including the CSS of the "MISSION" section  */
 .title-vision, .title-mission {
@@ -103,7 +106,7 @@ video {
   align-items: center;
   letter-spacing: 2px;
   bottom: -1.2rem;
-  font-weight: lighter;
+  font-weight: 450;
   font-size: 2.5rem;
   padding-right: 0.5rem;
   color: gray;
@@ -117,6 +120,9 @@ video {
   letter-spacing: normal;
 
 }
+.row.vision img{
+  border-radius: 5px;
+}
 
 /*-------------------  CONTENT 3 -- MISSION  ------------------------*/
 .mission {
@@ -124,7 +130,7 @@ video {
   border-radius: 10px;
   box-shadow: 0 0 20px rgb(0 0 0 / 20%);
   padding: 10px 0;
-  margin-bottom: 35px;
+  margin-bottom: 70px;
 }
 .mission .title-vision {
   margin-top: 25px;
@@ -149,87 +155,74 @@ video {
 
 /*---------------------  CONTENT 4 -- OUR COMMITMENT  ------------------------*/
 .our-commitment {
-  background-color: #2b3647;
-  color: white;
-  width: 100%;
-  margin: 0;
-  padding: 0 0 50px 0;
-  box-sizing: border-box;
+  margin-bottom: 70px;
 }
-.row.content-commitment {
-  padding: 0;
-  margin: 0;
-}
-.title-commitment {
-  margin-top: 60px;
-  margin-left: 70px;
-  text-transform: uppercase;
-  transform: rotate(-5deg);
-}
-.title-commitment .title {
-  font-size: 30px;
-  padding: 5px 10px;
-  width: 360px;
-  display: flex;
-  letter-spacing: 2px;
-  justify-content: center;
-  border: #ff3d00 4px solid;
-}
-
-.row.content-commitment .col-lg-6.num1 .content {
-  margin: 90px 50px 0 70px;
-  font-size: 20px;
-  font-style: italic;
-  line-height: 1.9;
-  letter-spacing: 1.5px;
-}
-.row.content-commitment .col-lg-6.num2 .img {
-  margin: 40px 30px 20px;
-}
-.row.content-commitment .col-lg-6.num3 .content , .row.content-commitment .col-lg-6.num4 .content {
-  margin: 0 25px 0 70px;
-  font-size: 20px;
-  font-style: italic;
-  line-height: 1.9;
-  letter-spacing: 1.5px;
-}
-.row.content-commitment .col-lg-6.num4 .content {
-  margin: 0 45px 0 40px;
-}
-.hero2-section {
-  transform: rotate(180deg);
-  margin-bottom: -2px;
-}
-.hero-section {
-  margin-top: -1px;
-}
-/*----------------------  CONTENT 5 -- OUR TEAM  ----------------------------*/
-.title-our-team{
+.title-our-commitment{
   height: 1px;
   background-color: #d3d3d3;
   position: relative;
-  margin-bottom: 1.8rem;
   z-index: 1;
+  margin: 34px;
 }
-.title-our-team span{
+.title-our-commitment span{
+  margin-left: 100px;
   position: absolute;
   bottom: -1.2rem;
-  font-weight: lighter;
   font-size: 2.5rem;
   background-color: #f2f2f2;
   padding-right: 0.5rem;
   color: gray;
-
+  font-weight: 450;
+  font-style: italic;
 }
+.carousel.slide {
+  height: 680px;
+}
+.carousel.slide img{
+  height: 680px;
+  object-fit: cover;
+}
+.carousel-caption {
+  margin: 0 -50px;
+}
+.carousel-caption h5{
+  font-size: 35px;
+  line-height: 1.7;
+  text-align: center;
+}
+.our-commitment .display-our-commitment {
+  display: none;
+}
+
+
+/*----------------------  CONTENT 5 -- OUR TEAM  ----------------------------*/
 .our-team {
+  margin-top: -12px;
   padding: 0;
-  margin-top: 40px;
   font-style: italic;
   color: grey;
 }
+.title-our-team{
+  height: 1px;
+  background-color: #d3d3d3;
+  position: relative;
+  z-index: 1;
+  margin: 50px 34px 34px;
+}
+.title-our-team span{
+  margin-left: 100px;
+  position: absolute;
+  bottom: -1.2rem;
+  font-size: 2.5rem;
+  background-color: #f2f2f2;
+  padding-right: 0.5rem;
+  color: gray;
+  font-weight: 450;
+  font-style: italic;
+}
 
 .content-our-team {
-  margin-top: 10px;
+  margin: 0;
 }
 .content-our-team .member-infor {
   background-color: #fff;
@@ -292,39 +285,76 @@ video {
     margin: 20px 0;
     line-height: 1.6;
   }
+  /*-----------------  content2 -- vision  ---------------------------*/
+  .title-vision{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-right: 0;
+  }
+
+
   /*-----------------  CONTENT 3 -- MISSION  -----------------*/
   .content-mission {
-    margin: 0 40px;
+
   }
 
   /*-----------------  CONTENT 4 -- OUR COMMITMENT  ------------------*/
-  .row.content-commitment .col-lg-6.num3 .content {
-    margin-top: 40px;
-  }
-  .row.content-commitment .col-lg-6.num4 .content {
-    margin-top: 40px;
-  }
-  .row.content-commitment .col-lg-6.num2 {
-    position: relative;
-  }
-  .row.content-commitment .col-lg-6.num2 .img{
-    position: absolute;
-    bottom: 0;
-    left: 20px;
-    margin-left: 0;
-  }
 
-
-
-
+  .carousel.slide {
+    height: 600px;
+  }
+  .carousel.slide img{
+    height: 600px;
+    object-fit: cover;
+  }
+  .carousel-caption {
+    margin: 0 -50px;
+  }
+  .carousel-caption h5{
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: center;
+  }
     /*---------------  CONTENT 5 -- -----------------OUR TEAM*/
   .content-member-information {
 
   }
 }
+/*  DISPLAY SCREEN LESS THAN 1200px  */
+@media (max-width: 1200px) {
+  /*  CONTENT 2 -- VISION  */
+  .row.vision {
+    position: relative;
+    padding: 24px 0 0;
+  }
+  .row.vision .col-5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+  }
+  .row.vision .col-7 {
+    width: 100%;
+    margin: 185px 0 0;
+    box-shadow: 0 0 20px rgb(0 0 0 / 20%);
+  }
+  .row.vision .content-vision {
+    padding: 0 24px;
+  }
+  .title-vision{
+    margin: 12px 0;
+  }
+
+  /*-------------------  CONTENT 3 -- MISSION  ------------------------*/
+  .content-mission {
+    margin: 0 100px;
+  }
+
+}
 
 
-/*  DISPLAY SCREEN LESS THAN 1024px  */
+  /*  DISPLAY SCREEN LESS THAN 1024px  */
 @media (max-width: 1024px){
 
   /*  BACKGROUND VIDEO*/
@@ -377,10 +407,10 @@ video {
   }
   .row.vision .col-7 {
     width: 100%;
-    margin: 185px 0 20px;
+    margin: 185px 0 0;
   }
   .row.vision .content-vision {
-    padding: 0 10px 10px;
+    padding: 0 24px 24px;
   }
 
   /*  CONTENT 3 -- MISSION  */
@@ -388,52 +418,47 @@ video {
     margin-top: 20px;
     margin-bottom: 8px;
   }
+  .content-mission {
+    margin: 0 50px;
+  }
 
 
   /*  CONTENT 4 -- OUR COMMITMENT  */
-  .col-lg-6 {
+  .carousel.slide {
+    height: 500px;
+  }
+  .carousel.slide img{
+    height: 500px;
+    object-fit: cover;
+  }
+  .carousel-caption {
+    margin: 0 -50px;
+  }
+  .carousel-caption h5{
+    font-size: 25px;
+    line-height: 1.5;
+    text-align: center;
+  }
+}
+/*  DISPLAY SCREEN LESS THAN 800px  */
+@media (max-width: 800px) {
+  /*  Vision  */
+  .row.vision .col-7 {
     width: 100%;
+    margin-top: 215px;
+    box-shadow: 0 0 20px rgb(0 0 0 / 20%);
+  }
+}
+
+/*  DISPLAY SCREEN LESS THAN 750px  */
+@media (max-width: 750px){
+  .our-commitment .display-our-commitment {
+    display: block;
+  }
+  .our-commitment .display-our-commitment p {
+    margin: 20px;
     text-align: justify;
   }
-  .row.content-commitment .col-lg-6.num2 {
-    position: static;
-  }
-  .row.content-commitment .col-lg-6.num2 .img{
-    position: static;
-  }
-  .title-commitment {
-    margin-top: 30px;
-    margin-left: 40px;
-    text-transform: uppercase;
-    transform: rotate(0deg);
-    color: #ff3d00;
-  }
-  .title-commitment .title {
-    padding: 0;
-    justify-content: left;
-    border: none;
-  }
-  .row.content-commitment .col-lg-6.num1 .content {
-    margin: 40px 40px 0;
-    font-size: 20px;
-    letter-spacing: 1px;
-  }
-  .row.content-commitment .col-lg-6.num2 .img {
-    display: flex;
-    justify-content: center;
-  }
-  .row.content-commitment .col-lg-6.num2 .img {
-    margin: 20px 20px 0;
-  }
-
-  .row.content-commitment .col-lg-6.num3 .content , .row.content-commitment .col-lg-6.num4 .content {
-    margin: 20px 40px 0;
-    font-size: 20px;
-  }
-  .row.content-commitment .col-lg-6.num4 .content {
-  }
-
-
 }
 
 
@@ -464,14 +489,17 @@ video {
     text-align: center;
   }
   .row.greeting .content.two {
-    font-size: 16px;
+    font-size: 18px;
+    margin: 0;
   }
 
 
   /*  CONTENT 2 -- VISION  */
-  .title-vision {
+  /*  including the CSS of the "MISSION" section  */
+  .title-vision, .title-mission {
     margin-top: 0;
     margin-bottom: 15px;
+    font-size: 2rem;
   }
   .row.vision .col-7 {
     margin-top: 230px;
@@ -480,17 +508,53 @@ video {
   .row.vision .col-5 {
     padding: 20px;
   }
-
+  .content-vision {
+    padding-bottom: 24px;
+    margin-bottom: 12px;
+  }
+  .row.vision .col-7 {
+    width: 100%;
+    margin-top: 260px;
+    box-shadow: 0 0 20px rgb(0 0 0 / 20%);
+  }
   /*  CONTENT3 -- MISSION  */
   .content-mission {
     margin: 0 20px;
   }
 
   /*  CONTENT 4 -- OUR COMMITMENT  */
-
-
+  .our-commitment {
+    margin-bottom: 60px;
+  }
+  .title-our-commitment{
+    margin: 10px;
+  }
+  .title-our-commitment span{
+    margin-left: 70px;
+    font-size: 2rem;
+  }
+  .carousel.slide {
+    height: 450px;
+  }
+  .carousel.slide img{
+    height: 450px;
+    object-fit: cover;
+  }
+  .carousel.slide {
+    margin-top: 30px;
+  }
   /*  CONTENT 5 -- OUR TEAM  */
-  .our-team {
+
+  .title-our-team{
+    height: 1px;
+    background-color: #d3d3d3;
+    position: relative;
+    z-index: 1;
+    margin: 50px 10px;
+  }
+  .title-our-team span{
+    margin-left: 70px;
+    font-size: 2rem;
   }
 }
 
@@ -511,11 +575,11 @@ video {
     height: 250px;
   }
   .title-background h1{
-    font-size: 25px;
+    font-size: 27px;
     letter-spacing: 3px;
   }
   .title-background a {
-    font-size: 18px;
+    font-size: 20px;
     letter-spacing: 3px;
     border-radius: 20px;
     padding: 2px 15px 3px;
@@ -524,7 +588,7 @@ video {
   /*  CONTENT 1 -- ABOUT-US  */
   .row.greeting {
     text-transform: uppercase;
-    padding: 27px 0;
+    padding: 12px 0;
     margin: 0;
     letter-spacing: 2px;
   }
@@ -535,10 +599,22 @@ video {
   .row.greeting .content.two {
     font-size: 16px;
     text-align: center;
+    margin-top: 0;
   }
 
   .title-vision, .title-mission {
-    font-size: 27px;
+    font-size: 30px;
+  }
+  .title-our-team span{
+    font-size: 30px;
+
+  }
+  .hero2-section {
+    transform: rotate(180deg);
+    margin-bottom: -3px;
+  }
+  .hero-section {
+    margin-top: -3px;
   }
 
 }

@@ -3,7 +3,7 @@
   <!--   BACKGROUND - VIDEO -->
   <div class="background-video">
     <video autoplay loop [muted]="true" playsinline>
-      <source src="https://player.vimeo.com/external/522640019.hd.mp4?s=dc318ae255053efa7316b584383c1aad95358a2a&profile_id=174" type="video/mp4">
+      <source src="https://player.vimeo.com/external/475000652.hd.mp4?s=747699319f17b38615a20f8240eff420359c641c&profile_id=174" type="video/mp4">
     </video>
     <div class="title-background">
       <h1>Bridge.com</h1>
@@ -14,10 +14,10 @@
 
   <!--  CONTENT 1 -- ABOUT US  -->
   <div class="row greeting">
-    <p class="content one">HI GUYS !!! WELCOME TO Bridge.com</p>
+    <p class="content one">HI !!! WELCOME TO Bridge.com</p>
     <p class="content two">
-      where you can find all the most complete, accurate,
-      reliable information about bridges in the world...
+      Where you can find all the most complete, accurate,
+      reliable information about bridges in the world
     </p>
   </div>
 
@@ -26,7 +26,7 @@
     <!--  CONTENT2 -- VISION  -->
     <div class="row vision">
       <div class="col-7">
-        <img src="https://wallpaperaccess.com/full/5237825.png" alt="world map">
+        <img src="assets/images/page-header-background.jpg" alt="world map">
       </div>
       <div class="col-5">
         <div class="title-vision">
@@ -63,55 +63,71 @@
   </div>
 
   <!--  CONTENT4  --  OUR COMMITMENT  -->
-  <div class="hero2-section">
-    <img src="https://6968579.fs1.hubspotusercontent-na1.net/hubfs/6968579/Memrise%20July%202020/Images/brushstrokes/navy-bg.png" alt="image">
-  </div>
   <div class="our-commitment">
-    <div class="row content-commitment">
-      <div class="col-lg-6 num1">
-        <div class="title-commitment">
-          <p class="title">our commitment</p>
-        </div>
-        <p class="content">
-          Since its founding on October 1, 2022, Bridge.com has always been committed to developing into a large reference website,
-          attracting a large number of visitors to search for information. All of our documents, images, information are free
-          to use, anyone can use them.
-        </p>
-      </div>
-      <div class="col-lg-6 num2">
-        <div class="img">
-          <img src="https://www.memrise.com/hubfs/Memrise%20July%202020/Images/Banner-image.png" alt="img">
-        </div>
-      </div>
-      <div class="col-lg-6 num3">
-        <p class="content">
-          We are constantly searching and creating new articles about bridges to bring you quickly and accurately. Newspapers about
-          new events will appear within weeks. In addition, we are always looking for omissions and inaccuracies in the articles we
-          have created.
-        </p>
-      </div>
-      <div class="col-lg-6 num4">
-        <p class="content">
-          We always promise that the articles we create are true. Our team always tries to find the most accurate information to bring
-          to readers. However, there are still certain errors that cannot be avoided, please comment and we will correct them as soon
-          as possible.
-        </p>
-
-      </div>
+    <div class="title-our-commitment mt-5">
+      <span>Our commitment</span>
     </div>
-
-  </div>
-  <div class="hero-section">
-    <img src="https://6968579.fs1.hubspotusercontent-na1.net/hubfs/6968579/Memrise%20July%202020/Images/brushstrokes/navy-bg.png" alt="image">
-  </div>
-
-
-  <div class="container">
-    <!--  CONTENT 5 --  OUR TEAM  -->
-    <div class="our-team">
-      <div class="title-our-team mt-5">
-        <span>Our team</span>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/images/bridges-list/golden_gate_bridge/thumbnail.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>We are constantly searching and creating new articles about bridges to bring you quickly and accurately. Newspapers about
+              new events will appear within weeks. In addition, we are always looking for omissions and inaccuracies in the articles we
+              have created.</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/images/bridges-list/rialto_bridge/thumbnail.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>We are constantly searching and creating new articles about bridges to bring you quickly and accurately. Newspapers about
+              new events will appear within weeks. In addition, we are always looking for omissions and inaccuracies in the articles we
+              have created.</h5>
+
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/images/bridges-list/sydney_harbour_bridge/thumbnail.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>We always promise that the articles we create are true. Our team always tries to find the most accurate information to bring
+              to readers. However, there are still certain errors that cannot be avoided, please comment and we will correct them as soon
+              as possible.</h5>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="display-our-commitment">
+      <p>We are constantly searching and creating new articles about bridges to bring you quickly and accurately. Newspapers about
+        new events will appear within weeks. In addition, we are always looking for omissions and inaccuracies in the articles we
+        have created.</p>
+      <p>We are constantly searching and creating new articles about bridges to bring you quickly and accurately. Newspapers about
+        new events will appear within weeks. In addition, we are always looking for omissions and inaccuracies in the articles we
+        have created.</p>
+      <p>We always promise that the articles we create are true. Our team always tries to find the most accurate information to bring
+        to readers. However, there are still certain errors that cannot be avoided, please comment and we will correct them as soon
+        as possible.</p>
+    </div>
+  </div>
+
+  <!--  CONTENT 5 --  OUR TEAM  -->
+  <div class="title-our-team mt-5">
+    <span>Our team</span>
+  </div>
+  <div class="container">
+    <div class="our-team">
       <div class="row px-5 content-our-team">
         <div class="col-12 col-md-6 col-lg-4 p-3" *ngFor="let l of listOurteam; let i = index">
           <div class="member-infor">
